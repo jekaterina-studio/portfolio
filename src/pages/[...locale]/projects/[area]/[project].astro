@@ -46,6 +46,8 @@ const results = typeof text.results === 'string' ? { items: [] as string[], text
 // Brand activation cases use their own section order (owner request):
 // descrizione, attività svolte, ruolo, risultati, link utili, galleria fotografica (slideshow).
 const isCase = caseAreas.includes(meta.area);
+// Independent practice: no dates (owner request)
+const hidePeriod = meta.area === 'independent-practice';
 const galleryImages = meta.media.flatMap((b) => b.images.map((im) => ({ src: im.file, alt: im.alt[locale] ?? im.alt.it })));
 const galleryFormat = meta.media[0]?.format ?? 'horizontal';
 const projectHref = (slug: string) => {
@@ -63,7 +65,7 @@ const projectHref = (slug: string) => {
       ]} />
       <div class="project__title">
         <h1 class:list={[isCase && 'case-title']}>{text.title}</h1>
-        <p class="project__period">{period ?? <span class="muted" data-placeholder>[{t('periodTbc', locale)}]</span>}</p>
+        {!hidePeriod && <p class="project__period">{period ?? <span class="muted" data-placeholder>[{t('periodTbc', locale)}]</span>}</p>}
       </div>
       {parent ? (
         <p class="project__meta muted">{t('partOf', locale)} <a href={localizedPath(locale, 'projects', parent.meta.area, parent.slug)}>{parent.text.title}</a>{meta.place && <> - {meta.place}</>}</p>
