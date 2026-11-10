@@ -3,7 +3,8 @@
  * Documentary image for project pages, shown in its original colours
  * (the red overlay was removed at the owner's request).
  */
-import { Picture } from 'astro:assets';
+import { Picture, getImage } from 'astro:assets';
+import { t } from '../data/ui';
 import type { ImageMetadata } from 'astro';
 import type { Locale } from '../lib/i18n';
 
@@ -15,12 +16,16 @@ interface Props {
   sizes?: string;
   caption?: string;
   loading?: 'lazy' | 'eager';
+  /** clickable: opens the enlarged image in the lightbox */
+  zoom?: boolean;
 }
-const { src, alt, format, caption, loading = 'lazy',
+const { src, alt, format, locale, caption, loading = 'lazy', zoom = false,
   sizes = '(max-width: 768px) 100vw, 50vw' } = Astro.props;
+const full = zoom ? await getImage({ src, width: Math.min(src.width, 2000), format: 'webp' }) : null;
+const Frame = zoom ? 'button' : 'div';
 ---
 <figure class:list={['doc-image', `doc-image--${format}`]}>
-  <div class="doc-image__frame">
+  <Frame class="doc-image__frame" {...(zoom ? { type: 'button', 'data-zoom': full!.src, 'aria-label': `${t('enlarge', locale)}: ${alt}` } : {})}>
     <Picture
       src={src}
       alt={alt}
@@ -30,12 +35,14 @@ const { src, alt, format, caption, loading = 'lazy',
       loading={loading}
       decoding="async"
     />
-  </div>
+  </Frame>
   {caption && <figcaption class="muted">{caption}</figcaption>}
 </figure>
 
 <style>
-  .doc-image__frame { display: block; width: 100%; overflow: hidden; }
+  .doc-image__frame { display: block; width: 100%; overflow: hidden; padding: 0; border: 0; background: none; }
+  button.doc-image__frame { cursor: zoom-in; }
+  button.doc-image__frame:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
   .doc-image--square .doc-image__frame { aspect-ratio: 1 / 1; }
   .doc-image--horizontal .doc-image__frame { aspect-ratio: 5 / 4; }
   .doc-image--vertical .doc-image__frame { aspect-ratio: 3 / 4; }

@@ -24,8 +24,8 @@ const strings = {
   cvPending: { it: 'in preparazione', en: 'coming soon' },
   cvDownload: { it: 'scarica i CV', en: 'download CVs' }, // home, owner request (en: proposal)
   vat: { it: 'P. IVA', en: 'VAT number' },
-  imageHint: { it: 'Attiva per vedere i colori originali', en: 'Activate to see the original colours' },
-  slideshow: { it: 'Sequenza di immagini', en: 'Image sequence' },
+  enlarge: { it: 'Ingrandisci immagine', en: 'Enlarge image' },
+  close: { it: 'chiudi', en: 'close' },
   previous: { it: 'precedente', en: 'previous' },
   next: { it: 'successiva', en: 'next' },
   breadcrumb: { it: 'Percorso', en: 'Breadcrumb' },

@@ -1,0 +1,38 @@
+---
+/**
+ * Photo gallery for project pages: images side by side in a row (1, 2, 3, 4...)
+ * that wraps into a grid; the number of columns depends on the format.
+ * Clicking an image enlarges it (lightbox, see src/scripts/lightbox.ts).
+ */
+import DocImage from './DocImage.astro';
+import type { SeriesImage } from './ImageSeries.astro';
+import { t } from '../data/ui';
+import type { Locale } from '../lib/i18n';
+
+interface Props { images: SeriesImage[]; format: 'square' | 'horizontal' | 'vertical'; locale: Locale }
+const { images, format, locale } = Astro.props;
+const sizes = format === 'horizontal' ? '(max-width: 768px) 100vw, 33vw' : '(max-width: 768px) 50vw, 25vw';
+---
+<ul class:list={['gallery', `gallery--${format}`]} aria-label={t('gallery', locale)}
+  data-lightbox data-label-close={t('close', locale)} data-label-prev={t('previous', locale)} data-label-next={t('next', locale)}>
+  {images.map((img, i) => (
+    <li>
+      <DocImage src={img.src} alt={img.alt} caption={img.caption} format={format} locale={locale}
+        sizes={sizes} loading={i < 4 ? 'eager' : 'lazy'} zoom />
+    </li>
+  ))}
+</ul>
+
+<style>
+  .gallery {
+    list-style: none;
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .gallery--horizontal { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @media (max-width: 47.99rem) {
+    .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); }
+    .gallery--horizontal { grid-template-columns: 1fr; }
+  }
+</style>

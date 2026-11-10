@@ -1,12 +1,12 @@
 ---
 /**
  * Image block for project pages.
- * layout: 'single' | 'series' (grid) | 'slideshow'
+ * layout: 'single' | 'series' (grid) | 'slideshow' (now rendered as a gallery grid with lightbox)
  * format: 'square' (1:1) | 'horizontal' (5:4)
  */
 import type { ImageMetadata } from 'astro';
 import DocImage from './DocImage.astro';
-import Slideshow from './Slideshow.astro';
+import Gallery from './Gallery.astro';
 import type { Locale } from '../lib/i18n';
 
 export interface SeriesImage { src: ImageMetadata; alt: string; caption?: string }
@@ -22,7 +22,7 @@ const sizes = layout === 'single'
   : format === 'square' ? '(max-width: 768px) 50vw, 33vw' : '(max-width: 768px) 100vw, 50vw';
 ---
 {layout === 'slideshow' ? (
-  <Slideshow images={images} format={format} locale={locale} />
+  <Gallery images={images} format={format} locale={locale} />
 ) : (
   <div class:list={['image-series', `image-series--${layout}`, `image-series--${format}`]}>
     {images.map((img) => (

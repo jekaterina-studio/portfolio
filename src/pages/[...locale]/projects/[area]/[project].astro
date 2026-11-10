@@ -5,7 +5,7 @@ import InfoRow from '../../../../components/InfoRow.astro';
 import Prose from '../../../../components/Prose.astro';
 import DocumentList from '../../../../components/DocumentList.astro';
 import ImageSeries from '../../../../components/ImageSeries.astro';
-import Slideshow from '../../../../components/Slideshow.astro';
+import Gallery from '../../../../components/Gallery.astro';
 import { site } from '../../../../data/site';
 import ProjectPager from '../../../../components/ProjectPager.astro';
 import { nav, t } from '../../../../data/ui';
@@ -44,7 +44,7 @@ const all = await getProjects(locale);
 const parent = meta.parent ? all.find((p) => p.slug === meta.parent) : undefined;
 const results = typeof text.results === 'string' ? { items: [] as string[], text: text.results } : text.results;
 // Brand activation cases use their own section order (owner request):
-// descrizione, attività svolte, ruolo, risultati, link utili, galleria fotografica (slideshow).
+// descrizione, attività svolte, ruolo, risultati, link utili, galleria fotografica (grid + lightbox).
 const isCase = caseAreas.includes(meta.area);
 // Independent practice: no dates (owner request)
 const hidePeriod = meta.area === 'independent-practice';
@@ -127,7 +127,7 @@ const projectHref = (slug: string) => {
           <section class="case-gallery">
             <h2 class="case-gallery__label">{t('gallery', locale)}</h2>
             {galleryImages.length > 0 ? (
-              <Slideshow images={galleryImages} format={galleryFormat} locale={locale} />
+              <Gallery images={galleryImages} format={galleryFormat} locale={locale} />
             ) : (
               <div class="case-gallery__placeholder" data-placeholder><span>{t('imagesToCome', locale)}</span></div>
             )}
@@ -152,7 +152,7 @@ const projectHref = (slug: string) => {
                 })}</ul>
               )}
               {s.gallery && galleryImages.length > 0 && (
-                <div class="section-gallery"><Slideshow images={galleryImages} format={galleryFormat} locale={locale} /></div>
+                <div class="section-gallery"><Gallery images={galleryImages} format={galleryFormat} locale={locale} /></div>
               )}
             </InfoRow>
           ))}
