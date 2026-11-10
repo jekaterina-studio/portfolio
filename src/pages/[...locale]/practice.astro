@@ -34,12 +34,12 @@ const isFallback = !(await getPage('practice', locale));
       </ol>
       <div class="flow__loop" aria-hidden="true"></div>
     </section>
-    <!-- Research tools (owner request), numbered groups -->
+    <!-- Research tools (owner request), groups lettered A. B. C. D. -->
     <InfoRow label={page.researchTitle ?? ''} show={page.research?.length > 0}>
       <ol class="research">
         {page.research?.map((r: any, i: number) => (
           <li>
-            <h3 class="research__title"><span class="research__num">{String(i + 1).padStart(2, '0')}.</span> {r.title}</h3>
+            <h3 class="research__title"><span class="research__num">{String.fromCharCode(65 + i)}.</span> {r.title}</h3>
             <p>{r.items}</p>
           </li>
         ))}
