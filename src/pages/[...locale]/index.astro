@@ -29,7 +29,7 @@ const tiles = (page.tiles ?? [])
   <div class="home__outro">
     <p class="home__statement">{page.statement}</p>
   </div>
-  <!-- CV downloads as a left-aligned list, underlined in red (owner request) -->
+  <!-- CV downloads as a right-aligned list, underlined in red (owner request) -->
   <ul class="home__cv">
     {[[t('cvIt', locale), site.cv.it, 'it'], [t('cvEn', locale), site.cv.en, 'en']].map(([label, href, lang]) => (
       <li>
@@ -57,8 +57,8 @@ const tiles = (page.tiles ?? [])
   .home__role { margin-top: var(--space-1); }
   .home__fields { margin-top: var(--space-1); font-size: var(--fs-small); }
   .home__statement { max-width: 28rem; font-weight: 700; }
-  /* "scarica i CV" bottom right, as a left-aligned list (owner request) */
-  .home__cv { grid-column: 2; grid-row: 3; align-self: end; justify-self: end; text-align: left; list-style: none; }
+  /* CV downloads bottom right, as a right-aligned list (owner request) */
+  .home__cv { grid-column: 2; grid-row: 3; align-self: end; justify-self: end; text-align: right; list-style: none; }
   .home__cv li + li { margin-top: var(--space-1); }
   .home__cv a, .home__cv-item { color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; }
 
@@ -76,7 +76,7 @@ const tiles = (page.tiles ?? [])
   @media (max-width: 47.99rem), (max-height: 31.25rem) {
     :global(main.home) { height: auto; display: block; }
     .home__tiles { padding: var(--space-5) 0; justify-content: flex-end; }
-    .home__cv { margin-top: var(--space-5); }
+    .home__cv { margin-top: var(--space-5); text-align: right; }
     .home__tiles :global(.home__tile) { width: calc((100% - var(--space-2)) / 2); height: auto; max-width: 8rem; aspect-ratio: 1 / 1; }
   }
 </style>
