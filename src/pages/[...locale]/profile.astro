@@ -38,7 +38,7 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
   </div>
 
   <!-- Personal references: playful subtitle requested by the owner (replaces the "no heading" rule). -->
-  {page.referencesTitle && <h2 class="references-title"><mark>{page.referencesTitle}</mark></h2>}
+  {page.referencesTitle && <h2 class="references-title"><span class="star" aria-hidden="true">*</span>{page.referencesTitle}</h2>}
   <ul class="references">
     {page.references.map((r: any) => {
       const src = img(r.image);
@@ -61,9 +61,9 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
   .education h3 { text-transform: none; }
   /* thin line requested by the owner between the academic path and VM Academy */
   .education .has-separator { border-top: 1px solid var(--color-rule); padding-top: var(--space-4); } /* institution names keep their capitalisation */
-  /* playful subtitle: lowercase, large, bold, highlighted (owner request) */
+  /* playful subtitle: lowercase, large, bold, red asterisk (owner request) */
   .references-title { margin-top: var(--space-6); font-size: var(--fs-h1); font-weight: 700; text-transform: lowercase; line-height: 1.15; }
-  .references-title mark { color: var(--color-text); background: linear-gradient(transparent 55%, rgba(214, 40, 40, 0.28) 55%); padding: 0 0.1em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .references-title .star { color: var(--color-accent); margin-right: 0.15em; }
   .references-title + .references { margin-top: var(--space-4); }
   .references {
     list-style: none;
