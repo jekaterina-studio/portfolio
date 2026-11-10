@@ -52,19 +52,20 @@ const hidePeriod = area.id === 'independent-practice';
   .title { margin-top: var(--space-2); }
   .intro { margin-top: var(--space-3); }
   .index { margin-top: var(--space-5); }
+  /* Brand activations list: one line per project on wide screens, the same two-line pattern on narrow ones */
   .works { width: 100%; margin-top: var(--space-5); border-collapse: collapse; line-height: 1.3; }
-  .works th { text-align: left; font-weight: 700; text-transform: uppercase; color: var(--color-accent); font-size: var(--fs-small); letter-spacing: 0.04em; padding: 0 var(--space-4) var(--space-3) 0; }
-  .works td { padding: 0.15rem var(--space-4) 0.15rem 0; vertical-align: top; }
-  .works th:first-child, .works td:first-child { width: 45%; }
+  .works th { text-align: left; font-weight: 700; text-transform: uppercase; color: var(--color-accent); font-size: var(--fs-small); letter-spacing: 0.04em; padding: 0 var(--space-5) var(--space-3) 0; white-space: nowrap; }
+  .works td { padding: 0.2rem var(--space-5) 0.2rem 0; vertical-align: baseline; white-space: nowrap; }
+  .works th:last-child, .works td:last-child { width: 100%; padding-right: 0; }
   .works__name a { font-weight: 700; }
   .works__meta { color: var(--color-muted); }
   .tbs { background: #f2f2f2; padding: 0 0.2em; }
   .works tr:hover .works__name a { color: var(--color-accent); }
-  @media (max-width: 47.99rem) {
-    .works, .works thead, .works tbody, .works tr, .works td, .works th { display: block; width: auto !important; }
+  @media (max-width: 69.99rem) {
+    .works, .works thead, .works tbody, .works tr, .works td, .works th { display: block; width: auto !important; white-space: normal; }
     .works thead tr { display: flex; flex-wrap: wrap; gap: 0 var(--space-3); padding-bottom: var(--space-2); }
     .works th { padding: 0; }
-    .works tbody tr { padding: 0.2rem 0; }
+    .works tbody tr { padding: 0.3rem 0; }
     .works td { padding: 0; display: inline; font-size: var(--fs-small); }
     .works__name { display: block !important; font-size: var(--fs-body) !important; }
     .works td.works__meta + td.works__meta::before { content: ' - '; }
