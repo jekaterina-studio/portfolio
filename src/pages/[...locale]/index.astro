@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
 import Placeholder from '../../components/dev/Placeholder.astro';
 import { site } from '../../data/site';
 import { nav } from '../../data/ui';
@@ -9,7 +10,10 @@ import { localeParams, localizedPath, toLocale } from '../../lib/i18n';
 export const getStaticPaths = localeParams;
 const locale = toLocale(Astro.params.locale);
 const allWorks = nav.find((n) => n.key === 'all-works')!;
-const page = (await getPage<{ role: string; fields: string; statement: string }>('home', locale))!;
+const page = (await getPage<{ role: string; fields: string; statement: string; portrait?: string; portraitAlt?: string }>('home', locale))!;
+// Portrait lives in src/assets/images/site/ (no red overlay: not project documentation).
+const siteImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/images/site/*.{jpg,jpeg}', { eager: true });
+const portrait = page.portrait ? siteImages[`../../assets/images/site/${page.portrait}`]?.default : undefined;
 ---
 <BaseLayout locale={locale} section="home" mainClass="home">
   <div class="home__text">
@@ -20,7 +24,11 @@ const page = (await getPage<{ role: string; fields: string; statement: string }>
     <p class="home__link"><a href={localizedPath(locale, ...allWorks.segments)}>{allWorks.label[locale]}</a></p>
   </div>
   <div class="home__portrait">
-    <Placeholder label="ritratto personale - JPEG da fornire" />
+    {portrait ? (
+      <Image src={portrait} alt={page.portraitAlt ?? ''} widths={[400, 800, 1200].filter((w) => w <= portrait.width)} sizes="(max-width: 768px) 100vw, 40vw" loading="eager" class="home__img" />
+    ) : (
+      <Placeholder label="ritratto personale - JPEG da fornire" />
+    )}
   </div>
 </BaseLayout>
 
@@ -39,11 +47,14 @@ const page = (await getPage<{ role: string; fields: string; statement: string }>
   .home__fields { margin-top: var(--space-1); font-size: var(--fs-small); }
   .home__statement { margin-top: auto; max-width: 28rem; font-weight: 700; }
   .home__link { margin-top: var(--space-4); }
-  .home__portrait { min-height: 0; max-width: 32rem; justify-self: end; width: 100%; }
+  .home__portrait { min-height: 0; max-width: 32rem; justify-self: end; width: 100%; display: flex; justify-content: flex-end; align-items: flex-start; }
+  /* the portrait keeps its own proportions and fits the available height */
+  .home__portrait :global(.home__img) { width: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
 
   @media (max-width: 47.99rem), (max-height: 31.25rem) {
     :global(main.home) { height: auto; grid-template-columns: 1fr; }
     .home__statement { margin-top: var(--space-5); }
-    .home__portrait { aspect-ratio: 4 / 5; justify-self: start; }
+    .home__portrait { justify-self: start; justify-content: flex-start; }
+    .home__portrait :global(.home__img) { width: 100%; max-height: none; }
   }
 </style>
