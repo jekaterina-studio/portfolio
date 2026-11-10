@@ -43,20 +43,20 @@ const c = site.contact;
   }
   .site-footer li { white-space: nowrap; }
 
-  /* Mobile: one compact row that scrolls sideways, like the navigation,
-     so every item stays reachable without the footer taking a large part of the screen. */
+  /* Mobile: the footer is a vertical list at the end of the page (owner request).
+     It is not fixed here, so it never covers the content. */
   @media (max-width: 47.99rem) {
     .site-footer {
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      overscroll-behavior-x: contain;
-      scrollbar-width: none;
-      padding-top: var(--space-3);
-      padding-bottom: var(--space-3);
-      gap: var(--space-4);
+      position: static;
+      flex-direction: column;
+      gap: var(--space-1);
+      padding-top: var(--space-4);
+      padding-bottom: calc(var(--space-4) + env(safe-area-inset-bottom, 0px));
+      font-size: var(--fs-body);
+      line-height: var(--lh-body);
     }
-    .site-footer::-webkit-scrollbar { display: none; }
-    .contacts, .site-footer :global(.footer-cv) { flex-wrap: nowrap !important; flex-shrink: 0; gap: var(--space-4); }
+    .contacts, .site-footer :global(.footer-cv) { flex-direction: column; flex-wrap: nowrap; gap: var(--space-1); }
+    .site-footer li { white-space: normal; }
   }
 
   /* Short viewports: footer is no longer fixed (approved exception). */
