@@ -43,10 +43,10 @@ media:
 - layout: series
   format: portrait
   images:
-  - file: ../../../assets/images/projects/floral-design/floral-design-09.webp
+  - file: ../../../assets/images/projects/floral-design/floral-design-09.jpg
     alt:
-      it: Schiena di una modella con un pannello di rete dorata intrecciata e anthurium verdi
-      en: A model's back with a woven gold mesh panel and green anthuriums
+      it: Dettaglio della schiena con un pannello di rete dorata intrecciata e anthurium verdi
+      en: Close-up of a back with a woven gold mesh panel and green anthuriums
   - file: ../../../assets/images/projects/floral-design/floral-design-10.jpg
     alt:
       it: Pannello di foglie verdi sovrapposte come squame, su pavimento di marmo alla luce del sole
