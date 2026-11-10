@@ -21,13 +21,14 @@ const tiles = (page.tiles ?? [])
     <p class="home__role">{page.role}</p>
     <p class="home__fields muted">{page.fields}</p>
   </div>
-  <div class="home__tiles">
-    {tiles.map((t) => (
-      <Image src={t.src!} alt={t.alt} widths={[200, 373].filter((w) => w <= t.src!.width)} sizes="8rem" loading="eager" class="home__tile" />
-    ))}
-  </div>
-  <div class="home__outro">
-    <p class="home__statement">{page.statement}</p>
+  <!-- Quote next to the two tiles, aligned right (owner request) -->
+  <div class="home__feature">
+    <blockquote class="home__quote"><p>“{page.statement}”</p></blockquote>
+    <div class="home__tiles">
+      {tiles.map((t) => (
+        <Image src={t.src!} alt={t.alt} widths={[200, 373].filter((w) => w <= t.src!.width)} sizes="8rem" loading="eager" class="home__tile" />
+      ))}
+    </div>
   </div>
   <!-- CV downloads as a right-aligned list, underlined in red (owner request) -->
   <ul class="home__cv">
@@ -42,7 +43,7 @@ const tiles = (page.tiles ?? [])
 
 <style>
   /* One screen on desktop: the space between the fixed header and footer.
-     Name at the top left, two small square tiles on the right in the middle, statement at the bottom left. */
+     Name at the top left; quote and two small square tiles on the right in the middle; CV links bottom right. */
   :global(main.home) {
     height: 100dvh;
     min-height: 0;
@@ -50,32 +51,32 @@ const tiles = (page.tiles ?? [])
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     grid-template-rows: auto 1fr auto;
   }
-  .home__intro, .home__outro { grid-column: 1; }
-  .home__intro { grid-row: 1; }
-  .home__outro { grid-row: 3; }
+  .home__intro { grid-column: 1; grid-row: 1; }
   .home__name { font-size: var(--fs-h1); }
   .home__role { margin-top: var(--space-1); }
   .home__fields { margin-top: var(--space-1); font-size: var(--fs-small); }
-  .home__statement { max-width: 28rem; font-weight: 700; }
   /* CV downloads bottom right, as a right-aligned list (owner request) */
   .home__cv { grid-column: 2; grid-row: 3; align-self: end; justify-self: end; text-align: right; list-style: none; }
   .home__cv li + li { margin-top: var(--space-1); }
   .home__cv a, .home__cv-item { color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; }
 
-  .home__tiles {
-    align-self: center;
-    grid-column: 2;
+  .home__feature {
+    grid-column: 1 / -1;
     grid-row: 2;
+    align-self: center;
     justify-self: end;
     display: flex;
-    gap: var(--space-2);
-    padding: var(--space-4) 0;
+    align-items: flex-end;
+    gap: var(--space-4);
   }
+  .home__quote { margin: 0; max-width: 21rem; text-align: right; font-weight: 700; text-wrap: balance; }
+  .home__tiles { display: flex; gap: var(--space-2); flex-shrink: 0; }
   .home__tiles :global(.home__tile) { width: 8rem; height: 8rem; object-fit: cover; }
 
   @media (max-width: 47.99rem), (max-height: 31.25rem) {
     :global(main.home) { height: auto; display: block; }
-    .home__tiles { padding: var(--space-5) 0; justify-content: flex-end; }
+    .home__feature { flex-direction: column-reverse; align-items: flex-end; padding: var(--space-5) 0; }
+    .home__tiles { justify-content: flex-end; }
     .home__cv { margin-top: var(--space-5); text-align: right; }
     .home__tiles :global(.home__tile) { width: calc((100% - var(--space-2)) / 2); height: auto; max-width: 8rem; aspect-ratio: 1 / 1; }
   }
