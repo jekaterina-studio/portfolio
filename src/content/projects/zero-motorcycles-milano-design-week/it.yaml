@@ -2,6 +2,11 @@
 # Leave a field out (or empty) to hide its section. Text marked [DA FORNIRE] is a placeholder.
 # links: - label: Nome del link
 #          url: https://...
+# Category list (attivazioni di brand): uncomment and fill in.
+# sector: Settore
+# keywords:
+# - parola chiave 1
+# - parola chiave 2
 title: GPone Milano per Zero Motorcycles, Milano Design Week MDW 2023
 description: Attivazione di brand durante la Milan Design Week 2024.
 activities:

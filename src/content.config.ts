@@ -100,6 +100,9 @@ const projectTexts = defineCollection({
         z.object({ intro: z.string().optional(), items: z.array(z.string()), note: z.string().optional() }),
       ])
       .optional(),
+    /** brand activations list: sector and service keywords (owner to supply) */
+    sector: z.string().optional(),
+    keywords: z.array(z.string()).optional(),
     /** useful external links (sites, articles, official pages) */
     links: z.array(z.object({ label: z.string(), url: z.string().url() })).default([]),
     /** extra two-column rows, e.g. "vegheterial" or the cantautorato songs */

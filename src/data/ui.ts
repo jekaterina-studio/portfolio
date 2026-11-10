@@ -52,6 +52,9 @@ const strings = {
   workDocuments: { it: 'documenti di lavoro', en: 'working documents' },
   examples: { it: 'esempi', en: 'examples' }, // owner request
   colName: { it: 'nome', en: 'name' },
+  colSector: { it: 'settore', en: 'sector' },
+  colKeywords: { it: 'parole chiave del servizio', en: 'service keywords' },
+  toSupply: { it: 'da fornire', en: 'to be supplied' },
   // brand activation case pages
   activitiesDone: { it: 'attività svolte', en: 'activities' },
   usefulLinks: { it: 'link utili', en: 'useful links' },

@@ -2,8 +2,7 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
 import ProjectIndex from '../../../../components/ProjectIndex.astro';
-import CaseCard from '../../../../components/CaseCard.astro';
-import { nav } from '../../../../data/ui';
+import { nav, t } from '../../../../data/ui';
 import { getAreas, getProjects, listedInArea } from '../../../../lib/content';
 import { localeParams, localizedPath, toLocale } from '../../../../lib/i18n';
 
@@ -17,27 +16,34 @@ const projectsLabel = nav.find((n) => n.key === 'projects')!.label[locale];
 const title = area.data.title[locale] ?? area.data.title.it;
 const projects = listedInArea(await getProjects(locale), area.id);
 const intro = area.data.intro?.[locale];
-// Brand activations: visual cards (title only). Independent practice: list without periods (owner requests).
-const asCards = area.id === 'events-and-brand-activations';
+// Brand activations: list with name, sector, keywords. Independent practice: list without periods (owner requests).
+const asList = area.id === 'events-and-brand-activations';
 const hidePeriod = area.id === 'independent-practice';
 ---
 <BaseLayout locale={locale} section="projects" title={title}>
   <Breadcrumb locale={locale} items={[{ label: projectsLabel, href: localizedPath(locale, 'projects') }, { label: title }]} />
   <h1 class="title">{title}</h1>
   {intro && <p class="measure intro">{intro}</p>}
-  {asCards ? (
-    <ul class="cards">
-      {projects.map((p) => (
-        <li>
-          <CaseCard
-            href={localizedPath(locale, 'projects', p.meta.area, p.slug)}
-            title={p.text.title}
-            locale={locale}
-            cover={p.meta.cover && { file: p.meta.cover.file, alt: p.meta.cover.alt[locale] ?? p.meta.cover.alt.it }}
-          />
-        </li>
-      ))}
-    </ul>
+  <!-- Brand activations: compact list - name, sector, service keywords (owner request) -->
+  {asList ? (
+    <table class="works">
+      <thead>
+        <tr>
+          <th scope="col">{t('colName', locale)}</th>
+          <th scope="col">{t('colSector', locale)}</th>
+          <th scope="col">{t('colKeywords', locale)}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {projects.map((p) => (
+          <tr>
+            <td class="works__name"><a href={localizedPath(locale, 'projects', p.meta.area, p.slug)}>{p.text.title}</a></td>
+            <td class="works__meta">{p.text.sector ?? <span class="tbs" data-placeholder>[{t('toSupply', locale)}]</span>}</td>
+            <td class="works__meta">{p.text.keywords?.length ? p.text.keywords.join(', ') : <span class="tbs" data-placeholder>[{t('toSupply', locale)}]</span>}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   ) : (
     <div class="index"><ProjectIndex projects={projects} locale={locale} hidePeriod={hidePeriod} /></div>
   )}
@@ -46,7 +52,21 @@ const hidePeriod = area.id === 'independent-practice';
   .title { margin-top: var(--space-2); }
   .intro { margin-top: var(--space-3); }
   .index { margin-top: var(--space-5); }
-  .cards { list-style: none; margin-top: var(--space-5); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-5) var(--space-4); }
-  @media (max-width: 63.99rem) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  @media (max-width: 35.99rem) { .cards { grid-template-columns: 1fr; max-width: 24rem; } }
+  .works { width: 100%; margin-top: var(--space-5); border-collapse: collapse; line-height: 1.3; }
+  .works th { text-align: left; font-weight: 700; text-transform: uppercase; color: var(--color-accent); font-size: var(--fs-small); letter-spacing: 0.04em; padding: 0 var(--space-4) var(--space-3) 0; }
+  .works td { padding: 0.15rem var(--space-4) 0.15rem 0; vertical-align: top; }
+  .works th:first-child, .works td:first-child { width: 45%; }
+  .works__name a { font-weight: 700; }
+  .works__meta { color: var(--color-muted); }
+  .tbs { background: #f2f2f2; padding: 0 0.2em; }
+  .works tr:hover .works__name a { color: var(--color-accent); }
+  @media (max-width: 47.99rem) {
+    .works, .works thead, .works tbody, .works tr, .works td, .works th { display: block; width: auto !important; }
+    .works thead tr { display: flex; flex-wrap: wrap; gap: 0 var(--space-3); padding-bottom: var(--space-2); }
+    .works th { padding: 0; }
+    .works tbody tr { padding: 0.2rem 0; }
+    .works td { padding: 0; display: inline; font-size: var(--fs-small); }
+    .works__name { display: block !important; font-size: var(--fs-body) !important; }
+    .works td.works__meta + td.works__meta::before { content: ' - '; }
+  }
 </style>
