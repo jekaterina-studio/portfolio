@@ -1,0 +1,24 @@
+---
+import { t } from '../data/ui';
+import type { Locale } from '../lib/i18n';
+interface Props { locale: Locale; items: { label: string; href?: string }[] }
+const { locale, items } = Astro.props;
+---
+<nav class="breadcrumb" aria-label={t('breadcrumb', locale)}>
+  <ol>
+    {items.map((item, i) => (
+      <li>
+        {item.href ? <a href={item.href}>{item.label}</a> : <span aria-current="page">{item.label}</span>}
+        {i < items.length - 1 && <span class="sep" aria-hidden="true"> / </span>}
+      </li>
+    ))}
+  </ol>
+</nav>
+<style>
+  .breadcrumb { font-size: var(--fs-small); text-transform: lowercase; color: var(--color-muted); }
+  .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; }
+  .breadcrumb li { white-space: pre; }
+  .breadcrumb a { color: var(--color-text); }
+  .breadcrumb a:hover, .breadcrumb a:focus-visible { color: var(--color-accent); }
+  .breadcrumb [aria-current] { color: var(--color-muted); }
+</style>

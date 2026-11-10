@@ -1,0 +1,107 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../../../components/Breadcrumb.astro';
+import InfoRow from '../../../../components/InfoRow.astro';
+import Prose from '../../../../components/Prose.astro';
+import DocumentList from '../../../../components/DocumentList.astro';
+import ImageSeries from '../../../../components/ImageSeries.astro';
+import ProjectPager from '../../../../components/ProjectPager.astro';
+import { nav, t } from '../../../../data/ui';
+import { getAreas, getProjects, hasProjectText, projectsInArea, type Project } from '../../../../lib/content';
+import { locales, localizedPath, toLocale, defaultLocale, type Locale } from '../../../../lib/i18n';
+
+export async function getStaticPaths() {
+  const areas = await getAreas();
+  const paths = [];
+  for (const locale of locales) {
+    const projects = await getProjects(locale);
+    for (const p of projects) {
+      const siblings = projectsInArea(projects, p.meta.area);
+      const i = siblings.findIndex((s) => s.slug === p.slug);
+      paths.push({
+        params: { locale: locale === defaultLocale ? undefined : locale, area: p.meta.area, project: p.slug },
+        props: { project: p, area: areas.find((a) => a.id === p.meta.area)!, prev: siblings[i - 1], next: siblings[i + 1] },
+      });
+    }
+  }
+  return paths;
+}
+
+interface Props { project: Project; area: any; prev?: Project; next?: Project }
+const { project, area, prev, next } = Astro.props;
+const locale = toLocale(Astro.params.locale);
+const other: Locale = locale === 'it' ? 'en' : 'it';
+const hasTranslation = await hasProjectText(project.slug, other);
+const { meta, text } = project;
+const areaTitle = area.data.title[locale] ?? area.data.title.it;
+const areaHref = localizedPath(locale, 'projects', area.id);
+const projectsLabel = nav.find((n) => n.key === 'projects')!.label[locale];
+const link = (p?: Project) => p && { href: localizedPath(locale, 'projects', p.meta.area, p.slug), label: p.text.title };
+const period = meta.period ? (meta.period[locale] ?? meta.period.it) : null;
+---
+<BaseLayout locale={locale} section="projects" title={text.title} hasTranslation={hasTranslation}>
+  <article class="project">
+    <header class="project__head">
+      <Breadcrumb locale={locale} items={[
+        { label: projectsLabel, href: localizedPath(locale, 'projects') },
+        { label: areaTitle, href: areaHref },
+        { label: text.title },
+      ]} />
+      <div class="project__title">
+        <h1>{text.title}</h1>
+        <p class="project__period">{period ?? <span class="muted" data-placeholder>[{t('periodTbc', locale)}]</span>}</p>
+      </div>
+      {(meta.company || text.category) && (
+        <p class="project__meta muted">{[meta.company, text.category].filter(Boolean).join(' - ')}</p>
+      )}
+    </header>
+
+    <div class="project__rows">
+      <InfoRow label={t('description', locale)} show={!!text.description}><Prose text={text.description} /></InfoRow>
+      <InfoRow label={t('role', locale)} show={!!text.role}><Prose text={text.role} /></InfoRow>
+      <InfoRow label={t('activities', locale)} show={!!text.activities?.length}>
+        <ul class="activities">{text.activities?.map((a) => <li><Prose text={a} /></li>)}</ul>
+      </InfoRow>
+      {text.sections.map((s) => (
+        <InfoRow label={s.label}>
+          {s.text && <Prose text={s.text} />}
+          {s.items && (
+            <ul class="items">{s.items.map((it) => <li>{it.url ? <a href={it.url} target="_blank" rel="noopener">{it.title}</a> : it.title}</li>)}</ul>
+          )}
+        </InfoRow>
+      ))}
+      <InfoRow label={t('documentation', locale)} show={meta.documents.length > 0}>
+        <DocumentList docs={meta.documents} locale={locale} />
+      </InfoRow>
+      <InfoRow label={t('results', locale)} show={!!text.results}><Prose text={text.results} /></InfoRow>
+    </div>
+
+    {meta.media.length > 0 && (
+      <div class="project__media">
+        {meta.media.map((block) => (
+          <ImageSeries
+            layout={block.layout}
+            format={block.format}
+            locale={locale}
+            images={block.images.map((im) => ({ src: im.file, alt: im.alt[locale] ?? im.alt.it }))}
+          />
+        ))}
+      </div>
+    )}
+
+    <footer class="project__nav">
+      <ProjectPager locale={locale} prev={link(prev)} next={link(next)} area={{ href: areaHref, label: areaTitle }} />
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  .project__title { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-2) var(--space-4); margin-top: var(--space-2); }
+  .project__period { color: var(--color-muted); }
+  .project__meta { margin-top: var(--space-1); }
+  .project__rows { margin-top: var(--space-6); display: grid; gap: var(--space-5); }
+  .activities, .items { list-style: none; max-width: var(--measure); }
+  .activities li + li, .items li + li { margin-top: var(--space-1); }
+  .project__media { margin-top: var(--space-6); display: grid; gap: var(--space-5); }
+  .project__nav { margin-top: var(--space-6); }
+</style>

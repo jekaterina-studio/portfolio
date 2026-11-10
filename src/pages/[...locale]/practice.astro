@@ -1,13 +1,49 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { nav } from '../../data/ui';
+import InfoRow from '../../components/InfoRow.astro';
+import Prose from '../../components/Prose.astro';
+import DocumentList from '../../components/DocumentList.astro';
+import { nav, t } from '../../data/ui';
+import { getPage } from '../../lib/content';
 import { localeParams, toLocale } from '../../lib/i18n';
 
 export const getStaticPaths = localeParams;
 const locale = toLocale(Astro.params.locale);
-const item = nav.find((n) => n.key === 'practice')!;
+const label = nav.find((n) => n.key === 'practice')!.label[locale];
+const page = (await getPage<any>('practice', locale)) ?? (await getPage<any>('practice', 'it'));
+const isFallback = !(await getPage('practice', locale));
 ---
-<BaseLayout locale={locale} section="practice" title={item.label[locale]}>
-  <h1>{item.label[locale]}</h1>
-  <p class="muted" style="margin-top:1.5rem">[pagina in costruzione - Phase 3]</p>
+<BaseLayout locale={locale} section="practice" title={label}>
+  <h1>{label}</h1>
+  {isFallback && <p class="muted" data-placeholder>[EN - approved English copy pending]</p>}
+  <div class="intro"><Prose text={page.intro} /></div>
+
+  <div class="rows">
+    <InfoRow label={t('process', locale)}>
+      <!-- A flexible sequence, not a rigid methodology: steps can be revisited or combined. -->
+      <ol class="steps">
+        {page.steps.map((s: any, i: number) => (
+          <li>
+            <span class="step-n muted">{i + 1}</span>
+            <h3>{s.title}</h3>
+            <Prose text={s.text} />
+          </li>
+        ))}
+      </ol>
+    </InfoRow>
+    <InfoRow label={t('tools', locale)} show={page.tools?.length > 0}>
+      <ul class="tools">{page.tools.map((x: string) => <li><Prose text={x} /></li>)}</ul>
+    </InfoRow>
+    <InfoRow label={t('workDocuments', locale)} show={page.documents?.length > 0}>
+      <DocumentList docs={page.documents ?? []} locale={locale} />
+    </InfoRow>
+  </div>
 </BaseLayout>
+
+<style>
+  .intro { margin-top: var(--space-5); }
+  .rows { margin-top: var(--space-6); display: grid; gap: var(--space-5); }
+  .steps { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: var(--space-4); max-width: none; }
+  .step-n { display: block; font-size: var(--fs-small); }
+  .tools { list-style: none; }
+</style>

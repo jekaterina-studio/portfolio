@@ -1,0 +1,22 @@
+---
+import { t } from '../data/ui';
+import { nav } from '../data/ui';
+import { localizedPath, type Locale } from '../lib/i18n';
+interface Link { href: string; label: string }
+interface Props { locale: Locale; prev?: Link; next?: Link; area: Link }
+const { locale, prev, next, area } = Astro.props;
+const projects = nav.find((n) => n.key === 'projects')!;
+---
+<nav class="pager" aria-label={t('projectNav', locale)}>
+  <ul>
+    {prev && <li><span class="muted">{t('previousProject', locale)}</span> <a href={prev.href} rel="prev">{prev.label}</a></li>}
+    {next && <li><span class="muted">{t('nextProject', locale)}</span> <a href={next.href} rel="next">{next.label}</a></li>}
+    <li><a href={area.href}>{area.label}</a></li>
+    <li><a href={localizedPath(locale, ...projects.segments)}>{projects.label[locale]}</a></li>
+  </ul>
+</nav>
+<style>
+  .pager { font-size: var(--fs-small); }
+  .pager ul { list-style: none; display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-5); }
+  .pager a { text-transform: lowercase; }
+</style>

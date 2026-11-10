@@ -1,0 +1,26 @@
+intro: "[DA FORNIRE: testo introduttivo approvato sul metodo di lavoro]"
+
+# The seven steps (brief 3.4). Texts: owner to supply.
+steps:
+  - title: osservare
+    text: "[DA FORNIRE]"
+  - title: ricercare
+    text: "[DA FORNIRE]"
+  - title: definire
+    text: "[DA FORNIRE]"
+  - title: pianificare
+    text: "[DA FORNIRE]"
+  - title: sviluppare
+    text: "[DA FORNIRE]"
+  - title: coordinare
+    text: "[DA FORNIRE]"
+  - title: verificare
+    text: "[DA FORNIRE]"
+
+tools:
+  - "[DA FORNIRE: strumenti e software approvati]"
+
+# Examples of working documents: PDFs in /public/documents/practice/ or external links
+documents: []
+#  - label: Esempio di cronoprogramma
+#    file: /documents/practice/esempio-cronoprogramma.pdf

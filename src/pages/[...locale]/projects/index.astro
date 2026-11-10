@@ -1,13 +1,42 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { nav } from '../../../data/ui';
-import { localeParams, toLocale } from '../../../lib/i18n';
+import { getAreas } from '../../../lib/content';
+import { localeParams, localizedPath, toLocale } from '../../../lib/i18n';
 
 export const getStaticPaths = localeParams;
 const locale = toLocale(Astro.params.locale);
-const item = nav.find((n) => n.key === 'projects')!;
+const label = nav.find((n) => n.key === 'projects')!.label[locale];
+const areas = await getAreas();
 ---
-<BaseLayout locale={locale} section="projects" title={item.label[locale]}>
-  <h1>{item.label[locale]}</h1>
-  <p class="muted" style="margin-top:1.5rem">[pagina in costruzione - Phase 3]</p>
+<BaseLayout locale={locale} section="projects" title={label}>
+  <h1>{label}</h1>
+  <!-- No introductory paragraph (brief 3.3). -->
+  <ol class="areas">
+    {areas.map((a) => (
+      <li>
+        <a href={localizedPath(locale, 'projects', a.id)}>
+          <span class="area-number">{String(a.data.number).padStart(2, '0')}</span>
+          <h2>{a.data.title[locale] ?? a.data.title.it}</h2>
+          {a.data.description?.[locale] && <p class="muted">{a.data.description[locale]}</p>}
+        </a>
+      </li>
+    ))}
+  </ol>
 </BaseLayout>
+<style>
+  .areas {
+    list-style: none;
+    margin-top: var(--space-5);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-5) var(--space-4);
+  }
+  .areas a { display: block; }
+  .area-number { display: block; color: var(--color-muted); font-size: var(--fs-small); margin-bottom: var(--space-2); }
+  .areas h2 { font-size: var(--fs-h2); }
+  .areas p { margin-top: var(--space-2); max-width: 22rem; }
+  .areas a:hover h2, .areas a:focus-visible h2, .areas a:hover .area-number { color: var(--color-accent); }
+  @media (max-width: 63.99rem) { .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 35.99rem) { .areas { grid-template-columns: 1fr; } }
+</style>

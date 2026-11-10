@@ -1,13 +1,76 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { nav } from '../../data/ui';
+import InfoRow from '../../components/InfoRow.astro';
+import Prose from '../../components/Prose.astro';
+import CvLinks from '../../components/CvLinks.astro';
+import Placeholder from '../../components/dev/Placeholder.astro';
+import { nav, t } from '../../data/ui';
+import { getPage } from '../../lib/content';
 import { localeParams, toLocale } from '../../lib/i18n';
 
 export const getStaticPaths = localeParams;
 const locale = toLocale(Astro.params.locale);
-const item = nav.find((n) => n.key === 'profile')!;
+const label = nav.find((n) => n.key === 'profile')!.label[locale];
+const page = (await getPage<any>('profile', locale)) ?? (await getPage<any>('profile', 'it'));
+const isFallback = !(await getPage('profile', locale));
+
+// Reference images live in src/assets/images/site/ (no red overlay: not project documentation).
+const siteImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/images/site/*.{jpg,jpeg}', { eager: true });
+const img = (name: string | null) => (name ? siteImages[`../../assets/images/site/${name}`]?.default : undefined);
 ---
-<BaseLayout locale={locale} section="profile" title={item.label[locale]}>
-  <h1>{item.label[locale]}</h1>
-  <p class="muted" style="margin-top:1.5rem">[pagina in costruzione - Phase 3]</p>
+<BaseLayout locale={locale} section="profile" title={label}>
+  <h1>{label}</h1>
+  {isFallback && <p class="muted" data-placeholder>[EN - approved English copy pending]</p>}
+
+  <div class="rows">
+    <InfoRow label={t('biography', locale)}><Prose text={page.biography} /></InfoRow>
+    <InfoRow label={t('education', locale)}>
+      <ol class="education">
+        {page.education.map((e: any) => (
+          <li>
+            <h3>{e.institution}</h3>
+            <Prose text={e.qualification} />
+            <Prose text={e.description} class="muted" />
+          </li>
+        ))}
+      </ol>
+    </InfoRow>
+  </div>
+
+  <!-- Personal references: no section heading (brief 3.2). -->
+  <ul class="references">
+    {page.references.map((r: any) => {
+      const src = img(r.image);
+      return (
+        <li>
+          <div class="ref-image">
+            {src ? <Image src={src} alt={r.alt} widths={[400, 800]} sizes="(max-width: 768px) 100vw, 33vw" /> : <Placeholder label={`immagine: ${r.alt} - da fornire`} />}
+          </div>
+          <p>{r.phrase}</p>
+        </li>
+      );
+    })}
+  </ul>
+
+  <CvLinks locale={locale} class="profile-cv" />
 </BaseLayout>
+
+<style>
+  .rows { margin-top: var(--space-5); display: grid; gap: var(--space-5); }
+  .education { list-style: none; display: grid; gap: var(--space-4); }
+  .education h3 { text-transform: none; } /* institution names keep their capitalisation */
+  .references {
+    list-style: none;
+    margin-top: var(--space-6);
+    max-width: 56rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+  .ref-image { aspect-ratio: 1 / 1; }
+  .ref-image :global(img) { width: 100%; height: 100%; object-fit: cover; }
+  .references p { margin-top: var(--space-2); }
+  :global(.profile-cv) { margin-top: var(--space-6); }
+  @media (max-width: 47.99rem) { .references { grid-template-columns: 1fr; max-width: 24rem; } }
+</style>

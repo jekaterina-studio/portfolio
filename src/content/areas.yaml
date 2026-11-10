@@ -1,0 +1,15 @@
+# The four professional areas. Order and English titles are from the brief.
+# Italian titles: PROPOSALS pending owner approval.
+# description: optional short text (owner to supply), omit if not needed.
+- id: communication-and-editorial
+  number: 1
+  title: { it: comunicazione e editoria, en: communication and editorial }
+- id: cultural-and-creative-projects
+  number: 2
+  title: { it: progetti culturali e creativi, en: cultural and creative projects }
+- id: events-and-brand-activations
+  number: 3
+  title: { it: eventi e brand activation, en: events and brand activations }
+- id: independent-practice
+  number: 4
+  title: { it: pratica indipendente, en: independent practice }

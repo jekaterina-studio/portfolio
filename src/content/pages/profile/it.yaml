@@ -1,0 +1,28 @@
+biography: "[DA FORNIRE: testo del profilo approvato]"
+
+# Approved order (brief 3.2). Qualifications and descriptions: owner to supply.
+education:
+  - institution: Università degli Studi di Urbino Carlo Bo
+    qualification: "[DA FORNIRE: titolo]"
+    description: "[DA FORNIRE: descrizione]"
+  - institution: Accademia di Belle Arti di Brera
+    qualification: "[DA FORNIRE: titolo]"
+    description: "[DA FORNIRE: descrizione]"
+  - institution: MEET Digital Culture Center
+    qualification: "[DA FORNIRE: titolo]"
+    description: "[DA FORNIRE: descrizione]"
+  - institution: VM Academy - International Flower Design School
+    qualification: "[DA FORNIRE: titolo]"
+    description: "[DA FORNIRE: descrizione]"
+
+# Three personal references, no section heading. Images: src/assets/images/site/
+references:
+  - phrase: "Prenderei la vita in giro con Phoebe Waller-Bridge."
+    image: null   # TODO(owner): e.g. reference-phoebe-waller-bridge.jpg (check image rights)
+    alt: "Phoebe Waller-Bridge"
+  - phrase: "Se fossi una disciplina, sarei l'origami."
+    image: null
+    alt: "Origami"
+  - phrase: "Per staccare la spina metterei Fille Rouge di Saint Germain."
+    image: null
+    alt: "Fille Rouge di Saint Germain"

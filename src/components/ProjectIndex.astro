@@ -1,0 +1,44 @@
+---
+/** Vertical typographic index of projects (area pages and All Works). */
+import type { Project } from '../lib/content';
+import { t } from '../data/ui';
+import { localizedPath, type Locale } from '../lib/i18n';
+interface Props { projects: Project[]; locale: Locale; areaTitles?: Record<string, string> }
+const { projects, locale, areaTitles } = Astro.props;
+---
+{projects.length === 0 ? (
+  <p class="muted">{t('noProjects', locale)}</p>
+) : (
+  <ol class:list={['project-index', areaTitles && 'project-index--with-area']}>
+    {projects.map((p) => (
+      <li>
+        <a href={localizedPath(locale, 'projects', p.meta.area, p.slug)}>
+          <span class="pi-title">{p.text.title}</span>
+          <span class="pi-period">{p.meta.period ? (p.meta.period[locale] ?? p.meta.period.it) : <span class="pi-tbc">{t('periodTbc', locale)}</span>}</span>
+          <span class="pi-company">{p.meta.company}</span>
+          {areaTitles && <span class="pi-area">{areaTitles[p.meta.area]}</span>}
+          {!areaTitles && <span class="pi-category">{p.text.category}</span>}
+        </a>
+      </li>
+    ))}
+  </ol>
+)}
+<style>
+  .project-index { list-style: none; }
+  .project-index a {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1.2fr);
+    gap: var(--space-4);
+    padding: var(--space-2) 0;
+  }
+  .pi-title { text-transform: lowercase; font-weight: 700; }
+  .pi-period, .pi-company, .pi-category, .pi-area { color: var(--color-muted); }
+  .pi-area { text-transform: lowercase; }
+  .pi-tbc { font-style: italic; }
+  .project-index a:hover span, .project-index a:focus-visible span { color: var(--color-accent); }
+
+  @media (max-width: 47.99rem) {
+    .project-index a { grid-template-columns: 1fr; gap: 0; padding: var(--space-3) 0; }
+    .pi-company:empty, .pi-category:empty { display: none; }
+  }
+</style>

@@ -1,0 +1,8 @@
+title: cantautorato
+description: "[DA FORNIRE: testo editoriale approvato]"
+sections:
+  - label: brani   # PROPOSAL (label)
+    items:
+      # add `url:` to link audio, video or documentation when supplied
+      - title: Spiccioli di rame - 2021
+      - title: Tutto ciò che finisce con sé - 2026

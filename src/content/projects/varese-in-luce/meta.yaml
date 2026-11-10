@@ -1,0 +1,7 @@
+area: cultural-and-creative-projects
+order: 1
+sort: null        # TODO(owner): end of project, e.g. 2025-06
+period: null      # TODO(owner): e.g. { it: "2025", en: "2025" }
+# company: TODO(owner)
+media: []
+documents: []

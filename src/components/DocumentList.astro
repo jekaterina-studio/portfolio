@@ -1,0 +1,16 @@
+---
+import { t } from '../data/ui';
+import type { Locale } from '../lib/i18n';
+interface Doc { label: { it: string; en?: string }; file?: string; url?: string; action?: 'open' | 'download' }
+interface Props { docs: Doc[]; locale: Locale }
+const { docs, locale } = Astro.props;
+---
+<ul class="doc-list">
+  {docs.map((d) => {
+    const label = d.label[locale] ?? d.label.it;
+    if (d.url) return <li><a href={d.url} target="_blank" rel="noopener">{label}</a> <span class="muted">- {t('externalLink', locale)}</span></li>;
+    if (d.action === 'download') return <li><a href={d.file} download>{label}</a> <span class="muted">- {t('downloadPdf', locale)}</span></li>;
+    return <li><a href={d.file} target="_blank" rel="noopener">{label}</a> <span class="muted">- PDF</span></li>;
+  })}
+</ul>
+<style>.doc-list { list-style: none; } .doc-list li + li { margin-top: var(--space-1); }</style>
