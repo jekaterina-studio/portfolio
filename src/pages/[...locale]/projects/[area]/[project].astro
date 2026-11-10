@@ -108,6 +108,16 @@ const projectHref = (slug: string) => {
               <p class="placeholder-line" data-placeholder>[{t('linksToCome', locale)}]</p>
             )}
           </InfoRow>
+          <InfoRow label={t('occasions', locale)} show={text.occasions.length > 0}>
+            <div class="occasions">
+              {text.occasions.map((o) => (
+                <div class="occasion">
+                  <h3 class="occasion__title">{o.title}</h3>
+                  <Prose text={o.text} />
+                </div>
+              ))}
+            </div>
+          </InfoRow>
         </div>
         {(galleryImages.length > 0 || site.showPlaceholders) && (
           <section class="case-gallery">
@@ -195,6 +205,8 @@ const projectHref = (slug: string) => {
   .case-links a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; }
   .placeholder-line { color: var(--color-muted); background: #f2f2f2; width: fit-content; padding: 0 0.2em; }
   .case-gallery { margin-top: var(--space-6); }
+  .occasions { display: grid; gap: var(--space-4); max-width: var(--measure); }
+  .occasion__title { text-transform: none; font-size: var(--fs-body); margin-bottom: var(--space-1); }
   .case-gallery__label { font-size: var(--fs-body); margin-bottom: var(--space-3); }
   .case-gallery__placeholder {
     max-width: 40rem; aspect-ratio: 5 / 4; background: #f2f2f2;

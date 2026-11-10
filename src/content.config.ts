@@ -105,6 +105,8 @@ const projectTexts = defineCollection({
     /** brand activations list: sector and service keywords (owner to supply) */
     sector: z.string().optional(),
     keywords: z.array(z.string()).optional(),
+    /** "occasioni": short texts shown in full on the page, after useful links */
+    occasions: z.array(z.object({ title: z.string(), text: z.string() })).default([]),
     /** useful external links (sites, articles, official pages) */
     links: z.array(z.object({ label: z.string(), url: z.string().url() })).default([]),
     /** extra two-column rows, e.g. "vegheterial" or the cantautorato songs */

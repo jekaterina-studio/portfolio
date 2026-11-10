@@ -58,6 +58,7 @@ const strings = {
   // brand activation case pages
   activitiesDone: { it: 'attività svolte', en: 'activities' },
   usefulLinks: { it: 'link utili', en: 'useful links' },
+  occasions: { it: 'occasioni', en: 'opportunities' }, // owner request (en: proposal)
   gallery: { it: 'galleria fotografica', en: 'photo gallery' },
   imagesToCome: { it: 'fotografie da inserire', en: 'photographs to be added' },
   linksToCome: { it: 'link da inserire', en: 'links to be added' },
