@@ -1,7 +1,10 @@
+# Language-neutral data. Images: src/assets/images/projects/<slug>/  PDFs: public/documents/projects/<slug>/
+# period: null = not supplied yet (shown as a placeholder).
 area: cultural-and-creative-projects
-order: 1
-sort: null        # TODO(owner): end of project, e.g. 2025-06
-period: null      # TODO(owner): e.g. { it: "2025", en: "2025" }
-# company: TODO(owner)
+order: 3
+sort: 2026-04
+period: null
+company: Onda Studio
+parent: onda-studio
 media: []
 documents: []

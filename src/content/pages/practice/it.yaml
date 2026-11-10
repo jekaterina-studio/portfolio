@@ -1,26 +1,30 @@
-intro: "[DA FORNIRE: testo introduttivo approvato sul metodo di lavoro]"
+# Approved Italian copy. documents: examples of working documents (PDF in public/documents/practice/ or external links)
+intro: |-
+  Nel mio metodo di lavoro cerco di partire dalla comprensione del contesto e dalla raccolta delle informazioni necessarie. Prima di sviluppare una proposta, considero gli obiettivi, le risorse disponibili, i vincoli e le persone coinvolte.
 
-# The seven steps (brief 3.4). Texts: owner to supply.
+  Definisco una direzione, organizzo le attività e traduco gli obiettivi in passaggi concreti. Durante il percorso verifico l'avanzamento, raccolgo riscontri e adatto il lavoro quando necessario. Il processo non è rigido: cambia in base alla natura del progetto e alle sue esigenze.
+
+  Nel lavoro di squadra considero fondamentali la comunicazione chiara, la condivisione delle informazioni e la collaborazione tra competenze diverse. Mi piace lavorare in ambienti in cui le persone possano confrontarsi apertamente, assumersi le proprie responsabilità e contribuire alla costruzione di una direzione comune. Credo in un approccio pratico e collaborativo, in cui il confronto aiuta a risolvere i problemi e a far avanzare il lavoro.
 steps:
-  - title: osservare
-    text: "[DA FORNIRE]"
-  - title: ricercare
-    text: "[DA FORNIRE]"
-  - title: definire
-    text: "[DA FORNIRE]"
-  - title: pianificare
-    text: "[DA FORNIRE]"
-  - title: sviluppare
-    text: "[DA FORNIRE]"
-  - title: coordinare
-    text: "[DA FORNIRE]"
-  - title: verificare
-    text: "[DA FORNIRE]"
-
+- title: osservare
+  text: comprendere contesto, brief, necessità.
+- title: ricercare
+  text: raccogliere informazioni, analizzare e individuare possibilità.
+- title: definire
+  text: obiettivi, priorità e direzione.
+- title: pianificare
+  text: attività, tempi, risorse e responsabilità.
+- title: sviluppare
+  text: tradurre idee in contenuti, materiali e azioni.
+- title: coordinare
+  text: seguire l'esecuzione, coinvolgere persone e gestire attività.
+- title: verificare
+  text: analizzare risultati e feedback, definire i prossimi passaggi.
 tools:
-  - "[DA FORNIRE: strumenti e software approvati]"
-
-# Examples of working documents: PDFs in /public/documents/practice/ or external links
+- label: Organizzazione
+  items: Notion, Google Workspace, Microsoft Office, Excel.
+- label: Comunicazione e produzione
+  items: Canva, Figma, CapCut, WordPress.
+- label: Analisi e marketing
+  items: Metricool, Brevo, Meta Business Suite.
 documents: []
-#  - label: Esempio di cronoprogramma
-#    file: /documents/practice/esempio-cronoprogramma.pdf

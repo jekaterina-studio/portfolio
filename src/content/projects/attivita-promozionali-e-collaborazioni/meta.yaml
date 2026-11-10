@@ -1,0 +1,8 @@
+# Language-neutral data. Images: src/assets/images/projects/<slug>/  PDFs: public/documents/projects/<slug>/
+# period: null = not supplied yet (shown as a placeholder).
+area: events-and-brand-activations
+order: 3
+sort: null
+period: null
+media: []
+documents: []

@@ -1,28 +1,28 @@
-biography: "[DA FORNIRE: testo del profilo approvato]"
+# Approved Italian copy. references.image: file name in src/assets/images/site/ (e.g. reference-origami.jpg)
+biography: |-
+  Il mio percorso prende forma tra comunicazione e arti visive, per poi estendersi alla progettazione culturale, al marketing e al coordinamento di progetti.
 
-# Approved order (brief 3.2). Qualifications and descriptions: owner to supply.
+  Mi sono mossa tra realtà creative e aziendali, attraversando settori e contesti diversi. Ho lavorato su strategie social media, sviluppo editoriale e ricerca in ambito educativo. Ho ideato, elaborato e organizzato contenuti, narrazioni, processi e progetti, seguendone la pianificazione e la produzione. Spesso mi sono trovata nel punto d'incontro tra idee, persone e possibilità.
+
+  **Leggere il contesto e riconoscere le opportunità.** Partirei da questo, ogni volta.
+
+  Sceglierei sempre il confronto aperto, perché mi piace la comunicazione diretta. Credo che il lavoro di squadra non debba soltanto mettere insieme competenze diverse, ma farle incontrare. Attraverso l'apertura e il riconoscimento delle differenze dell'altro.
 education:
-  - institution: Università degli Studi di Urbino Carlo Bo
-    qualification: "[DA FORNIRE: titolo]"
-    description: "[DA FORNIRE: descrizione]"
-  - institution: Accademia di Belle Arti di Brera
-    qualification: "[DA FORNIRE: titolo]"
-    description: "[DA FORNIRE: descrizione]"
-  - institution: MEET Digital Culture Center
-    qualification: "[DA FORNIRE: titolo]"
-    description: "[DA FORNIRE: descrizione]"
-  - institution: VM Academy - International Flower Design School
-    qualification: "[DA FORNIRE: titolo]"
-    description: "[DA FORNIRE: descrizione]"
-
-# Three personal references, no section heading. Images: src/assets/images/site/
+- institution: Università degli Studi di Urbino Carlo Bo
+  qualification: Laurea in New Media, Informazione e Pubblicità.
+- institution: Accademia di Belle Arti di Brera
+  qualification: Laurea magistrale in Comunicazione e Didattica dell'Arte, indirizzo Multimedia e Arti Visive.
+- institution: MEET Digital Culture Center
+  qualification: Executive Master in Digital Curatorship for Creative Industries.
+- institution: VM Academy - International Flower Design School
+  qualification: Percorso professionalizzante in Floral Design.
 references:
-  - phrase: "Prenderei la vita in giro con Phoebe Waller-Bridge."
-    image: null   # TODO(owner): e.g. reference-phoebe-waller-bridge.jpg (check image rights)
-    alt: "Phoebe Waller-Bridge"
-  - phrase: "Se fossi una disciplina, sarei l'origami."
-    image: null
-    alt: "Origami"
-  - phrase: "Per staccare la spina metterei Fille Rouge di Saint Germain."
-    image: null
-    alt: "Fille Rouge di Saint Germain"
+- phrase: Prenderei la vita in giro con Phoebe Waller-Bridge.
+  image: null
+  alt: Phoebe Waller-Bridge
+- phrase: Se fossi una disciplina, sarei l'origami.
+  image: null
+  alt: Origami
+- phrase: Per staccare la spina metterei Fille Rouge di Saint Germain.
+  image: null
+  alt: Fille Rouge di Saint Germain

@@ -1,6 +1,8 @@
+# Language-neutral data. Images: src/assets/images/projects/<slug>/  PDFs: public/documents/projects/<slug>/
+# period: null = not supplied yet (shown as a placeholder).
 area: independent-practice
 order: 1
-sort: null        # TODO(owner)
-period: null      # TODO(owner)
+sort: null
+period: null
 media: []
 documents: []

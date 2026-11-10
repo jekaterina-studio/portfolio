@@ -22,7 +22,7 @@ const strings = {
   cvIt: { it: 'Scarica CV in italiano', en: 'Download CV in Italian' }, // en: PROPOSAL
   cvEn: { it: 'Download CV in English', en: 'Download CV in English' },
   cvPending: { it: 'in preparazione', en: 'coming soon' },
-  vat: { it: 'P. IVA', en: 'VAT no.' }, // en: PROPOSAL
+  vat: { it: 'P. IVA', en: 'VAT number' },
   imageHint: { it: 'Attiva per vedere i colori originali', en: 'Activate to see the original colours' },
   slideshow: { it: 'Sequenza di immagini', en: 'Image sequence' },
   previous: { it: 'precedente', en: 'previous' },
@@ -42,6 +42,7 @@ const strings = {
   nextProject: { it: 'progetto successivo', en: 'next project' },
   projectNav: { it: 'Navigazione tra i progetti', en: 'Project navigation' },
   periodTbc: { it: 'periodo da confermare', en: 'period to be confirmed' },
+  partOf: { it: 'parte di', en: 'part of' },
   noProjects: { it: 'Nessun progetto pubblicato in questa lingua.', en: 'No projects published in this language yet.' },
   // profile / practice headings - PROPOSALS (it)
   education: { it: 'formazione', en: 'education' },

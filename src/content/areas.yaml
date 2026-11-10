@@ -1,15 +1,25 @@
-# The four professional areas. Order and English titles are from the brief.
-# Italian titles: PROPOSALS pending owner approval.
-# description: optional short text (owner to supply), omit if not needed.
+# The four areas. Italian titles: PROPOSALS pending owner approval.
+# description: optional short text for the projects landing page. intro: text on the area page.
 - id: communication-and-editorial
   number: 1
-  title: { it: comunicazione e editoria, en: communication and editorial }
+  title:
+    it: comunicazione e editoria
+    en: communication and editorial
 - id: cultural-and-creative-projects
   number: 2
-  title: { it: progetti culturali e creativi, en: cultural and creative projects }
+  title:
+    it: progetti culturali e creativi
+    en: cultural and creative projects
 - id: events-and-brand-activations
   number: 3
-  title: { it: eventi e brand activation, en: events and brand activations }
+  title:
+    it: eventi e brand activation
+    en: events and brand activations
 - id: independent-practice
   number: 4
-  title: { it: pratica indipendente, en: independent practice }
+  title:
+    it: pratica indipendente
+    en: independent practice
+  intro:
+    it: Una parte del mio lavoro nasce da ciò che osservo, vivo e sento e dal bisogno impellente di trovare una forma per esprimerlo all'esterno. Prevalentemente, sono tre le forme che oggi scelgo per dare spazio a ciò che altrimenti resterebbe dentro.
+    en: Part of my work emerges from what I observe, experience and feel, and from an urgent need to find a form through which to express it externally. At present, I mainly explore three forms of expression to give space to what might otherwise remain within.

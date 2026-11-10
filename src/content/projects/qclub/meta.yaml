@@ -1,0 +1,11 @@
+# Language-neutral data. Images: src/assets/images/projects/<slug>/  PDFs: public/documents/projects/<slug>/
+# period: null = not supplied yet (shown as a placeholder).
+area: events-and-brand-activations
+order: 4
+sort: present
+period:
+  it: maggio 2026 - in corso
+  en: May 2026 - Present
+company: QClub
+media: []
+documents: []

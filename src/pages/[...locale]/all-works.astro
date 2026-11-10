@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProjectIndex from '../../components/ProjectIndex.astro';
 import { nav } from '../../data/ui';
-import { chronological, getAreas, getProjects } from '../../lib/content';
+import { chronological, getAreas, getPage, getProjects } from '../../lib/content';
 import { localeParams, toLocale } from '../../lib/i18n';
 
 export const getStaticPaths = localeParams;
@@ -10,9 +10,11 @@ const locale = toLocale(Astro.params.locale);
 const label = nav.find((n) => n.key === 'all-works')!.label[locale];
 const areaTitles = Object.fromEntries((await getAreas()).map((a) => [a.id, a.data.title[locale] ?? a.data.title.it]));
 const projects = chronological(await getProjects(locale));
+const page = await getPage<{ intro?: string }>('all-works', locale);
 ---
 <BaseLayout locale={locale} section="all-works" title={label}>
   <h1>{label}</h1>
+  {page?.intro && <p class="measure intro">{page.intro}</p>}
   <div class="index"><ProjectIndex projects={projects} locale={locale} areaTitles={areaTitles} /></div>
 </BaseLayout>
-<style>.index { margin-top: var(--space-5); }</style>
+<style>.index { margin-top: var(--space-5); } .intro { margin-top: var(--space-3); }</style>

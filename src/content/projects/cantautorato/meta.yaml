@@ -1,6 +1,10 @@
+# Language-neutral data. Images: src/assets/images/projects/<slug>/  PDFs: public/documents/projects/<slug>/
+# period: null = not supplied yet (shown as a placeholder).
 area: independent-practice
 order: 3
-sort: "2026"      # most recent song: 2026
-period: { it: "2021 - 2026", en: "2021 - 2026" }   # TODO(owner): confirm
+sort: '2026'
+period:
+  it: 2021 - 2026
+  en: 2021 - 2026
 media: []
 documents: []

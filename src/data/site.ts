@@ -11,7 +11,7 @@ export const site = {
     email: 'digitalcuratorship@gmail.com',
     phoneDisplay: '+39 348 270 1207',
     phoneHref: '+393482701207',
-    city: 'Milano, Italia',
+    city: { it: 'Milano, Italia', en: 'Milan, Italy' },
     // TODO(owner): confirm. An Italian partita IVA has 11 digits; this value looks like a placeholder.
     vat: '0123456789',
     // TODO(owner): supply profile URLs.

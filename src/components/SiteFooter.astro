@@ -15,7 +15,7 @@ const c = site.contact;
     <li><a href={`tel:${c.phoneHref}`}>{c.phoneDisplay}</a></li>
     <li>{c.linkedin ? <a href={c.linkedin} rel="me noopener" target="_blank">LinkedIn</a> : <span class="muted">LinkedIn</span>}</li>
     <li>{c.instagram ? <a href={c.instagram} rel="me noopener" target="_blank">Instagram</a> : <span class="muted">Instagram</span>}</li>
-    <li>{c.city}</li>
+    <li>{c.city[locale]}</li>
     <li>{t('vat', locale)}: {c.vat}</li>
   </ul>
   <CvLinks locale={locale} class="footer-cv" />

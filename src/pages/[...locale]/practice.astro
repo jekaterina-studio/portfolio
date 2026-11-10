@@ -32,7 +32,7 @@ const isFallback = !(await getPage('practice', locale));
       </ol>
     </InfoRow>
     <InfoRow label={t('tools', locale)} show={page.tools?.length > 0}>
-      <ul class="tools">{page.tools.map((x: string) => <li><Prose text={x} /></li>)}</ul>
+      <ul class="tools">{page.tools.map((x: any) => <li><strong>{x.label}:</strong> {x.items}</li>)}</ul>
     </InfoRow>
     <InfoRow label={t('workDocuments', locale)} show={page.documents?.length > 0}>
       <DocumentList docs={page.documents ?? []} locale={locale} />

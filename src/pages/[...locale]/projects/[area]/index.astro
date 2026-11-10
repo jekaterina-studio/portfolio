@@ -3,7 +3,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
 import ProjectIndex from '../../../../components/ProjectIndex.astro';
 import { nav } from '../../../../data/ui';
-import { getAreas, getProjects, projectsInArea } from '../../../../lib/content';
+import { getAreas, getProjects, listedInArea } from '../../../../lib/content';
 import { localeParams, localizedPath, toLocale } from '../../../../lib/i18n';
 
 export async function getStaticPaths() {
@@ -14,12 +14,13 @@ const { area } = Astro.props;
 const locale = toLocale(Astro.params.locale);
 const projectsLabel = nav.find((n) => n.key === 'projects')!.label[locale];
 const title = area.data.title[locale] ?? area.data.title.it;
-const projects = projectsInArea(await getProjects(locale), area.id);
+const projects = listedInArea(await getProjects(locale), area.id);
+const intro = area.data.intro?.[locale];
 ---
 <BaseLayout locale={locale} section="projects" title={title}>
   <Breadcrumb locale={locale} items={[{ label: projectsLabel, href: localizedPath(locale, 'projects') }, { label: title }]} />
   <h1 class="title"><span class="muted">{String(area.data.number).padStart(2, '0')}</span> {title}</h1>
-  {area.data.description?.[locale] && <p class="measure intro">{area.data.description[locale]}</p>}
+  {intro && <p class="measure intro">{intro}</p>}
   <div class="index"><ProjectIndex projects={projects} locale={locale} /></div>
 </BaseLayout>
 <style>

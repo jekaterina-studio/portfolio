@@ -38,6 +38,13 @@ const areaHref = localizedPath(locale, 'projects', area.id);
 const projectsLabel = nav.find((n) => n.key === 'projects')!.label[locale];
 const link = (p?: Project) => p && { href: localizedPath(locale, 'projects', p.meta.area, p.slug), label: p.text.title };
 const period = meta.period ? (meta.period[locale] ?? meta.period.it) : null;
+const all = await getProjects(locale);
+const parent = meta.parent ? all.find((p) => p.slug === meta.parent) : undefined;
+const results = typeof text.results === 'string' ? { items: [] as string[], text: text.results } : text.results;
+const projectHref = (slug: string) => {
+  const p = all.find((x) => x.slug === slug);
+  return p ? localizedPath(locale, 'projects', p.meta.area, p.slug) : undefined;
+};
 ---
 <BaseLayout locale={locale} section="projects" title={text.title} hasTranslation={hasTranslation}>
   <article class="project">
@@ -51,9 +58,11 @@ const period = meta.period ? (meta.period[locale] ?? meta.period.it) : null;
         <h1>{text.title}</h1>
         <p class="project__period">{period ?? <span class="muted" data-placeholder>[{t('periodTbc', locale)}]</span>}</p>
       </div>
-      {(meta.company || text.category) && (
-        <p class="project__meta muted">{[meta.company, text.category].filter(Boolean).join(' - ')}</p>
-      )}
+      {parent ? (
+        <p class="project__meta muted">{t('partOf', locale)} <a href={localizedPath(locale, 'projects', parent.meta.area, parent.slug)}>{parent.text.title}</a>{meta.place && <> - {meta.place}</>}</p>
+      ) : (meta.company && meta.company !== text.title) || meta.place ? (
+        <p class="project__meta muted">{[meta.company !== text.title ? meta.company : null, meta.place].filter(Boolean).join(' - ')}</p>
+      ) : null}
     </header>
 
     <div class="project__rows">
@@ -66,14 +75,26 @@ const period = meta.period ? (meta.period[locale] ?? meta.period.it) : null;
         <InfoRow label={s.label}>
           {s.text && <Prose text={s.text} />}
           {s.items && (
-            <ul class="items">{s.items.map((it) => <li>{it.url ? <a href={it.url} target="_blank" rel="noopener">{it.title}</a> : it.title}</li>)}</ul>
+            <ul class="items">{s.items.map((it) => {
+              const href = it.project ? projectHref(it.project) : undefined;
+              return <li>{href ? <a href={href}>{it.title}</a> : it.url ? <a href={it.url} target="_blank" rel="noopener">{it.title}</a> : it.title}</li>;
+            })}</ul>
           )}
         </InfoRow>
       ))}
       <InfoRow label={t('documentation', locale)} show={meta.documents.length > 0}>
         <DocumentList docs={meta.documents} locale={locale} />
       </InfoRow>
-      <InfoRow label={t('results', locale)} show={!!text.results}><Prose text={text.results} /></InfoRow>
+      <InfoRow label={t('results', locale)} show={!!results}>
+        {results && 'text' in results && <Prose text={results.text} />}
+        {results && 'items' in results && results.items.length > 0 && (
+          <>
+            {'intro' in results && results.intro && <p class="results-intro">{results.intro}</p>}
+            <ul class="activities">{results.items.map((r) => <li>{r}</li>)}</ul>
+            {'note' in results && results.note && <p class="muted results-note">{results.note}</p>}
+          </>
+        )}
+      </InfoRow>
     </div>
 
     {meta.media.length > 0 && (
@@ -104,4 +125,9 @@ const period = meta.period ? (meta.period[locale] ?? meta.period.it) : null;
   .activities li + li, .items li + li { margin-top: var(--space-1); }
   .project__media { margin-top: var(--space-6); display: grid; gap: var(--space-5); }
   .project__nav { margin-top: var(--space-6); }
+  .project__meta a { color: var(--color-text); }
+  .project__meta a:hover { color: var(--color-accent); }
+  .results-intro { margin-bottom: var(--space-2); }
+  .results-note { margin-top: var(--space-2); max-width: var(--measure); font-size: var(--fs-small); }
+  .items + :global(.prose), :global(.prose) + .items { margin-top: var(--space-2); }
 </style>

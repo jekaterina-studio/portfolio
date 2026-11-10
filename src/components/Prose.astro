@@ -5,11 +5,13 @@ interface Props { text?: string | null; class?: string }
 const { text, class: className } = Astro.props;
 const placeholder = !text || /^\[DA FORNIRE/.test(text);
 const paragraphs = (text ?? '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+// **text** = bold (as in the approved documents)
+const parts = (p: string) => p.split(/\*\*(.+?)\*\*/g);
 ---
 {placeholder ? (
   <p class:list={['placeholder-text', className]} data-placeholder>{text ?? '[DA FORNIRE]'}</p>
 ) : (
-  <div class:list={['prose', className]}>{paragraphs.map((p) => <p>{p}</p>)}</div>
+  <div class:list={['prose', className]}>{paragraphs.map((p) => <p>{parts(p).map((s, i) => (i % 2 ? <strong>{s}</strong> : s))}</p>)}</div>
 )}
 <style>
   .prose { max-width: var(--measure); }

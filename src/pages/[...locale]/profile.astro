@@ -31,7 +31,7 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
           <li>
             <h3>{e.institution}</h3>
             <Prose text={e.qualification} />
-            <Prose text={e.description} class="muted" />
+            {e.description && <Prose text={e.description} class="muted" />}
           </li>
         ))}
       </ol>

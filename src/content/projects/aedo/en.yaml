@@ -1,0 +1,21 @@
+# Approved British English copy (portfolio_website_copy_british_english.pdf)
+title: Aedo
+role: Communication and Project Assistant
+description: At Aedo, I contributed to the development of cultural, educational and digital projects. The experience involved research, writing, content organisation and project development support. I worked across projects with different audiences and formats, including digital archives, educational programmes, audio guides and editorial productions.
+activities:
+- research and collection of materials
+- content development, editing and organisation
+- narrative reconstruction of projects and archives
+- editorial and project development support
+- preparation of presentations and institutional materials
+- coordination with external collaborators
+sections:
+- label: aedo projects
+  items:
+  - title: Aedo's digital identity and editorial archive
+  - title: OFFLab - Urban Green Design
+    project: offlab-urban-green-design
+  - title: AscoltaMi
+    project: ascoltami
+  - title: FAI audio guides and podcasts for Villa Gregoriana, Castello e Parco di Masino and Casa Noha
+    project: fai-audioguide-e-podcast

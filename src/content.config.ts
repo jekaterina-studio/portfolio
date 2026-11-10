@@ -18,6 +18,8 @@ const areas = defineCollection({
     number: z.number(),
     title: i18nText,
     description: z.object({ it: z.string().optional(), en: z.string().optional() }).optional(),
+    /** introductory text shown on the area page only */
+    intro: z.object({ it: z.string().optional(), en: z.string().optional() }).optional(),
   }),
 });
 
@@ -34,7 +36,13 @@ const projects = defineCollection({
       /** position inside its area (1, 2, 3 ...) - used for previous / next */
       order: z.number(),
       /** sort key for All Works, newest first: 'YYYY' or 'YYYY-MM' (end of the project). null = not known yet */
-      sort: z.string().regex(/^\d{4}(-\d{2})?$/).nullable(),
+      sort: z.union([z.literal('present'), z.string().regex(/^\d{4}(-\d{2})?$/)]).nullable(),
+      /** slug of the professional experience page this project belongs to (e.g. onda-studio) */
+      parent: z.string().optional(),
+      /** also list this project in other area indexes (it keeps one canonical page) */
+      alsoIn: z.array(z.enum(areaSlugs)).default([]),
+      /** place shown under the title, e.g. "GPone Milano, Darsena, Milano" */
+      place: z.string().optional(),
       /** period as displayed next to the title */
       period: z.object({ it: z.string(), en: z.string().optional() }).nullable(),
       /** company or organisation, where applicable */
@@ -84,14 +92,21 @@ const projectTexts = defineCollection({
     description: z.string().optional(),
     role: z.string().optional(),
     activities: z.array(z.string()).optional(),
-    results: z.string().optional(),
+    results: z
+      .union([
+        z.string(),
+        z.object({ intro: z.string().optional(), items: z.array(z.string()), note: z.string().optional() }),
+      ])
+      .optional(),
     /** extra two-column rows, e.g. "vegheterial" or the cantautorato songs */
     sections: z
       .array(
         z.object({
           label: z.string(),
           text: z.string().optional(),
-          items: z.array(z.object({ title: z.string(), url: z.string().url().optional() })).optional(),
+          items: z
+            .array(z.object({ title: z.string(), url: z.string().url().optional(), project: z.string().optional() }))
+            .optional(),
         }),
       )
       .default([]),
