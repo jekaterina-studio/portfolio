@@ -31,7 +31,6 @@ const tiles = (page.tiles ?? [])
   </div>
   <!-- CV downloads as a left-aligned list, underlined in red (owner request) -->
   <ul class="home__cv">
-    <li class="home__cv-title">{t('cvDownload', locale)}</li>
     {[[t('cvIt', locale), site.cv.it, 'it'], [t('cvEn', locale), site.cv.en, 'en']].map(([label, href, lang]) => (
       <li>
         {href ? <a href={href} download hreflang={lang}>{label}</a> : <span class="home__cv-item">{label}</span>}
@@ -61,7 +60,6 @@ const tiles = (page.tiles ?? [])
   /* "scarica i CV" bottom right, as a left-aligned list (owner request) */
   .home__cv { grid-column: 2; grid-row: 3; align-self: end; justify-self: end; text-align: left; list-style: none; }
   .home__cv li + li { margin-top: var(--space-1); }
-  .home__cv-title { margin-bottom: var(--space-1); }
   .home__cv a, .home__cv-item { color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; }
 
   .home__tiles {
