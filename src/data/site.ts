@@ -14,9 +14,8 @@ export const site = {
     city: { it: 'Milano, Italia', en: 'Milan, Italy' },
     // TODO(owner): confirm. An Italian partita IVA has 11 digits; this value looks like a placeholder.
     vat: '0123456789',
-    // TODO(owner): supply profile URLs.
-    linkedin: null as string | null,
-    instagram: null as string | null,
+    linkedin: 'https://www.linkedin.com/in/jekaterinakanevskaja/' as string | null,
+    instagram: 'https://www.instagram.com/sauletekis_____/' as string | null,
   },
   /**
    * CV files. Put the PDFs in /public/documents/cv/ and write the path here,
