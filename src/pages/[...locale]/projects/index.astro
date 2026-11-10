@@ -24,15 +24,15 @@ const areas = await getAreas();
   </ol>
 </BaseLayout>
 <style>
-  /* Categories listed vertically and centred (owner request) */
+  /* Categories listed vertically, aligned left (owner request) */
   .areas {
     list-style: none;
     margin-top: var(--space-6);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: var(--space-4);
-    text-align: center;
+    text-align: left;
   }
   .areas a { display: block; }
   .areas h2 { font-size: var(--fs-h2); font-weight: 700; text-transform: uppercase; } /* owner request: area titles bold uppercase */
