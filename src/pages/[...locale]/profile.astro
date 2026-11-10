@@ -28,7 +28,7 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
     <InfoRow label={t('education', locale)}>
       <ol class="education">
         {page.education.map((e: any) => (
-          <li>
+          <li class:list={[e.separatorBefore && 'has-separator']}>
             <h3>{e.institution}</h3>
             <Prose text={e.qualification} />
             {e.description && <Prose text={e.description} class="muted" />}
@@ -59,7 +59,9 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
 <style>
   .rows { margin-top: var(--space-5); display: grid; gap: var(--space-5); }
   .education { list-style: none; display: grid; gap: var(--space-4); }
-  .education h3 { text-transform: none; } /* institution names keep their capitalisation */
+  .education h3 { text-transform: none; }
+  /* thin line requested by the owner between the academic path and VM Academy */
+  .education .has-separator { border-top: 1px solid var(--color-rule); padding-top: var(--space-4); } /* institution names keep their capitalisation */
   .references {
     list-style: none;
     margin-top: var(--space-6);

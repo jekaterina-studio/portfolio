@@ -5,6 +5,7 @@
   --color-text: #000000;
   --color-muted: #6b6b6b;     /* neutral grey, 5.3:1 on white */
   --color-accent: #d62828;    /* red: interactive states and image overlay only */
+  --color-rule: #d9d9d9;      /* thin separator lines */
 
   /* Red overlay on documentary images.
      Calibrate --overlay-opacity against the owner's reference photographs. */

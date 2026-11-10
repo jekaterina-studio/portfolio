@@ -1,21 +1,23 @@
 # Approved Italian copy. references.image: file name in src/assets/images/site/ (e.g. reference-origami.jpg)
+# education: shown in this order. separatorBefore: true draws a thin line above the entry.
 biography: |-
   Il mio percorso prende forma tra comunicazione e arti visive, per poi estendersi alla progettazione culturale, al marketing e al coordinamento di progetti.
 
   Mi sono mossa tra realtà creative e aziendali, attraversando settori e contesti diversi. Ho lavorato su strategie social media, sviluppo editoriale e ricerca in ambito educativo. Ho ideato, elaborato e organizzato contenuti, narrazioni, processi e progetti, seguendone la pianificazione e la produzione. Spesso mi sono trovata nel punto d'incontro tra idee, persone e possibilità.
 
-  **Leggere il contesto e riconoscere le opportunità.** Partirei da questo, ogni volta.
+  Leggere il contesto e riconoscere le opportunità. Partirei da questo, ogni volta.
 
   Sceglierei sempre il confronto aperto, perché mi piace la comunicazione diretta. Credo che il lavoro di squadra non debba soltanto mettere insieme competenze diverse, ma farle incontrare. Attraverso l'apertura e il riconoscimento delle differenze dell'altro.
 education:
-- institution: Università degli Studi di Urbino Carlo Bo
-  qualification: Laurea in New Media, Informazione e Pubblicità.
-- institution: Accademia di Belle Arti di Brera
-  qualification: Laurea magistrale in Comunicazione e Didattica dell'Arte, indirizzo Multimedia e Arti Visive.
 - institution: MEET Digital Culture Center
   qualification: Executive Master in Digital Curatorship for Creative Industries.
+- institution: Accademia di Belle Arti di Brera
+  qualification: Laurea magistrale in Comunicazione e Didattica dell'Arte, indirizzo Multimedia e Arti Visive.
+- institution: Università degli Studi di Urbino Carlo Bo
+  qualification: Laurea in New Media, Informazione e Pubblicità.
 - institution: VM Academy - International Flower Design School
   qualification: Percorso professionalizzante in Floral Design.
+  separatorBefore: true
 references:
 - phrase: Prenderei la vita in giro con Phoebe Waller-Bridge.
   image: null
