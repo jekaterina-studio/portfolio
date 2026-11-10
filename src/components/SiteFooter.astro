@@ -27,7 +27,7 @@ const c = site.contact;
     inset: auto 0 0 0;
     z-index: 10;
     background: var(--color-bg);
-    font-size: var(--fs-small);
+    font-size: 0.75rem; /* owner request: smaller footer text (12px) */
     line-height: var(--lh-tight);
     padding: var(--space-3) var(--margin);
     display: flex;
@@ -52,7 +52,7 @@ const c = site.contact;
       gap: var(--space-1);
       padding-top: var(--space-4);
       padding-bottom: calc(var(--space-4) + env(safe-area-inset-bottom, 0px));
-      font-size: var(--fs-body);
+      font-size: var(--fs-small);
       line-height: var(--lh-body);
     }
     .contacts, .site-footer :global(.footer-cv) { flex-direction: column; flex-wrap: nowrap; gap: var(--space-1); }

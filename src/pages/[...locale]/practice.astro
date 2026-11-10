@@ -37,6 +37,16 @@ const isFallback = !(await getPage('practice', locale));
     <InfoRow label={t('tools', locale)} show={page.tools?.length > 0}>
       <ul class="tools">{page.tools.map((x: any) => <li><strong>{x.label}:</strong> {x.items}</li>)}</ul>
     </InfoRow>
+    <InfoRow label={t('examples', locale)} show={page.examples?.length > 0}>
+      <ul class="examples">
+        {page.examples?.map((x: any) => (
+          <li>
+            {x.url ? <a href={x.url} target="_blank" rel="noopener">{x.title}</a> : <span>{x.title}</span>}
+            <span class="muted"> - {x.tool}{!x.url && ` (${t('linkPending', locale)})`}</span>
+          </li>
+        ))}
+      </ul>
+    </InfoRow>
     <InfoRow label={t('workDocuments', locale)} show={page.documents?.length > 0}>
       <DocumentList docs={page.documents ?? []} locale={locale} />
     </InfoRow>
@@ -46,7 +56,9 @@ const isFallback = !(await getPage('practice', locale));
 <style>
   .intro { margin-top: var(--space-5); }
   .rows { margin-top: var(--space-6); display: grid; gap: var(--space-5); }
-  .tools { list-style: none; }
+  .tools, .examples { list-style: none; }
+  .examples li + li { margin-top: var(--space-1); }
+  .examples a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; }
 
   /* ---- process flow ---- */
   .process__label { font-size: var(--fs-body); margin-bottom: var(--space-4); }

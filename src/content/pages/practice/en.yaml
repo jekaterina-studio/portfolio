@@ -28,3 +28,17 @@ tools:
 - label: Analysis and marketing
   items: Metricool, Brevo, Meta Business Suite.
 documents: []
+# Examples of working documents (owner request). Add `url:` with the share link (Excel/Notion) to make each title clickable.
+examples:
+- title: Editorial plan
+  tool: Excel
+  url: null
+- title: Project timeline
+  tool: Notion
+  url: null
+- title: Onda Studio contact database
+  tool: Excel
+  url: null
+- title: Outreach campaign
+  tool: Notion
+  url: null

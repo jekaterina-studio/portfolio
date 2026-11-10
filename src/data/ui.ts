@@ -49,6 +49,8 @@ const strings = {
   process: { it: 'processo', en: 'process' },
   tools: { it: 'strumenti e software', en: 'tools and software' },
   workDocuments: { it: 'documenti di lavoro', en: 'working documents' },
+  examples: { it: 'esempi', en: 'examples' }, // owner request
+  linkPending: { it: 'link in arrivo', en: 'link coming soon' },
   biography: { it: 'biografia', en: 'biography' },
 } as const;
 
