@@ -1,14 +1,24 @@
 ---
-/** Two-column row: label | content. Renders nothing when `show` is false (no empty fields). */
+/** Two-column row: label | content. Renders nothing when `show` is false (no empty fields).
+ *  Optional "sublabel" slot: a subtitle under the label, in the left column. */
 interface Props { label: string; show?: boolean }
 const { label, show = true } = Astro.props;
+const hasSub = Astro.slots.has('sublabel');
 ---
 {show && (
   <section class="info-row">
-    <h2 class="info-row__label">{label}</h2>
+    {hasSub ? (
+      <div class="info-row__head">
+        <h2 class="info-row__label">{label}</h2>
+        <div class="info-row__sublabel"><slot name="sublabel" /></div>
+      </div>
+    ) : (
+      <h2 class="info-row__label">{label}</h2>
+    )}
     <div class="info-row__content"><slot /></div>
   </section>
 )}
 <style>
   .info-row__label { font-size: var(--fs-body); }
+  .info-row__sublabel { margin-top: var(--space-1); }
 </style>

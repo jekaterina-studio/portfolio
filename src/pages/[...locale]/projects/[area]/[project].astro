@@ -144,6 +144,11 @@ const projectHref = (slug: string) => {
           </InfoRow>
           {text.sections.map((s) => (
             <InfoRow label={s.label}>
+              {s.subtitle && (
+                <p slot="sublabel" class="section-subtitle">{s.subtitle.url
+                  ? <a class="item-link" href={s.subtitle.url} target="_blank" rel="noopener">{s.subtitle.title}</a>
+                  : <span class="item-link">{s.subtitle.title}</span>}</p>
+              )}
               {s.text && <Prose text={s.text} />}
               {s.gallery && galleryImages.length > 0 && (
                 <div class="section-gallery"><Gallery images={galleryImages} format={galleryFormat} locale={locale} /></div>

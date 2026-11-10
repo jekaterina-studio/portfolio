@@ -117,6 +117,8 @@ const projectTexts = defineCollection({
           text: z.string().optional(),
           /** true: show the project's image gallery inside this section */
           gallery: z.boolean().optional(),
+          /** subtitle under the section label (left column), bold red; url optional */
+          subtitle: z.object({ title: z.string(), url: z.string().url().optional() }).optional(),
           items: z
             .array(z.object({ title: z.string(), url: z.string().url().optional(), project: z.string().optional(), highlight: z.boolean().optional() }))
             .optional(),
