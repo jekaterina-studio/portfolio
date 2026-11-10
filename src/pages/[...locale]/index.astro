@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import Placeholder from '../../components/dev/Placeholder.astro';
 import { site } from '../../data/site';
 import { nav } from '../../data/ui';
 import { getPage } from '../../lib/content';
@@ -10,51 +9,59 @@ import { localeParams, localizedPath, toLocale } from '../../lib/i18n';
 export const getStaticPaths = localeParams;
 const locale = toLocale(Astro.params.locale);
 const allWorks = nav.find((n) => n.key === 'all-works')!;
-const page = (await getPage<{ role: string; fields: string; statement: string; portrait?: string; portraitAlt?: string }>('home', locale))!;
-// Portrait lives in src/assets/images/site/ (no red overlay: not project documentation).
+const page = (await getPage<{ role: string; fields: string; statement: string; tiles?: { image: string; alt: string }[] }>('home', locale))!;
+// Tiles live in src/assets/images/site/ (no red overlay: not project documentation).
 const siteImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/images/site/*.{jpg,jpeg}', { eager: true });
-const portrait = page.portrait ? siteImages[`../../assets/images/site/${page.portrait}`]?.default : undefined;
+const tiles = (page.tiles ?? [])
+  .map((t) => ({ ...t, src: siteImages[`../../assets/images/site/${t.image}`]?.default }))
+  .filter((t) => t.src);
 ---
 <BaseLayout locale={locale} section="home" mainClass="home">
-  <div class="home__text">
+  <div class="home__intro">
     <h1 class="home__name">{site.name.toLowerCase()}</h1>
     <p class="home__role">{page.role}</p>
     <p class="home__fields muted">{page.fields}</p>
+  </div>
+  <div class="home__tiles">
+    {tiles.map((t) => (
+      <Image src={t.src!} alt={t.alt} widths={[200, 373].filter((w) => w <= t.src!.width)} sizes="11rem" loading="eager" class="home__tile" />
+    ))}
+  </div>
+  <div class="home__outro">
     <p class="home__statement">{page.statement}</p>
     <p class="home__link"><a href={localizedPath(locale, ...allWorks.segments)}>{allWorks.label[locale]}</a></p>
-  </div>
-  <div class="home__portrait">
-    {portrait ? (
-      <Image src={portrait} alt={page.portraitAlt ?? ''} widths={[400, 800, 1200].filter((w) => w <= portrait.width)} sizes="(max-width: 768px) 100vw, 40vw" loading="eager" class="home__img" />
-    ) : (
-      <Placeholder label="ritratto personale - JPEG da fornire" />
-    )}
   </div>
 </BaseLayout>
 
 <style>
-  /* One screen on desktop: the space between the fixed header and footer. */
+  /* One screen on desktop: the space between the fixed header and footer.
+     Left half: name at the top, two small square tiles in the middle, statement at the bottom. */
   :global(main.home) {
     height: 100dvh;
     min-height: 0;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: var(--space-5);
+    grid-template-rows: auto 1fr auto;
   }
-  .home__text { display: flex; flex-direction: column; }
+  .home__intro, .home__tiles, .home__outro { grid-column: 1; }
   .home__name { font-size: var(--fs-h1); }
   .home__role { margin-top: var(--space-1); }
   .home__fields { margin-top: var(--space-1); font-size: var(--fs-small); }
-  .home__statement { margin-top: auto; max-width: 28rem; font-weight: 700; }
+  .home__statement { max-width: 28rem; font-weight: 700; }
   .home__link { margin-top: var(--space-4); }
-  .home__portrait { min-height: 0; max-width: 32rem; justify-self: end; width: 100%; display: flex; justify-content: flex-end; align-items: flex-start; }
-  /* the portrait keeps its own proportions and fits the available height */
-  .home__portrait :global(.home__img) { width: auto; max-width: 100%; max-height: 100%; object-fit: contain; }
+
+  .home__tiles {
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    gap: var(--space-2);
+    padding: var(--space-4) 0;
+  }
+  .home__tiles :global(.home__tile) { width: 11rem; height: 11rem; object-fit: cover; }
 
   @media (max-width: 47.99rem), (max-height: 31.25rem) {
-    :global(main.home) { height: auto; grid-template-columns: 1fr; }
-    .home__statement { margin-top: var(--space-5); }
-    .home__portrait { justify-self: start; justify-content: flex-start; }
-    .home__portrait :global(.home__img) { width: 100%; max-height: none; }
+    :global(main.home) { height: auto; display: block; }
+    .home__tiles { padding: var(--space-5) 0; }
+    .home__tiles :global(.home__tile) { width: calc((100% - var(--space-2)) / 2); height: auto; max-width: 11rem; aspect-ratio: 1 / 1; }
   }
 </style>

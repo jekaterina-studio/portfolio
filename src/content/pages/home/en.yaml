@@ -1,5 +1,9 @@
 role: project and communication coordinator
 fields: Communication · Project Development · Cultural and Creative Projects · Events and Brand Activations
 statement: I'm interested in understanding how ideas work, what it takes to develop them and how to turn them from theory into practice.
-portrait: portrait-jekaterina-kanevskaja.jpg   # file in src/assets/images/site/
-portraitAlt: Black and white portrait of Jekaterina Kanevskaja
+# Two small square tiles on the home page (files in src/assets/images/site/)
+tiles:
+- image: home-portrait-jekaterina-kanevskaja.jpg
+  alt: Black and white portrait of Jekaterina Kanevskaja
+- image: home-graphic-red-flower.jpg
+  alt: Plant leaf in red and light blue
