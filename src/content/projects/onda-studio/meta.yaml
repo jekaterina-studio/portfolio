@@ -7,5 +7,8 @@ period:
   it: novembre 2024 - aprile 2026
   en: November 2024 - April 2026
 company: Onda Studio
+# also listed in comunicazione (one canonical page here)
+alsoIn:
+- communication-and-editorial
 media: []
 documents: []
