@@ -5,7 +5,7 @@ order: 1
 sort: null
 period: null
 media:
-- layout: slideshow
+- layout: series
   format: vertical
   images:
   - file: ../../../assets/images/projects/floral-design/floral-design-01.jpg
@@ -28,4 +28,16 @@ media:
     alt:
       it: Composizione su base in legno con struttura vegetale rivestita e fiori arancioni
       en: Arrangement on a wooden base with a wrapped plant structure and orange flowers
+  - file: ../../../assets/images/projects/floral-design/floral-design-06.jpg
+    alt:
+      it: Struttura di cubi in metallo nero con graminacee e calle rosa e gialle
+      en: Black metal cube structure with grasses and pink and yellow calla lilies
+  - file: ../../../assets/images/projects/floral-design/floral-design-07.jpg
+    alt:
+      it: Anthurium rosa tra rami e graminacee in un contenitore nero, alla luce del tramonto
+      en: Pink anthuriums among twigs and grasses in a black container, in sunset light
+  - file: ../../../assets/images/projects/floral-design/floral-design-08.jpg
+    alt:
+      it: Borsa botanica di foglie intrecciate con perle, anthurium e manico rivestito, tenuta in mano
+      en: Botanical bag of woven leaves with pearls, anthuriums and a wrapped handle, held in a hand
 documents: []

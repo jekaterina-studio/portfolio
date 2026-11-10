@@ -10,6 +10,6 @@ sections:
 - label: vegetherial
   gallery: true
   text: 'My experimentation and curiosity are archived on an Instagram page where three core concepts behind this practice meet: vegetal, ethereal, material. **Vegetherial.**'
-  # subtitle under the label; url to come: add   url: https://www.instagram.com/...
   subtitle:
     title: instagram vegetherial
+    url: https://www.instagram.com/vegetherial/
