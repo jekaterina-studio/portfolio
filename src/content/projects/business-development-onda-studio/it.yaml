@@ -1,0 +1,25 @@
+# Case page (approved Onda Studio texts, business development part). Empty fields are hidden.
+# sector: Settore
+# keywords:
+# - mansione
+title: Business development per Onda Studio
+description: Ho collaborato alle attività di sviluppo progettuale e commerciale, alla ricerca di opportunità internazionali e alla preparazione di proposte e materiali di presentazione.
+activities:
+- ricerca e sviluppo di opportunità internazionali
+- sviluppo, scrittura e coordinamento di candidature progettuali
+- preparazione di proposte e materiali di presentazione
+- sviluppo commerciale e ricerca di partnership
+- sviluppo di relazioni con potenziali partner e committenti
+role: Communication, Partnerships and Business Development Coordinator
+sections:
+- label: progetti
+  items:
+  - title: FACES - Évora 2027
+    project: faces-evora-2027
+  - title: Varese in Luce
+    project: varese-in-luce
+  - title: Candidature internazionali
+    project: candidature-internazionali
+  - title: Sviluppo partnership
+    project: sviluppo-partnership
+links: []

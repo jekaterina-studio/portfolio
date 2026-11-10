@@ -39,6 +39,8 @@ const projects = defineCollection({
       sort: z.union([z.literal('present'), z.string().regex(/^\d{4}(-\d{2})?$/)]).nullable(),
       /** slug of the professional experience page this project belongs to (e.g. onda-studio) */
       parent: z.string().optional(),
+      /** true: page exists (linked from its parent and All Works) but is not listed in its area */
+      hidden: z.boolean().default(false),
       /** also list this project in other area indexes (it keeps one canonical page) */
       alsoIn: z.array(z.enum(areaSlugs)).default([]),
       /** place shown under the title, e.g. "GPone Milano, Darsena, Milano" */

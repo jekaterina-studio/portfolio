@@ -27,7 +27,7 @@ export async function getProjects(locale: Locale): Promise<Project[]> {
 
 /** Projects whose canonical page is in this area (used for previous / next). */
 export function projectsInArea(projects: Project[], area: string): Project[] {
-  return projects.filter((p) => p.meta.area === area).sort((a, b) => a.meta.order - b.meta.order);
+  return projects.filter((p) => p.meta.area === area && !p.meta.hidden).sort((a, b) => a.meta.order - b.meta.order);
 }
 
 /** Area index: canonical projects first, then projects also listed here (alsoIn). */
@@ -63,7 +63,7 @@ export async function getPage<T = Record<string, any>>(page: string, locale: Loc
 }
 
 /** Areas shown as a case list (name, sector, service) with the case page structure. */
-export const caseAreas: string[] = ['events-and-brand-activations', 'communication-and-editorial'];
+export const caseAreas: string[] = ['events-and-brand-activations', 'communication-and-editorial', 'cultural-and-creative-projects'];
 
 /** Text still to be supplied by the owner. */
 export const isPlaceholder = (s?: string | null) => !s || /^\[DA FORNIRE/.test(s);

@@ -22,7 +22,7 @@ export async function getStaticPaths() {
       const i = siblings.findIndex((s) => s.slug === p.slug);
       paths.push({
         params: { locale: locale === defaultLocale ? undefined : locale, area: p.meta.area, project: p.slug },
-        props: { project: p, area: areas.find((a) => a.id === p.meta.area)!, prev: siblings[i - 1], next: siblings[i + 1] },
+        props: { project: p, area: areas.find((a) => a.id === p.meta.area)!, prev: i >= 0 ? siblings[i - 1] : undefined, next: i >= 0 ? siblings[i + 1] : undefined },
       });
     }
   }
