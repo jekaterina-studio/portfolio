@@ -20,6 +20,16 @@ steps:
   text: seguire l'esecuzione, coinvolgere persone e gestire attività.
 - title: verificare
   text: analizzare risultati e feedback, definire i prossimi passaggi.
+researchTitle: strumenti di ricerca
+research:
+- title: esplorazione visiva
+  items: Pinterest · Are.na
+- title: ricerca documentale
+  items: Web · Google Scholar · Europeana · ChatGPT · Claude
+- title: ricerca assistita dall'intelligenza artificiale
+  items: ChatGPT · Perplexity · Gemini · Claude
+- title: organizzazione della conoscenza
+  items: Notion · Zotero · Notebook cartaceo · Black notebook cartaceo
 tools:
 - label: Organizzazione
   items: Notion, Google Workspace, Microsoft Office, Excel.

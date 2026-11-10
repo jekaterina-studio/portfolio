@@ -20,6 +20,16 @@ steps:
   text: oversee execution, involve people and manage activities.
 - title: review
   text: evaluate results and feedback, and identify next steps.
+researchTitle: research tools
+research:
+- title: visual exploration
+  items: Pinterest · Are.na
+- title: documentary research
+  items: Web · Google Scholar · Europeana · ChatGPT · Claude
+- title: AI-assisted research
+  items: ChatGPT · Perplexity · Gemini · Claude
+- title: knowledge organisation
+  items: Notion · Zotero · Paper notebook · Black paper notebook
 tools:
 - label: Organisation
   items: Notion, Google Workspace, Microsoft Office, Excel.

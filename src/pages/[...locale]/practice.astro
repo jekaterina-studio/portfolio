@@ -34,6 +34,17 @@ const isFallback = !(await getPage('practice', locale));
       </ol>
       <div class="flow__loop" aria-hidden="true"></div>
     </section>
+    <!-- Research tools (owner request), numbered groups -->
+    <InfoRow label={page.researchTitle ?? ''} show={page.research?.length > 0}>
+      <ol class="research">
+        {page.research?.map((r: any, i: number) => (
+          <li>
+            <h3 class="research__title"><span class="research__num">{String(i + 1).padStart(2, '0')}.</span> {r.title}</h3>
+            <p>{r.items}</p>
+          </li>
+        ))}
+      </ol>
+    </InfoRow>
     <InfoRow label={t('tools', locale)} show={page.tools?.length > 0}>
       <ul class="tools">{page.tools.map((x: any) => <li><strong>{x.label}:</strong> {x.items}</li>)}</ul>
     </InfoRow>
@@ -57,6 +68,9 @@ const isFallback = !(await getPage('practice', locale));
   .intro { margin-top: var(--space-5); }
   .rows { margin-top: var(--space-6); display: grid; gap: var(--space-5); }
   .tools, .examples { list-style: none; }
+  .research { list-style: none; display: grid; gap: var(--space-3); }
+  .research__title { font-size: var(--fs-body); font-weight: 700; text-transform: none; }
+  .research__num { color: var(--color-accent); font-variant-numeric: tabular-nums; }
   .examples li + li { margin-top: var(--space-1); }
   .examples a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; }
 
