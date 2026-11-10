@@ -74,5 +74,11 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
   .ref-image :global(img) { width: 100%; height: 100%; object-fit: cover; }
   .references p { margin-top: var(--space-2); }
   :global(.profile-cv) { margin-top: var(--space-6); }
+  /* CV links on the profile page: red and underlined (owner request) */
+  :global(.profile-cv) :global(a), :global(.profile-cv) :global(span) {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
   @media (max-width: 47.99rem) { .references { grid-template-columns: 1fr; max-width: 24rem; } }
 </style>
