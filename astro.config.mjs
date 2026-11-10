@@ -8,6 +8,6 @@ export default defineConfig({
   // Replace with the free subdomain once hosting is set up (e.g. https://<name>.pages.dev).
   site: 'https://example.invalid',
   trailingSlash: 'always',
-  build: { format: 'directory' },
+  build: { format: 'directory', assets: 'assets' },
   devToolbar: { enabled: false },
 });
