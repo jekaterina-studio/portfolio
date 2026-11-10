@@ -3,7 +3,6 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import InfoRow from '../../components/InfoRow.astro';
 import Prose from '../../components/Prose.astro';
-import CvLinks from '../../components/CvLinks.astro';
 import Placeholder from '../../components/dev/Placeholder.astro';
 import { nav, t } from '../../data/ui';
 import { getPage } from '../../lib/content';
@@ -53,7 +52,6 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
     })}
   </ul>
 
-  <CvLinks locale={locale} class="profile-cv" />
 </BaseLayout>
 
 <style>
@@ -74,12 +72,5 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
   .ref-image :global(img) { width: 100%; height: 100%; object-fit: cover; }
   /* reference phrases: uppercase, bold, red (owner request) */
   .references p { margin-top: var(--space-2); text-transform: uppercase; font-weight: 700; color: var(--color-accent); }
-  :global(.profile-cv) { margin-top: var(--space-6); }
-  /* CV links on the profile page: red and underlined (owner request) */
-  :global(.profile-cv) :global(a), :global(.profile-cv) :global(span) {
-    color: var(--color-accent);
-    text-decoration: underline;
-    text-underline-offset: 0.2em;
-  }
   @media (max-width: 47.99rem) { .references { grid-template-columns: 1fr; max-width: 24rem; } }
 </style>

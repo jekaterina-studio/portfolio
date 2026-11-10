@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import { site } from '../../data/site';
-import { nav } from '../../data/ui';
+import { nav, t } from '../../data/ui';
 import { getPage } from '../../lib/content';
 import { localeParams, localizedPath, toLocale } from '../../lib/i18n';
 
@@ -31,6 +31,16 @@ const tiles = (page.tiles ?? [])
     <p class="home__statement">{page.statement}</p>
     <p class="home__link"><a href={localizedPath(locale, ...allWorks.segments)}>{allWorks.label[locale]}</a></p>
   </div>
+  <p class="home__cv">
+    {t('cvDownload', locale)}{' '}
+    {[['IT', site.cv.it, 'it'], ['EN', site.cv.en, 'en']].map(([label, href, lang], i) => (
+      <>
+        {i > 0 && <span aria-hidden="true"> / </span>}
+        {href ? <a href={href} download hreflang={lang}>{label}</a> : <span class="muted" title={t('cvPending', locale)}>{label}</span>}
+      </>
+    ))}
+    {!site.cv.it && !site.cv.en && <span class="muted"> ({t('cvPending', locale)})</span>}
+  </p>
 </BaseLayout>
 
 <style>
@@ -51,6 +61,9 @@ const tiles = (page.tiles ?? [])
   .home__fields { margin-top: var(--space-1); font-size: var(--fs-small); }
   .home__statement { max-width: 28rem; font-weight: 700; }
   .home__link { margin-top: var(--space-4); }
+  /* "scarica i CV" bottom right (owner request) */
+  .home__cv { grid-column: 2; grid-row: 3; align-self: end; justify-self: end; text-align: right; }
+  .home__cv a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; }
 
   .home__tiles {
     align-self: center;
@@ -66,6 +79,7 @@ const tiles = (page.tiles ?? [])
   @media (max-width: 47.99rem), (max-height: 31.25rem) {
     :global(main.home) { height: auto; display: block; }
     .home__tiles { padding: var(--space-5) 0; justify-content: flex-end; }
+    .home__cv { margin-top: var(--space-5); text-align: right; }
     .home__tiles :global(.home__tile) { width: calc((100% - var(--space-2)) / 2); height: auto; max-width: 8rem; aspect-ratio: 1 / 1; }
   }
 </style>
