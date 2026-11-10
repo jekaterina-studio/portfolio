@@ -51,6 +51,9 @@ const strings = {
   tools: { it: 'strumenti e software', en: 'tools and software' },
   workDocuments: { it: 'documenti di lavoro', en: 'working documents' },
   examples: { it: 'esempi', en: 'examples' }, // owner request
+  colName: { it: 'nome', en: 'name' },
+  colClient: { it: 'cliente', en: 'client' },
+  colCategory: { it: 'categoria', en: 'category' },
   linkPending: { it: 'link in arrivo', en: 'link coming soon' },
   biography: { it: 'biografia', en: 'biography' },
 } as const;

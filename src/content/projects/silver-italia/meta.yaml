@@ -6,6 +6,6 @@ sort: 2026-09
 period:
   it: ottobre 2025 - settembre 2026
   en: October 2025 - September 2026
-company: Silver Italia e Silver Snc
+company: { it: Silver Italia e Silver Snc, en: Silver Italia and Silver Snc }
 media: []
 documents: []

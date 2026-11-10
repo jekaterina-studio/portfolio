@@ -4,7 +4,7 @@ import type { Locale } from './i18n';
 export type Area = CollectionEntry<'areas'>;
 export type ProjectMeta = CollectionEntry<'projects'>;
 export type ProjectText = CollectionEntry<'projectTexts'>['data'];
-export interface Project { slug: string; meta: ProjectMeta['data']; text: ProjectText }
+export interface Project { slug: string; meta: Omit<ProjectMeta['data'], 'company'> & { company?: string }; text: ProjectText }
 
 export async function getAreas(): Promise<Area[]> {
   return (await getCollection('areas')).sort((a, b) => a.data.number - b.data.number);
@@ -17,7 +17,12 @@ export async function getProjects(locale: Locale): Promise<Project[]> {
   const byId = new Map(texts.map((t) => [t.id, t.data]));
   return metas
     .filter((m) => byId.has(`${m.id}/${locale}`))
-    .map((m) => ({ slug: m.id, meta: m.data, text: byId.get(`${m.id}/${locale}`)! }));
+    .map((m) => {
+      // company can be one name, or { it, en } when it differs by language
+      const c = m.data.company;
+      const company = typeof c === 'object' ? (c[locale] ?? c.it) : c;
+      return { slug: m.id, meta: { ...m.data, company }, text: byId.get(`${m.id}/${locale}`)! };
+    });
 }
 
 /** Projects whose canonical page is in this area (used for previous / next). */

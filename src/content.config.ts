@@ -46,7 +46,7 @@ const projects = defineCollection({
       /** period as displayed next to the title */
       period: z.object({ it: z.string(), en: z.string().optional() }).nullable(),
       /** company or organisation, where applicable */
-      company: z.string().optional(),
+      company: z.union([z.string(), z.object({ it: z.string(), en: z.string().optional() })]).optional(),
       /** groups projects belonging to the same professional experience (e.g. 'onda-studio') */
       experience: z.string().optional(),
       media: z

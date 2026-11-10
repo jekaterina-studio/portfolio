@@ -1,20 +1,62 @@
 ---
+/* All Works: a compact list only (owner request) - name, client, category.
+   Chronological order, newest first. Every name links to its project page. */
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ProjectIndex from '../../components/ProjectIndex.astro';
-import { nav } from '../../data/ui';
-import { chronological, getAreas, getPage, getProjects } from '../../lib/content';
-import { localeParams, toLocale } from '../../lib/i18n';
+import { nav, t } from '../../data/ui';
+import { chronological, getAreas, getProjects } from '../../lib/content';
+import { localeParams, localizedPath, toLocale } from '../../lib/i18n';
 
 export const getStaticPaths = localeParams;
 const locale = toLocale(Astro.params.locale);
 const label = nav.find((n) => n.key === 'all-works')!.label[locale];
 const areaTitles = Object.fromEntries((await getAreas()).map((a) => [a.id, a.data.title[locale] ?? a.data.title.it]));
 const projects = chronological(await getProjects(locale));
-const page = await getPage<{ intro?: string }>('all-works', locale);
 ---
 <BaseLayout locale={locale} section="all-works" title={label}>
-  <h1>{label}</h1>
-  {page?.intro && <p class="measure intro">{page.intro}</p>}
-  <div class="index"><ProjectIndex projects={projects} locale={locale} areaTitles={areaTitles} /></div>
+  <h1 class="visually-hidden">{label}</h1>
+  <table class="works">
+    <thead>
+      <tr>
+        <th scope="col">{t('colName', locale)}</th>
+        <th scope="col">{t('colClient', locale)}</th>
+        <th scope="col">{t('colCategory', locale)}</th>
+      </tr>
+    </thead>
+    <tbody>
+      {projects.map((p) => (
+        <tr>
+          <td class="works__name"><a href={localizedPath(locale, 'projects', p.meta.area, p.slug)}>{p.text.title}</a></td>
+          <td class="works__client">{p.meta.company}</td>
+          <td class="works__cat">{areaTitles[p.meta.area]}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
 </BaseLayout>
-<style>.index { margin-top: var(--space-5); } .intro { margin-top: var(--space-3); }</style>
+
+<style>
+  .works { width: 100%; border-collapse: collapse; line-height: 1.3; }
+  .works th {
+    text-align: left; font-weight: 700; text-transform: uppercase;
+    color: var(--color-accent); font-size: var(--fs-small); letter-spacing: 0.04em;
+    padding: 0 var(--space-4) var(--space-3) 0;
+  }
+  .works td { padding: 0.15rem var(--space-4) 0.15rem 0; vertical-align: top; }
+  .works th:first-child, .works td:first-child { width: 45%; }
+  .works__name a { font-weight: 700; text-transform: lowercase; }
+  .works__client, .works__cat { color: var(--color-muted); }
+  .works__cat { text-transform: lowercase; }
+  .works tr:hover .works__name a { color: var(--color-accent); }
+
+  /* Mobile: each project on two short lines (name, then client - category); headers on one line */
+  @media (max-width: 47.99rem) {
+    .works, .works thead, .works tbody, .works tr, .works td, .works th { display: block; width: auto !important; }
+    .works thead tr { display: flex; flex-wrap: wrap; gap: 0 var(--space-3); padding-bottom: var(--space-2); }
+    .works th { padding: 0; }
+    .works tbody tr { padding: 0.2rem 0; line-height: 1.25; }
+    .works td { padding: 0; display: inline; }
+    .works__name { display: block !important; }
+    .works__client:not(:empty)::after { content: ' - '; }
+    .works__client, .works__cat { font-size: var(--fs-small); }
+  }
+</style>
