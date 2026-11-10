@@ -2,6 +2,7 @@
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
 import ProjectIndex from '../../../../components/ProjectIndex.astro';
+import CaseCard from '../../../../components/CaseCard.astro';
 import { nav } from '../../../../data/ui';
 import { getAreas, getProjects, listedInArea } from '../../../../lib/content';
 import { localeParams, localizedPath, toLocale } from '../../../../lib/i18n';
@@ -16,15 +17,36 @@ const projectsLabel = nav.find((n) => n.key === 'projects')!.label[locale];
 const title = area.data.title[locale] ?? area.data.title.it;
 const projects = listedInArea(await getProjects(locale), area.id);
 const intro = area.data.intro?.[locale];
+// Brand activations: visual cards (title only). Independent practice: list without periods (owner requests).
+const asCards = area.id === 'events-and-brand-activations';
+const hidePeriod = area.id === 'independent-practice';
 ---
 <BaseLayout locale={locale} section="projects" title={title}>
   <Breadcrumb locale={locale} items={[{ label: projectsLabel, href: localizedPath(locale, 'projects') }, { label: title }]} />
   <h1 class="title">{title}</h1>
   {intro && <p class="measure intro">{intro}</p>}
-  <div class="index"><ProjectIndex projects={projects} locale={locale} /></div>
+  {asCards ? (
+    <ul class="cards">
+      {projects.map((p) => (
+        <li>
+          <CaseCard
+            href={localizedPath(locale, 'projects', p.meta.area, p.slug)}
+            title={p.text.title}
+            locale={locale}
+            cover={p.meta.cover && { file: p.meta.cover.file, alt: p.meta.cover.alt[locale] ?? p.meta.cover.alt.it }}
+          />
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <div class="index"><ProjectIndex projects={projects} locale={locale} hidePeriod={hidePeriod} /></div>
+  )}
 </BaseLayout>
 <style>
   .title { margin-top: var(--space-2); }
   .intro { margin-top: var(--space-3); }
   .index { margin-top: var(--space-5); }
+  .cards { list-style: none; margin-top: var(--space-5); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-5) var(--space-4); }
+  @media (max-width: 63.99rem) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 35.99rem) { .cards { grid-template-columns: 1fr; max-width: 24rem; } }
 </style>

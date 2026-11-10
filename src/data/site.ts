@@ -7,6 +7,11 @@
  */
 export const site = {
   name: 'Jekaterina Kanevskaja',
+  /**
+   * true while content is being prepared: empty gallery / links sections show a visible
+   * placeholder so the structure can be reviewed. Set to false before launch: empty sections are then hidden.
+   */
+  showPlaceholders: true,
   contact: {
     email: 'digitalcuratorship@gmail.com',
     phoneDisplay: '+39 348 270 1207',

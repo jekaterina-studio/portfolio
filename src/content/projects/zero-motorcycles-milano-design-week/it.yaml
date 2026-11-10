@@ -1,0 +1,15 @@
+# Brand activation case page. Sections in this order: descrizione, attività svolte, ruolo, risultati, link utili, galleria.
+# Leave a field out (or empty) to hide its section. Text marked [DA FORNIRE] is a placeholder.
+# links: - label: Nome del link
+#          url: https://...
+title: GPone Milano per Zero Motorcycles, Milano Design Week MDW 2023
+description: Attivazione di brand durante la Milan Design Week 2024.
+activities:
+- comunicazione digitale e promozione
+- contenuti social e campagne pubblicitarie
+- accoglienza di ospiti e media
+- coordinamento e supporto ai test ride
+- raccolta dei feedback
+- documentazione dell'evento
+role: '[DA FORNIRE: ruolo ricoperto nel progetto]'
+links: []

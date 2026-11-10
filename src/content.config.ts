@@ -43,6 +43,8 @@ const projects = defineCollection({
       alsoIn: z.array(z.enum(areaSlugs)).default([]),
       /** place shown under the title, e.g. "GPone Milano, Darsena, Milano" */
       place: z.string().optional(),
+      /** cover image for the card on the category page (brand activations) */
+      cover: z.object({ file: image(), alt: z.object({ it: z.string(), en: z.string().optional() }) }).optional(),
       /** period as displayed next to the title */
       period: z.object({ it: z.string(), en: z.string().optional() }).nullable(),
       /** company or organisation, where applicable */
@@ -98,6 +100,8 @@ const projectTexts = defineCollection({
         z.object({ intro: z.string().optional(), items: z.array(z.string()), note: z.string().optional() }),
       ])
       .optional(),
+    /** useful external links (sites, articles, official pages) */
+    links: z.array(z.object({ label: z.string(), url: z.string().url() })).default([]),
     /** extra two-column rows, e.g. "vegheterial" or the cantautorato songs */
     sections: z
       .array(

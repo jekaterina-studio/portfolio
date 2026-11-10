@@ -1,5 +1,8 @@
-# Approved Italian copy (portfolio_testi_italiano.pdf)
-title: Askoll XKP 80
+# Brand activation case page. Sections in this order: descrizione, attività svolte, ruolo, risultati, link utili, galleria.
+# Leave a field out (or empty) to hide its section. Text marked [DA FORNIRE] is a placeholder.
+# links: - label: Nome del link
+#          url: https://...
+title: Askoll XKP 80, lancio locale del prodotto
 description: Organizzazione dell'evento di lancio locale e dell'esperienza di test ride per Askoll XKP 80 presso il punto vendita ufficiale Askoll di Milano.
 activities:
 - contributo al concept e al format
@@ -10,8 +13,10 @@ activities:
 - coordinamento della documentazione foto e video
 - collaborazione con Askoll su conferenza stampa, campagna M4, lead generation, influencer e inviti a clienti selezionati
 - gestione budget, spese e report post-evento
+role: '[DA FORNIRE: ruolo ricoperto nel progetto]'
 results:
   items:
   - circa 80 partecipanti
   - 20 test ride
   - 1 veicolo venduto durante l'evento
+links: []

@@ -3,8 +3,8 @@
 import type { Project } from '../lib/content';
 import { t } from '../data/ui';
 import { localizedPath, type Locale } from '../lib/i18n';
-interface Props { projects: Project[]; locale: Locale; areaTitles?: Record<string, string> }
-const { projects, locale, areaTitles } = Astro.props;
+interface Props { projects: Project[]; locale: Locale; areaTitles?: Record<string, string>; hidePeriod?: boolean }
+const { projects, locale, areaTitles, hidePeriod = false } = Astro.props;
 ---
 {projects.length === 0 ? (
   <p class="muted">{t('noProjects', locale)}</p>
@@ -14,7 +14,7 @@ const { projects, locale, areaTitles } = Astro.props;
       <li>
         <a href={localizedPath(locale, 'projects', p.meta.area, p.slug)}>
           <span class="pi-title">{p.text.title}</span>
-          <span class="pi-period">{p.meta.period ? (p.meta.period[locale] ?? p.meta.period.it) : <span class="pi-tbc">{t('periodTbc', locale)}</span>}</span>
+          {!hidePeriod && <span class="pi-period">{p.meta.period ? (p.meta.period[locale] ?? p.meta.period.it) : <span class="pi-tbc">{t('periodTbc', locale)}</span>}</span>}
           <span class="pi-company">{p.meta.company}</span>
           {areaTitles && <span class="pi-area">{areaTitles[p.meta.area]}</span>}
           {!areaTitles && <span class="pi-category">{p.text.category}</span>}

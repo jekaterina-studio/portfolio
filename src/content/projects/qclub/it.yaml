@@ -1,6 +1,8 @@
-# Approved Italian copy (portfolio_testi_italiano.pdf)
-title: QClub live events
-role: Live Lighting Operator and Venue Operations Support
+# Brand activation case page. Sections in this order: descrizione, attività svolte, ruolo, risultati, link utili, galleria.
+# Leave a field out (or empty) to hide its section. Text marked [DA FORNIRE] is a placeholder.
+# links: - label: Nome del link
+#          url: https://...
+title: Live Events at Q Club
 description: Lavoro nella gestione delle luci durante eventi e performance dal vivo, seguendo le schede tecniche e i cue degli artisti. Il ruolo comprende anche il coordinamento con organizzatori, art director e performer e un supporto occasionale alle attività operative della venue. Accanto alla gestione tecnica, collaboro allo scouting e all'inserimento di nuove risorse e, quando necessario, affianco il team nelle attività quotidiane del locale.
 activities:
 - gestione delle luci durante eventi e performance
@@ -9,3 +11,5 @@ activities:
 - supporto operativo alla venue
 - supporto occasionale a shooting, cassa e guardaroba
 - scouting e inserimento di nuove risorse
+role: Live Lighting Operator and Venue Operations Support
+links: []

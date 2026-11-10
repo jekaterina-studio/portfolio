@@ -52,6 +52,13 @@ const strings = {
   workDocuments: { it: 'documenti di lavoro', en: 'working documents' },
   examples: { it: 'esempi', en: 'examples' }, // owner request
   colName: { it: 'nome', en: 'name' },
+  // brand activation case pages
+  activitiesDone: { it: 'attività svolte', en: 'activities' },
+  usefulLinks: { it: 'link utili', en: 'useful links' },
+  gallery: { it: 'galleria fotografica', en: 'photo gallery' },
+  imagesToCome: { it: 'fotografie da inserire', en: 'photographs to be added' },
+  linksToCome: { it: 'link da inserire', en: 'links to be added' },
+  imageToCome: { it: 'immagine da inserire', en: 'image to be added' },
   colClient: { it: 'cliente', en: 'client' },
   colCategory: { it: 'categoria', en: 'category' },
   linkPending: { it: 'link in arrivo', en: 'link coming soon' },

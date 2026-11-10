@@ -1,0 +1,13 @@
+# Language-neutral data. Gallery photos: src/assets/images/projects/<slug>/ and list them under media (layout: slideshow).
+# cover: image for the card on the category page, e.g.
+# cover:
+#   file: ../../../assets/images/projects/<slug>/<slug>-cover.jpg
+#   alt: { it: ..., en: ... }
+area: events-and-brand-activations
+order: 3
+sort: 2026-04
+period: null
+company: Onda Studio
+parent: onda-studio
+media: []
+documents: []

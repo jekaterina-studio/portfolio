@@ -1,0 +1,14 @@
+# Language-neutral data. Gallery photos: src/assets/images/projects/<slug>/ and list them under media (layout: slideshow).
+# cover: image for the card on the category page, e.g.
+# cover:
+#   file: ../../../assets/images/projects/<slug>/<slug>-cover.jpg
+#   alt: { it: ..., en: ... }
+# NOTE: the case title says MDW 2023, the approved text says 2024 - owner to confirm the year.
+area: events-and-brand-activations
+order: 2
+sort: 2024-04
+period:
+  it: '2024'
+  en: '2024'
+media: []
+documents: []
