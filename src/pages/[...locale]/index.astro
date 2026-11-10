@@ -24,7 +24,7 @@ const tiles = (page.tiles ?? [])
   </div>
   <div class="home__tiles">
     {tiles.map((t) => (
-      <Image src={t.src!} alt={t.alt} widths={[200, 373].filter((w) => w <= t.src!.width)} sizes="11rem" loading="eager" class="home__tile" />
+      <Image src={t.src!} alt={t.alt} widths={[200, 373].filter((w) => w <= t.src!.width)} sizes="8rem" loading="eager" class="home__tile" />
     ))}
   </div>
   <div class="home__outro">
@@ -52,16 +52,16 @@ const tiles = (page.tiles ?? [])
 
   .home__tiles {
     align-self: center;
-    justify-self: center;
+    justify-self: start;
     display: flex;
     gap: var(--space-2);
     padding: var(--space-4) 0;
   }
-  .home__tiles :global(.home__tile) { width: 11rem; height: 11rem; object-fit: cover; }
+  .home__tiles :global(.home__tile) { width: 8rem; height: 8rem; object-fit: cover; }
 
   @media (max-width: 47.99rem), (max-height: 31.25rem) {
     :global(main.home) { height: auto; display: block; }
     .home__tiles { padding: var(--space-5) 0; }
-    .home__tiles :global(.home__tile) { width: calc((100% - var(--space-2)) / 2); height: auto; max-width: 11rem; aspect-ratio: 1 / 1; }
+    .home__tiles :global(.home__tile) { width: calc((100% - var(--space-2)) / 2); height: auto; max-width: 8rem; aspect-ratio: 1 / 1; }
   }
 </style>
