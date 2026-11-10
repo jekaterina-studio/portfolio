@@ -9,7 +9,7 @@ import type { SeriesImage } from './ImageSeries.astro';
 import { t } from '../data/ui';
 import type { Locale } from '../lib/i18n';
 
-interface Props { images: SeriesImage[]; format: 'square' | 'horizontal' | 'vertical'; locale: Locale }
+interface Props { images: SeriesImage[]; format: 'square' | 'horizontal' | 'vertical' | 'portrait'; locale: Locale }
 const { images, format, locale } = Astro.props;
 const sizes = format === 'horizontal' ? '(max-width: 768px) 100vw, 33vw' : '(max-width: 768px) 50vw, 25vw';
 ---
@@ -17,7 +17,7 @@ const sizes = format === 'horizontal' ? '(max-width: 768px) 100vw, 33vw' : '(max
   data-lightbox data-label-close={t('close', locale)} data-label-prev={t('previous', locale)} data-label-next={t('next', locale)}>
   {images.map((img, i) => (
     <li>
-      <DocImage src={img.src} alt={img.alt} caption={img.caption} format={format} locale={locale}
+      <DocImage src={img.src} alt={img.alt} caption={img.caption} format={img.format ?? format} locale={locale}
         sizes={sizes} loading={i < 4 ? 'eager' : 'lazy'} zoom />
     </li>
   ))}

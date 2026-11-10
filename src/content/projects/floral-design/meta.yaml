@@ -40,4 +40,23 @@ media:
     alt:
       it: Borsa botanica di foglie intrecciate con perle, anthurium e manico rivestito, tenuta in mano
       en: Botanical bag of woven leaves with pearls, anthuriums and a wrapped handle, held in a hand
+- layout: series
+  format: portrait
+  images:
+  - file: ../../../assets/images/projects/floral-design/floral-design-09.webp
+    alt:
+      it: Schiena di una modella con un pannello di rete dorata intrecciata e anthurium verdi
+      en: A model's back with a woven gold mesh panel and green anthuriums
+  - file: ../../../assets/images/projects/floral-design/floral-design-10.jpg
+    alt:
+      it: Pannello di foglie verdi sovrapposte come squame, su pavimento di marmo alla luce del sole
+      en: Panel of green leaves overlapping like scales, on a marble floor in sunlight
+  - file: ../../../assets/images/projects/floral-design/floral-design-11.jpg
+    alt:
+      it: Cascata di anelli dorati con orchidee bianche ed edera, appesa a un legno di mare tenuto in mano
+      en: Cascade of gold rings with white orchids and ivy, hanging from driftwood held in a hand
+  - file: ../../../assets/images/projects/floral-design/floral-design-12.jpg
+    alt:
+      it: Dettaglio della cascata di anelli dorati con orchidee bianche ed edera
+      en: Detail of the gold ring cascade with white orchids and ivy
 documents: []

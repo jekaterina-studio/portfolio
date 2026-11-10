@@ -9,11 +9,11 @@ import DocImage from './DocImage.astro';
 import Gallery from './Gallery.astro';
 import type { Locale } from '../lib/i18n';
 
-export interface SeriesImage { src: ImageMetadata; alt: string; caption?: string }
+export interface SeriesImage { src: ImageMetadata; alt: string; caption?: string; format?: 'square' | 'horizontal' | 'vertical' | 'portrait' }
 interface Props {
   images: SeriesImage[];
   layout: 'single' | 'series' | 'slideshow';
-  format: 'square' | 'horizontal' | 'vertical';
+  format: 'square' | 'horizontal' | 'vertical' | 'portrait';
   locale: Locale;
 }
 const { images, layout, format, locale } = Astro.props;

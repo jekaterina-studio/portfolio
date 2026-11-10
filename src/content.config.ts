@@ -57,7 +57,7 @@ const projects = defineCollection({
         .array(
           z.object({
             layout: z.enum(['single', 'series', 'slideshow']),
-            format: z.enum(['square', 'horizontal', 'vertical']),
+            format: z.enum(['square', 'horizontal', 'vertical', 'portrait']), // portrait = 4:5
             images: z.array(
               z.object({
                 file: image(),
