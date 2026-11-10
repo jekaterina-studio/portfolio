@@ -72,7 +72,8 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
   }
   .ref-image { aspect-ratio: 4 / 5; } /* owner request: 4:5 */
   .ref-image :global(img) { width: 100%; height: 100%; object-fit: cover; }
-  .references p { margin-top: var(--space-2); }
+  /* reference phrases: uppercase, bold, red (owner request) */
+  .references p { margin-top: var(--space-2); text-transform: uppercase; font-weight: 700; color: var(--color-accent); }
   :global(.profile-cv) { margin-top: var(--space-6); }
   /* CV links on the profile page: red and underlined (owner request) */
   :global(.profile-cv) :global(a), :global(.profile-cv) :global(span) {
