@@ -1,7 +1,7 @@
 # Language-neutral data. Images: src/assets/images/projects/<slug>/  PDFs: public/documents/projects/<slug>/
 # period: null = not supplied yet (shown as a placeholder).
 area: communication-and-editorial
-order: 4
+order: 6
 sort: '2024'
 period:
   it: '2024'

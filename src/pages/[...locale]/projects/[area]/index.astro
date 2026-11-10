@@ -3,7 +3,7 @@ import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
 import ProjectIndex from '../../../../components/ProjectIndex.astro';
 import { nav, t } from '../../../../data/ui';
-import { getAreas, getProjects, listedInArea } from '../../../../lib/content';
+import { caseAreas, getAreas, getProjects, listedInArea } from '../../../../lib/content';
 import { localeParams, localizedPath, toLocale } from '../../../../lib/i18n';
 
 export async function getStaticPaths() {
@@ -17,7 +17,7 @@ const title = area.data.title[locale] ?? area.data.title.it;
 const projects = listedInArea(await getProjects(locale), area.id);
 const intro = area.data.intro?.[locale];
 // Brand activations: list with name, sector, keywords. Independent practice: list without periods (owner requests).
-const asList = area.id === 'events-and-brand-activations';
+const asList = caseAreas.includes(area.id);
 const hidePeriod = area.id === 'independent-practice';
 // list display only: lowercase, no commas, no hyphens
 const listName = (title: string) => title.toLowerCase().replace(/[,\-]/g, ' ').replace(/\s+/g, ' ').trim();

@@ -62,5 +62,8 @@ export async function getPage<T = Record<string, any>>(page: string, locale: Loc
   return (await getCollection('pages')).find((e) => e.id === `${page}/${locale}`)?.data as T | undefined;
 }
 
+/** Areas shown as a case list (name, sector, service) with the case page structure. */
+export const caseAreas: string[] = ['events-and-brand-activations', 'communication-and-editorial'];
+
 /** Text still to be supplied by the owner. */
 export const isPlaceholder = (s?: string | null) => !s || /^\[DA FORNIRE/.test(s);

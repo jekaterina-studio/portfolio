@@ -9,7 +9,7 @@ import Slideshow from '../../../../components/Slideshow.astro';
 import { site } from '../../../../data/site';
 import ProjectPager from '../../../../components/ProjectPager.astro';
 import { nav, t } from '../../../../data/ui';
-import { getAreas, getProjects, hasProjectText, projectsInArea, type Project } from '../../../../lib/content';
+import { caseAreas, getAreas, getProjects, hasProjectText, projectsInArea, type Project } from '../../../../lib/content';
 import { locales, localizedPath, toLocale, defaultLocale, type Locale } from '../../../../lib/i18n';
 
 export async function getStaticPaths() {
@@ -45,7 +45,7 @@ const parent = meta.parent ? all.find((p) => p.slug === meta.parent) : undefined
 const results = typeof text.results === 'string' ? { items: [] as string[], text: text.results } : text.results;
 // Brand activation cases use their own section order (owner request):
 // descrizione, attività svolte, ruolo, risultati, link utili, galleria fotografica (slideshow).
-const isCase = meta.area === 'events-and-brand-activations';
+const isCase = caseAreas.includes(meta.area);
 const galleryImages = meta.media.flatMap((b) => b.images.map((im) => ({ src: im.file, alt: im.alt[locale] ?? im.alt.it })));
 const galleryFormat = meta.media[0]?.format ?? 'horizontal';
 const projectHref = (slug: string) => {
@@ -90,6 +90,17 @@ const projectHref = (slug: string) => {
               </>
             )}
           </InfoRow>
+          {text.sections.map((s) => (
+            <InfoRow label={s.label}>
+              {s.text && <Prose text={s.text} />}
+              {s.items && (
+                <ul class="items">{s.items.map((it) => {
+                  const href = it.project ? projectHref(it.project) : undefined;
+                  return <li>{href ? <a href={href}>{it.title}</a> : it.url ? <a href={it.url} target="_blank" rel="noopener">{it.title}</a> : it.title}</li>;
+                })}</ul>
+              )}
+            </InfoRow>
+          ))}
           <InfoRow label={t('usefulLinks', locale)} show={text.links.length > 0 || site.showPlaceholders}>
             {text.links.length > 0 ? (
               <ul class="items case-links">{text.links.map((l) => <li><a href={l.url} target="_blank" rel="noopener">{l.label}</a></li>)}</ul>
