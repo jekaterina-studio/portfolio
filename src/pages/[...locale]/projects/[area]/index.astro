@@ -36,7 +36,7 @@ const listName = (title: string) => title.toLowerCase().replace(/[,\-]/g, ' ').r
             <span class="case__name">{listName(p.text.title)}</span>
             <span class="case__sector">{p.text.sector ?? <span class="tbs" data-placeholder>[{t('toSupply', locale)}]</span>}</span>
           </a>
-          <span class="case__service">{p.text.keywords?.length ? p.text.keywords.join(', ') : <span class="tbs" data-placeholder>[{t('toSupply', locale)}]</span>}</span>
+          <span class="case__service">{p.text.keywords?.length ? p.text.keywords.map((k) => <span class="case__service-item">{k}</span>) : <span class="tbs" data-placeholder>[{t('toSupply', locale)}]</span>}</span>
         </li>
       ))}
     </ul>
@@ -60,7 +60,10 @@ const listName = (title: string) => title.toLowerCase().replace(/[,\-]/g, ' ').r
   .case__main { display: block; }
   .case__name { display: block; font-weight: 700; }
   .case__sector { display: block; font-size: var(--fs-small); color: var(--color-muted); margin-top: 0.1rem; }
+  /* sector and services in lowercase (owner request); one service per line */
+  .case__sector, .case__service { text-transform: lowercase; }
   .case__service { color: var(--color-accent); }
+  .case__service-item { display: block; }
   .case__main:hover .case__name, .case__main:focus-visible .case__name { color: var(--color-accent); }
   .tbs { background: #f2f2f2; color: var(--color-muted); padding: 0 0.2em; }
   @media (max-width: 47.99rem) {
