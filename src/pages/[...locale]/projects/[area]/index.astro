@@ -19,7 +19,7 @@ const intro = area.data.intro?.[locale];
 ---
 <BaseLayout locale={locale} section="projects" title={title}>
   <Breadcrumb locale={locale} items={[{ label: projectsLabel, href: localizedPath(locale, 'projects') }, { label: title }]} />
-  <h1 class="title"><span class="muted">{String(area.data.number).padStart(2, '0')}</span> {title}</h1>
+  <h1 class="title">{title}</h1>
   {intro && <p class="measure intro">{intro}</p>}
   <div class="index"><ProjectIndex projects={projects} locale={locale} /></div>
 </BaseLayout>
