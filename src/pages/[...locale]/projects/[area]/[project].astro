@@ -100,7 +100,7 @@ const projectHref = (slug: string) => {
               {s.items && (
                 <ul class="items">{s.items.map((it) => {
                   const href = it.project ? projectHref(it.project) : undefined;
-                  return <li>{href ? <a href={href}>{it.title}</a> : it.url ? <a href={it.url} target="_blank" rel="noopener">{it.title}</a> : it.title}</li>;
+                  return <li>{href ? <a href={href}>{it.title}</a> : it.url ? <a class="item-link" href={it.url} target="_blank" rel="noopener">{it.title}</a> : it.title}</li>;
                 })}</ul>
               )}
             </InfoRow>
@@ -148,7 +148,7 @@ const projectHref = (slug: string) => {
               {s.items && (
                 <ul class="items">{s.items.map((it) => {
                   const href = it.project ? projectHref(it.project) : undefined;
-                  return <li>{href ? <a href={href}>{it.title}</a> : it.url ? <a href={it.url} target="_blank" rel="noopener">{it.title}</a> : it.title}</li>;
+                  return <li>{href ? <a href={href}>{it.title}</a> : it.url ? <a class="item-link" href={it.url} target="_blank" rel="noopener">{it.title}</a> : it.title}</li>;
                 })}</ul>
               )}
               {s.gallery && galleryImages.length > 0 && (
@@ -209,6 +209,8 @@ const projectHref = (slug: string) => {
   .items + :global(.prose), :global(.prose) + .items { margin-top: var(--space-2); }
   /* brand activation cases */
   .case-title { text-transform: none; } /* exact case titles as given by the owner */
+  .item-link { color: var(--color-accent); font-weight: 700; }
+  .item-link:hover { text-decoration: underline; text-underline-offset: 0.2em; }
   .case-links a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; }
   .placeholder-line { color: var(--color-muted); background: #f2f2f2; width: fit-content; padding: 0 0.2em; }
   .case-gallery { margin-top: var(--space-6); }
