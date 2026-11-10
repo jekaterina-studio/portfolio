@@ -109,7 +109,7 @@ const projectTexts = defineCollection({
     occasions: z.array(z.object({ title: z.string(), text: z.string() })).default([]),
     /** useful external links (sites, articles, official pages) */
     links: z.array(z.object({ label: z.string(), url: z.string().url() })).default([]),
-    /** extra two-column rows, e.g. "vegheterial" or the cantautorato songs */
+    /** extra two-column rows, e.g. "vegetherial" or the cantautorato songs */
     sections: z
       .array(
         z.object({

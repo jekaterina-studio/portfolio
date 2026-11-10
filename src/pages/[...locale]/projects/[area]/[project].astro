@@ -50,7 +50,7 @@ const isCase = caseAreas.includes(meta.area);
 const hidePeriod = meta.area === 'independent-practice';
 const galleryImages = meta.media.flatMap((b) => b.images.map((im) => ({ src: im.file, alt: im.alt[locale] ?? im.alt.it })));
 const galleryFormat = meta.media[0]?.format ?? 'horizontal';
-// a section can host the gallery (e.g. vegheterial in floral design)
+// a section can host the gallery (e.g. vegetherial in floral design)
 const sectionGallery = text.sections.some((s) => s.gallery);
 const projectHref = (slug: string) => {
   const p = all.find((x) => x.slug === slug);
