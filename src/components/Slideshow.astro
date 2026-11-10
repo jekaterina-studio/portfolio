@@ -1,0 +1,53 @@
+---
+import DocImage from './DocImage.astro';
+import type { SeriesImage } from './ImageSeries.astro';
+import { t } from '../data/ui';
+import type { Locale } from '../lib/i18n';
+
+interface Props { images: SeriesImage[]; format: 'square' | 'horizontal'; locale: Locale }
+const { images, format, locale } = Astro.props;
+---
+<section class:list={['slideshow', `slideshow--${format}`]} data-slideshow
+  aria-roledescription="carousel" aria-label={t('slideshow', locale)}>
+  <div class="slideshow__track">
+    {images.map((img, i) => (
+      <div class="slideshow__slide" role="group" aria-roledescription="slide" aria-label={`${i + 1} / ${images.length}`}>
+        <DocImage src={img.src} alt={img.alt} caption={img.caption} format={format} locale={locale}
+          sizes="(max-width: 768px) 100vw, 640px" loading={i === 0 ? 'eager' : 'lazy'} />
+      </div>
+    ))}
+  </div>
+  <div class="slideshow__controls">
+    <button type="button" data-prev>{t('previous', locale)}</button>
+    <span class="slideshow__count" aria-live="polite"><span data-current>1</span> / {images.length}</span>
+    <button type="button" data-next>{t('next', locale)}</button>
+  </div>
+</section>
+
+<style>
+  .slideshow { max-width: 40rem; }
+  .slideshow--square { max-width: 32rem; }
+  .slideshow__track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+  .slideshow__track::-webkit-scrollbar { display: none; }
+  .slideshow__slide { flex: 0 0 100%; scroll-snap-align: start; }
+
+  .slideshow__controls {
+    display: none; /* shown once the script runs; without JS, swipe/scroll still works */
+    gap: var(--space-3);
+    margin-top: var(--space-2);
+    font-size: var(--fs-small);
+  }
+  .slideshow.is-enhanced .slideshow__controls { display: flex; }
+  .slideshow__controls button {
+    background: none; border: 0; padding: 0; cursor: pointer;
+  }
+  .slideshow__controls button:hover:not(:disabled),
+  .slideshow__controls button:focus-visible { color: var(--color-accent); }
+  .slideshow__controls button:disabled { color: var(--color-muted); cursor: default; }
+</style>

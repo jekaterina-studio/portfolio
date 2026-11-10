@@ -1,0 +1,51 @@
+/* Design tokens - the only place colours, type and spacing are defined. */
+:root {
+  /* Colour */
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-muted: #6b6b6b;     /* neutral grey, 5.3:1 on white */
+  --color-accent: #d62828;    /* red: interactive states and image overlay only */
+
+  /* Red overlay on documentary images.
+     Calibrate --overlay-opacity against the owner's reference photographs. */
+  --overlay-color: var(--color-accent);
+  --overlay-blend: multiply;
+  --overlay-opacity: 0.72;
+  --overlay-transition: 200ms ease;
+
+  /* Typography */
+  --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --fs-small: 0.8125rem;   /* 13px - header, footer, meta */
+  --fs-body: 1rem;         /* 16px */
+  --fs-h2: 1.125rem;       /* 18px */
+  --fs-h1: 1.75rem;        /* 28px */
+  --lh-tight: 1.2;
+  --lh-body: 1.5;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.5rem;
+  --space-6: 4rem;
+
+  /* Layout */
+  --margin: 2rem;            /* page side margin */
+  --measure: 40rem;          /* comfortable reading width */
+  --label-col: 12rem;        /* left column of two-column info rows */
+
+  /* Fixed bars: real heights are written here by scripts/layout-offsets.ts.
+     These are no-JS fallbacks. */
+  --header-h: 3rem;
+  --footer-h: 2.75rem;
+}
+
+@media (max-width: 47.99rem) {
+  :root {
+    --margin: 1rem;
+    --fs-h1: 1.5rem;
+    --header-h: 5rem;
+    --footer-h: 2.75rem;
+  }
+}

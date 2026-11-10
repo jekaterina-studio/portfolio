@@ -1,0 +1,66 @@
+---
+import { site } from '../data/site';
+import { t } from '../data/ui';
+import type { Locale } from '../lib/i18n';
+import CvLinks from './CvLinks.astro';
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const c = site.contact;
+---
+<footer class="site-footer" data-fixed-bar="footer">
+  <h2 class="visually-hidden">{t('contacts', locale)}</h2>
+  <ul class="contacts">
+    <li><a href={`mailto:${c.email}`}>{c.email}</a></li>
+    <li><a href={`tel:${c.phoneHref}`}>{c.phoneDisplay}</a></li>
+    <li>{c.linkedin ? <a href={c.linkedin} rel="me noopener" target="_blank">LinkedIn</a> : <span class="muted">LinkedIn</span>}</li>
+    <li>{c.instagram ? <a href={c.instagram} rel="me noopener" target="_blank">Instagram</a> : <span class="muted">Instagram</span>}</li>
+    <li>{c.city}</li>
+    <li>{t('vat', locale)}: {c.vat}</li>
+  </ul>
+  <CvLinks locale={locale} class="footer-cv" />
+</footer>
+
+<style>
+  .site-footer {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 10;
+    background: var(--color-bg);
+    font-size: var(--fs-small);
+    line-height: var(--lh-tight);
+    padding: var(--space-3) var(--margin);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-5);
+  }
+  .contacts, .site-footer :global(.footer-cv) {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-4);
+  }
+  .site-footer li { white-space: nowrap; }
+
+  /* Mobile: one compact row that scrolls sideways, like the navigation,
+     so every item stays reachable without the footer taking a large part of the screen. */
+  @media (max-width: 47.99rem) {
+    .site-footer {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+      padding-top: var(--space-3);
+      padding-bottom: var(--space-3);
+      gap: var(--space-4);
+    }
+    .site-footer::-webkit-scrollbar { display: none; }
+    .contacts, .site-footer :global(.footer-cv) { flex-wrap: nowrap !important; flex-shrink: 0; gap: var(--space-4); }
+  }
+
+  /* Short viewports: footer is no longer fixed (approved exception). */
+  @media (max-height: 31.25rem) {
+    .site-footer { position: static; }
+  }
+</style>

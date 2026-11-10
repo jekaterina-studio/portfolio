@@ -1,0 +1,28 @@
+---
+import { site } from '../data/site';
+import { t } from '../data/ui';
+import type { Locale } from '../lib/i18n';
+
+interface Props { locale: Locale; class?: string }
+const { locale, class: className } = Astro.props;
+const items = [
+  { href: site.cv.it, label: t('cvIt', locale), lang: 'it' },
+  { href: site.cv.en, label: t('cvEn', locale), lang: 'en' },
+];
+---
+<ul class:list={['cv-links', className]}>
+  {items.map((cv) => (
+    <li>
+      {cv.href ? (
+        <a href={cv.href} download hreflang={cv.lang}>{cv.label}</a>
+      ) : (
+        /* File not supplied yet: plain text, not a link. */
+        <span class="muted">{cv.label} ({t('cvPending', locale)})</span>
+      )}
+    </li>
+  ))}
+</ul>
+
+<style>
+  .cv-links { list-style: none; }
+</style>

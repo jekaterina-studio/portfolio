@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Placeholder from '../../components/dev/Placeholder.astro';
+import { site } from '../../data/site';
+import { nav } from '../../data/ui';
+import { localeParams, localizedPath, toLocale } from '../../lib/i18n';
+
+export const getStaticPaths = localeParams;
+const locale = toLocale(Astro.params.locale);
+const allWorks = nav.find((n) => n.key === 'all-works')!;
+
+// Approved statement (brief 3.1). English: pending approved translation.
+const statement = {
+  it: 'Mi interessa capire come funzionano le idee, cosa serve per svilupparle e come portarle dalla teoria alla pratica.',
+  en: null as string | null,
+}[locale];
+---
+<BaseLayout locale={locale} section="home" mainClass="home">
+  <div class="home__text">
+    <h1 class="home__name">{site.name.toLowerCase()}</h1>
+    <p class="home__role">Project and Communication Coordinator</p>
+    {statement ? <p class="home__statement">{statement}</p>
+      : <p class="home__statement muted">[EN statement - pending approved translation]</p>}
+    <p class="home__link"><a href={localizedPath(locale, ...allWorks.segments)}>{allWorks.label[locale]}</a></p>
+  </div>
+  <div class="home__portrait">
+    <Placeholder label="ritratto personale - JPEG da fornire" />
+  </div>
+</BaseLayout>
+
+<style>
+  /* One screen on desktop: the space between the fixed header and footer. */
+  :global(main.home) {
+    height: 100dvh;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--space-5);
+  }
+  .home__text { display: flex; flex-direction: column; }
+  .home__name { font-size: var(--fs-h1); }
+  .home__role { margin-top: var(--space-1); }
+  .home__statement { margin-top: auto; max-width: 28rem; }
+  .home__link { margin-top: var(--space-4); }
+  .home__portrait { min-height: 0; max-width: 32rem; justify-self: end; width: 100%; }
+
+  @media (max-width: 47.99rem), (max-height: 31.25rem) {
+    :global(main.home) { height: auto; grid-template-columns: 1fr; }
+    .home__statement { margin-top: var(--space-5); }
+    .home__portrait { aspect-ratio: 4 / 5; justify-self: start; }
+  }
+</style>

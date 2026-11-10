@@ -1,0 +1,51 @@
+---
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/layout.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { site } from '../data/site';
+import { t, type SectionKey } from '../data/ui';
+import { localizedPath, routeSegments, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+  title?: string;
+  description?: string;
+  section?: SectionKey;
+  hasTranslation?: boolean;
+  noindex?: boolean;
+  /** extra class on <main>, e.g. for the one-screen home page */
+  mainClass?: string;
+}
+const { locale, title, description, section, hasTranslation = true, noindex, mainClass } = Astro.props;
+const segments = routeSegments(Astro.url.pathname);
+const fullTitle = title ? `${title} - ${site.name}` : site.name;
+const alternates = hasTranslation ? (['it', 'en'] as const) : [locale];
+---
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    {description && <meta name="description" content={description} />}
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={new URL(localizedPath(locale, ...segments), Astro.site)} />
+    {alternates.map((l) => <link rel="alternate" hreflang={l} href={new URL(localizedPath(l, ...segments), Astro.site)} />)}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{t('skipToContent', locale)}</a>
+    <SiteHeader locale={locale} section={section} hasTranslation={hasTranslation} />
+    <main id="main" class:list={['page', mainClass]} tabindex="-1">
+      <slot />
+    </main>
+    <SiteFooter locale={locale} />
+    <script>
+      import '../scripts/layout-offsets.ts';
+      import '../scripts/image-toggle.ts';
+      import '../scripts/slideshow.ts';
+    </script>
+  </body>
+</html>

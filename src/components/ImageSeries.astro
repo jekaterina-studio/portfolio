@@ -1,0 +1,45 @@
+---
+/**
+ * Image block for project pages.
+ * layout: 'single' | 'series' (grid) | 'slideshow'
+ * format: 'square' (1:1) | 'horizontal' (5:4)
+ */
+import type { ImageMetadata } from 'astro';
+import DocImage from './DocImage.astro';
+import Slideshow from './Slideshow.astro';
+import type { Locale } from '../lib/i18n';
+
+export interface SeriesImage { src: ImageMetadata; alt: string; caption?: string }
+interface Props {
+  images: SeriesImage[];
+  layout: 'single' | 'series' | 'slideshow';
+  format: 'square' | 'horizontal';
+  locale: Locale;
+}
+const { images, layout, format, locale } = Astro.props;
+const sizes = layout === 'single'
+  ? '(max-width: 768px) 100vw, 640px'
+  : format === 'square' ? '(max-width: 768px) 50vw, 33vw' : '(max-width: 768px) 100vw, 50vw';
+---
+{layout === 'slideshow' ? (
+  <Slideshow images={images} format={format} locale={locale} />
+) : (
+  <div class:list={['image-series', `image-series--${layout}`, `image-series--${format}`]}>
+    {images.map((img) => (
+      <DocImage src={img.src} alt={img.alt} caption={img.caption} format={format} locale={locale} sizes={sizes} />
+    ))}
+  </div>
+)}
+
+<style>
+  .image-series { display: grid; gap: var(--space-3); }
+  .image-series--single.image-series--square { max-width: 32rem; }
+  .image-series--single.image-series--horizontal { max-width: 40rem; }
+  .image-series--series.image-series--square { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .image-series--series.image-series--horizontal { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  @media (max-width: 47.99rem) {
+    .image-series--series.image-series--square { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .image-series--series.image-series--horizontal { grid-template-columns: 1fr; }
+  }
+</style>

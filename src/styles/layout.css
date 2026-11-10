@@ -1,0 +1,26 @@
+/* Page frame: content is padded by the real height of the fixed header and footer,
+   so the footer never covers the last section. */
+.page {
+  padding: calc(var(--header-h) + var(--space-5)) var(--margin) calc(var(--footer-h) + var(--space-5));
+  min-height: 100dvh;
+}
+
+/* Short viewports (phone held sideways): the footer stops being fixed. */
+@media (max-height: 31.25rem) {
+  .page { padding-bottom: var(--space-5); min-height: 0; }
+}
+
+.measure { max-width: var(--measure); }
+
+.stack > * + * { margin-top: var(--space-4); }
+.stack-lg > * + * { margin-top: var(--space-6); }
+
+/* Two-column information row: label | content (project details, profile). */
+.info-row {
+  display: grid;
+  grid-template-columns: var(--label-col) minmax(0, var(--measure));
+  gap: var(--space-4);
+}
+@media (max-width: 47.99rem) {
+  .info-row { grid-template-columns: 1fr; gap: var(--space-2); }
+}

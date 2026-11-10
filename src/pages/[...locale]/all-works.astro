@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { nav } from '../../data/ui';
+import { localeParams, toLocale } from '../../lib/i18n';
+
+export const getStaticPaths = localeParams;
+const locale = toLocale(Astro.params.locale);
+const item = nav.find((n) => n.key === 'all-works')!;
+---
+<BaseLayout locale={locale} section="all-works" title={item.label[locale]}>
+  <h1>{item.label[locale]}</h1>
+  <p class="muted" style="margin-top:1.5rem">[pagina in costruzione - Phase 3]</p>
+</BaseLayout>

@@ -1,0 +1,92 @@
+---
+import { site } from '../data/site';
+import { nav, t, type SectionKey } from '../data/ui';
+import { localizedPath, routeSegments, type Locale } from '../lib/i18n';
+
+interface Props {
+  locale: Locale;
+  section?: SectionKey;
+  /** false when the other-language version of this page does not exist yet */
+  hasTranslation?: boolean;
+}
+const { locale, section, hasTranslation = true } = Astro.props;
+const segments = routeSegments(Astro.url.pathname);
+const isExact = (s: readonly string[]) => s.join('/') === segments.join('/');
+---
+<header class="site-header" data-fixed-bar="header">
+  <a class="wordmark" href={localizedPath(locale)}>{site.name}</a>
+
+  <nav class="lang" aria-label={t('languageNav', locale)}>
+    {(['it', 'en'] as const).map((l, i) => (
+      <>
+        {i > 0 && <span class="sep" aria-hidden="true">/</span>}
+        {l === locale ? (
+          <span class="lang-current" aria-current="true" lang={l}>{l.toUpperCase()}</span>
+        ) : hasTranslation ? (
+          <a href={localizedPath(l, ...segments)} hreflang={l} lang={l}>{l.toUpperCase()}</a>
+        ) : (
+          <span class="muted" lang={l}>{l.toUpperCase()}</span>
+        )}
+      </>
+    ))}
+  </nav>
+
+  <nav class="main-nav" aria-label={t('mainNav', locale)}>
+    <ul>
+      {nav.map((item) => (
+        <li>
+          <a
+            href={localizedPath(locale, ...item.segments)}
+            aria-current={isExact(item.segments) ? 'page' : item.key === section ? 'true' : undefined}
+          >{item.label[locale]}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 10;
+    background: var(--color-bg);
+    font-size: var(--fs-small);
+    line-height: var(--lh-tight);
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas: 'word nav lang';
+    align-items: baseline;
+    column-gap: var(--space-5);
+    padding: var(--space-3) var(--margin);
+  }
+  .wordmark { grid-area: word; white-space: nowrap; }
+  .main-nav { grid-area: nav; }
+  .lang { grid-area: lang; white-space: nowrap; }
+  .lang .sep { margin: 0 0.35em; }
+  .lang-current { color: var(--color-accent); }
+
+  .main-nav ul { list-style: none; display: flex; }
+  .main-nav li { white-space: nowrap; }
+  .main-nav li + li::before { content: '|'; margin: 0 0.6em; color: var(--color-text); }
+
+  /* Mobile: two rows; the navigation scrolls sideways inside its own row.
+     No hamburger menu. */
+  @media (max-width: 47.99rem) {
+    .site-header {
+      grid-template-columns: 1fr auto;
+      grid-template-areas: 'word lang' 'nav nav';
+      row-gap: var(--space-3);
+      padding-bottom: var(--space-2);
+    }
+    .main-nav {
+      margin: 0 calc(-1 * var(--margin));
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scrollbar-width: none;
+      padding: 0 var(--margin) var(--space-1);
+    }
+    .main-nav::-webkit-scrollbar { display: none; }
+    .main-nav ul { width: max-content; }
+  }
+</style>
