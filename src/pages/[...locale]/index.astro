@@ -2,13 +2,12 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import { site } from '../../data/site';
-import { nav, t } from '../../data/ui';
+import { t } from '../../data/ui';
 import { getPage } from '../../lib/content';
-import { localeParams, localizedPath, toLocale } from '../../lib/i18n';
+import { localeParams, toLocale } from '../../lib/i18n';
 
 export const getStaticPaths = localeParams;
 const locale = toLocale(Astro.params.locale);
-const allWorks = nav.find((n) => n.key === 'all-works')!;
 const page = (await getPage<{ role: string; fields: string; statement: string; tiles?: { image: string; alt: string }[] }>('home', locale))!;
 // Tiles live in src/assets/images/site/ (no red overlay: not project documentation).
 const siteImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/images/site/*.{jpg,jpeg}', { eager: true });
@@ -29,7 +28,6 @@ const tiles = (page.tiles ?? [])
   </div>
   <div class="home__outro">
     <p class="home__statement">{page.statement}</p>
-    <p class="home__link"><a href={localizedPath(locale, ...allWorks.segments)}>{allWorks.label[locale]}</a></p>
   </div>
   <p class="home__cv">
     {t('cvDownload', locale)}{' '}
@@ -60,7 +58,6 @@ const tiles = (page.tiles ?? [])
   .home__role { margin-top: var(--space-1); }
   .home__fields { margin-top: var(--space-1); font-size: var(--fs-small); }
   .home__statement { max-width: 28rem; font-weight: 700; }
-  .home__link { margin-top: var(--space-4); }
   /* "scarica i CV" bottom right (owner request) */
   .home__cv { grid-column: 2; grid-row: 3; align-self: end; justify-self: end; text-align: right; }
   .home__cv a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; }
