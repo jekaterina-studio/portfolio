@@ -14,7 +14,7 @@ const label = nav.find((n) => n.key === 'profile')!.label[locale];
 const page = (await getPage<any>('profile', locale)) ?? (await getPage<any>('profile', 'it'));
 const isFallback = !(await getPage('profile', locale));
 
-// Reference images live in src/assets/images/site/ (no red overlay: not project documentation).
+// Reference images live in src/assets/images/site/ (shown in original colours).
 const siteImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/images/site/*.{jpg,jpeg}', { eager: true });
 const img = (name: string | null) => (name ? siteImages[`../../assets/images/site/${name}`]?.default : undefined);
 ---

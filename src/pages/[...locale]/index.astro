@@ -9,7 +9,7 @@ import { localeParams, toLocale } from '../../lib/i18n';
 export const getStaticPaths = localeParams;
 const locale = toLocale(Astro.params.locale);
 const page = (await getPage<{ role: string; fields: string; statement: string; tiles?: { image: string; alt: string }[] }>('home', locale))!;
-// Tiles live in src/assets/images/site/ (no red overlay: not project documentation).
+// Tiles live in src/assets/images/site/ (shown in original colours).
 const siteImages = import.meta.glob<{ default: ImageMetadata }>('../../assets/images/site/*.{jpg,jpeg}', { eager: true });
 const tiles = (page.tiles ?? [])
   .map((t) => ({ ...t, src: siteImages[`../../assets/images/site/${t.image}`]?.default }))
