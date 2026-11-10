@@ -10,3 +10,7 @@ sections:
 - label: vegetherial
   gallery: true
   text: 'Vegetherial was born from the meeting of three concepts: Vegetal, Ethereal, Material. **vegetherial.**'
+  items:
+  # url to come: add url: https://www.instagram.com/... and remove highlight
+  - title: instagram vegetherial
+    highlight: true
