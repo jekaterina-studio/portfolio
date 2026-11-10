@@ -50,6 +50,8 @@ const isCase = caseAreas.includes(meta.area);
 const hidePeriod = meta.area === 'independent-practice';
 const galleryImages = meta.media.flatMap((b) => b.images.map((im) => ({ src: im.file, alt: im.alt[locale] ?? im.alt.it })));
 const galleryFormat = meta.media[0]?.format ?? 'horizontal';
+// a section can host the gallery (e.g. vegheterial in floral design)
+const sectionGallery = text.sections.some((s) => s.gallery);
 const projectHref = (slug: string) => {
   const p = all.find((x) => x.slug === slug);
   return p ? localizedPath(locale, 'projects', p.meta.area, p.slug) : undefined;
@@ -149,6 +151,9 @@ const projectHref = (slug: string) => {
                   return <li>{href ? <a href={href}>{it.title}</a> : it.url ? <a href={it.url} target="_blank" rel="noopener">{it.title}</a> : it.title}</li>;
                 })}</ul>
               )}
+              {s.gallery && galleryImages.length > 0 && (
+                <div class="section-gallery"><Slideshow images={galleryImages} format={galleryFormat} locale={locale} /></div>
+              )}
             </InfoRow>
           ))}
           <InfoRow label={t('documentation', locale)} show={meta.documents.length > 0}>
@@ -166,7 +171,7 @@ const projectHref = (slug: string) => {
           </InfoRow>
         </div>
 
-        {meta.media.length > 0 && (
+        {meta.media.length > 0 && !sectionGallery && (
           <div class="project__media">
             {meta.media.map((block) => (
               <ImageSeries
@@ -207,6 +212,7 @@ const projectHref = (slug: string) => {
   .case-links a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; }
   .placeholder-line { color: var(--color-muted); background: #f2f2f2; width: fit-content; padding: 0 0.2em; }
   .case-gallery { margin-top: var(--space-6); }
+  .section-gallery { margin-top: var(--space-4); }
   .occasions { display: grid; gap: var(--space-4); max-width: var(--measure); }
   .occasion__title { text-transform: none; font-size: var(--fs-body); margin-bottom: var(--space-1); }
   .case-gallery__label { font-size: var(--fs-body); margin-bottom: var(--space-3); }

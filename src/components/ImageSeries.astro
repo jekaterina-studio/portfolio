@@ -13,7 +13,7 @@ export interface SeriesImage { src: ImageMetadata; alt: string; caption?: string
 interface Props {
   images: SeriesImage[];
   layout: 'single' | 'series' | 'slideshow';
-  format: 'square' | 'horizontal';
+  format: 'square' | 'horizontal' | 'vertical';
   locale: Locale;
 }
 const { images, layout, format, locale } = Astro.props;

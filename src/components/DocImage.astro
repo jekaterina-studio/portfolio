@@ -11,7 +11,7 @@ import type { Locale } from '../lib/i18n';
 interface Props {
   src: ImageMetadata;
   alt: string;
-  format: 'square' | 'horizontal';
+  format: 'square' | 'horizontal' | 'vertical';
   locale: Locale;
   sizes?: string;
   caption?: string;
@@ -50,6 +50,7 @@ const { src, alt, format, locale, caption, loading = 'lazy',
   }
   .doc-image--square .doc-image__toggle { aspect-ratio: 1 / 1; }
   .doc-image--horizontal .doc-image__toggle { aspect-ratio: 5 / 4; }
+  .doc-image--vertical .doc-image__toggle { aspect-ratio: 3 / 4; }
 
   .doc-image__toggle :global(img) {
     width: 100%;

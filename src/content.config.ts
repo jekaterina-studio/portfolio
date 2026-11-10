@@ -57,7 +57,7 @@ const projects = defineCollection({
         .array(
           z.object({
             layout: z.enum(['single', 'series', 'slideshow']),
-            format: z.enum(['square', 'horizontal']),
+            format: z.enum(['square', 'horizontal', 'vertical']),
             images: z.array(
               z.object({
                 file: image(),
@@ -115,6 +115,8 @@ const projectTexts = defineCollection({
         z.object({
           label: z.string(),
           text: z.string().optional(),
+          /** true: show the project's image gallery inside this section */
+          gallery: z.boolean().optional(),
           items: z
             .array(z.object({ title: z.string(), url: z.string().url().optional(), project: z.string().optional() }))
             .optional(),

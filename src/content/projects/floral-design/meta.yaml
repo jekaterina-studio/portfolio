@@ -4,5 +4,28 @@ area: independent-practice
 order: 1
 sort: null
 period: null
-media: []
+media:
+- layout: slideshow
+  format: vertical
+  images:
+  - file: ../../../assets/images/projects/floral-design/floral-design-01.jpg
+    alt:
+      it: Foglie verdi intrecciate a sfera in un vaso di pietra
+      en: Green leaves woven into a sphere in a stone vase
+  - file: ../../../assets/images/projects/floral-design/floral-design-02.jpg
+    alt:
+      it: Dettaglio delle foglie verdi intrecciate
+      en: Detail of the woven green leaves
+  - file: ../../../assets/images/projects/floral-design/floral-design-03.jpg
+    alt:
+      it: Graminacee secche con boccioli viola in un vaso di vetro
+      en: Dried grasses with purple buds in a glass vase
+  - file: ../../../assets/images/projects/floral-design/floral-design-04.jpg
+    alt:
+      it: Bouquet con fiori bianchi, velluto grigio e cubi argentati
+      en: Bouquet with white flowers, grey velvet and silver cubes
+  - file: ../../../assets/images/projects/floral-design/floral-design-05.jpg
+    alt:
+      it: Composizione su base in legno con struttura vegetale rivestita e fiori arancioni
+      en: Arrangement on a wooden base with a wrapped plant structure and orange flowers
 documents: []

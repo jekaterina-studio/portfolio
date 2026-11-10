@@ -4,7 +4,7 @@ import type { SeriesImage } from './ImageSeries.astro';
 import { t } from '../data/ui';
 import type { Locale } from '../lib/i18n';
 
-interface Props { images: SeriesImage[]; format: 'square' | 'horizontal'; locale: Locale }
+interface Props { images: SeriesImage[]; format: 'square' | 'horizontal' | 'vertical'; locale: Locale }
 const { images, format, locale } = Astro.props;
 ---
 <section class:list={['slideshow', `slideshow--${format}`]} data-slideshow
@@ -27,6 +27,7 @@ const { images, format, locale } = Astro.props;
 <style>
   .slideshow { max-width: 40rem; }
   .slideshow--square { max-width: 32rem; }
+  .slideshow--vertical { max-width: 26rem; }
   .slideshow__track {
     display: flex;
     overflow-x: auto;
