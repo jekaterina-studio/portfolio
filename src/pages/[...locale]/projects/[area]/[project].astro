@@ -200,6 +200,9 @@ const projectHref = (slug: string) => {
   .project__meta { margin-top: var(--space-1); }
   .project__rows { margin-top: var(--space-6); display: grid; gap: var(--space-5); }
   .activities, .items { list-style: none; max-width: var(--measure); }
+  /* bullet points on activity / result lists (owner request) */
+  .activities { list-style: disc; padding-left: 1.2em; }
+  .activities li::marker { color: var(--color-text); }
   .activities li + li, .items li + li { margin-top: var(--space-1); }
   .project__media { margin-top: var(--space-6); display: grid; gap: var(--space-5); }
   .project__nav { margin-top: var(--space-6); }
