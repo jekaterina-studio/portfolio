@@ -97,6 +97,8 @@ const projectTexts = defineCollection({
     category: z.string().optional(),
     description: z.string().optional(),
     role: z.string().optional(),
+    /** optional custom heading for the role row (e.g. 'attività svolte') */
+    roleLabel: z.string().optional(),
     activities: z.array(z.string()).optional(),
     results: z
       .union([

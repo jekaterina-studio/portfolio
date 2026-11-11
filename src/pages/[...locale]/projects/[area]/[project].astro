@@ -84,7 +84,7 @@ const projectHref = (slug: string) => {
           <InfoRow label={t('activitiesDone', locale)} show={!!text.activities?.length}>
             <ul class="activities">{text.activities?.map((a) => <li><Prose text={a} /></li>)}</ul>
           </InfoRow>
-          <InfoRow label={t('role', locale)} show={!!text.role}><Prose text={text.role} /></InfoRow>
+          <InfoRow label={text.roleLabel ?? t('role', locale)} show={!!text.role}><Prose text={text.role} /></InfoRow>
           <InfoRow label={t('results', locale)} show={!!results}>
             {results && 'text' in results && <Prose text={results.text} />}
             {results && 'items' in results && results.items.length > 0 && (
@@ -139,7 +139,7 @@ const projectHref = (slug: string) => {
       <>
         <div class="project__rows">
           <InfoRow label={t('description', locale)} show={!!text.description}><Prose text={text.description} /></InfoRow>
-          <InfoRow label={t('role', locale)} show={!!text.role}><Prose text={text.role} /></InfoRow>
+          <InfoRow label={text.roleLabel ?? t('role', locale)} show={!!text.role}><Prose text={text.role} /></InfoRow>
           <InfoRow label={t('activities', locale)} show={!!text.activities?.length}>
             <ul class="activities">{text.activities?.map((a) => <li><Prose text={a} /></li>)}</ul>
           </InfoRow>
