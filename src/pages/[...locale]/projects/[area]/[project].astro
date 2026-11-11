@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../../../components/Breadcrumb.astro';
 import InfoRow from '../../../../components/InfoRow.astro';
@@ -154,8 +155,17 @@ const projectHref = (slug: string) => {
                 <div class="section-gallery"><Gallery images={galleryImages} format={galleryFormat} locale={locale} /></div>
               )}
               {s.items && (
-                <ul class:list={['items', s.gallery && 'items--after-gallery']}>{s.items.map((it) => {
+                <ul class:list={['items', s.gallery && 'items--after-gallery', meta.thumbnails.length > 0 && 'items--thumbs']}>{s.items.map((it, idx) => {
                   const href = it.project ? projectHref(it.project) : undefined;
+                  const thumb = it.url ? meta.thumbnails[idx] : undefined;
+                  if (thumb) return (
+                    <li class="thumb-item">
+                      <a class="item-link" href={it.url} target="_blank" rel="noopener">{it.title}</a>
+                      <a class="thumb" href={it.url} target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+                        <Image src={thumb.file} alt={thumb.alt[locale] ?? thumb.alt.it} widths={[320, 640]} sizes="16rem" />
+                      </a>
+                    </li>
+                  );
                   // url: external link (bold red); highlight without url: same style, link still to come
                   return <li>{href ? <a href={href}>{it.title}</a> : it.url ? <a class="item-link" href={it.url} target="_blank" rel="noopener">{it.title}</a> : it.highlight ? <span class="item-link">{it.title}</span> : it.title}</li>;
                 })}</ul>
@@ -225,6 +235,13 @@ const projectHref = (slug: string) => {
   .case-gallery { margin-top: var(--space-6); }
   .section-gallery { margin-top: var(--space-4); }
   .items--after-gallery { margin-top: var(--space-4); }
+  /* small reference thumbnails under linked items (cantautorato songs) */
+  .items--thumbs li + li { margin-top: var(--space-4); }
+  .thumb { display: block; width: 16rem; max-width: 100%; aspect-ratio: 16 / 9; overflow: hidden; margin-top: var(--space-2); }
+  .thumb :global(img) { width: 100%; height: 100%; object-fit: cover; }
+  /* owner request: second song (and every even one) aligned to the right */
+  .items--thumbs .thumb-item:nth-child(even) { text-align: right; }
+  .items--thumbs .thumb-item:nth-child(even) .thumb { margin-left: auto; }
   /* red label, regular italic (owner request for "last project") */
   .section-subtitle--italic .item-link { font-weight: 400; font-style: italic; }
   span.item-link:hover { text-decoration: none; }

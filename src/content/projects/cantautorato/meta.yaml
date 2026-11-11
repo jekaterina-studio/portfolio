@@ -7,4 +7,14 @@ period:
   it: 2021 - 2026
   en: 2021 - 2026
 media: []
+# small thumbnails shown under each song title (same order as the songs)
+thumbnails:
+- file: ../../../assets/images/projects/cantautorato/tutto-cio-che-finisce-con-se.jpg
+  alt:
+    it: Copertina di Tutto ciò che finisce con sé, con bordo rosso
+    en: Cover of Tutto ciò che finisce con sé, with a red border
+- file: ../../../assets/images/projects/cantautorato/spiccioli-di-rame.webp
+  alt:
+    it: Fotogramma in bianco e nero di Spiccioli di rame, con chitarra
+    en: Black and white still from Spiccioli di rame, with guitar
 documents: []

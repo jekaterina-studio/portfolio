@@ -67,6 +67,8 @@ const projects = defineCollection({
           }),
         )
         .default([]),
+      /** small reference images shown next to the linked items of a section, in order (e.g. song thumbnails) */
+      thumbnails: z.array(z.object({ file: image(), alt: z.object({ it: z.string(), en: z.string().optional() }) })).default([]),
       documents: z
         .array(
           z.object({
