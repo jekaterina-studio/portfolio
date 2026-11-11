@@ -1,5 +1,5 @@
 ---
-/* All Works: a compact list only (owner request) - name, client, category.
+/* All Works: a compact list only (owner request) - name and category (client column removed by owner request).
    Chronological order, newest first. Every name links to its project page. */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { nav, t } from '../../data/ui';
@@ -18,7 +18,6 @@ const projects = chronological(await getProjects(locale));
     <thead>
       <tr>
         <th scope="col">{t('colName', locale)}</th>
-        <th scope="col">{t('colClient', locale)}</th>
         <th scope="col">{t('colCategory', locale)}</th>
       </tr>
     </thead>
@@ -26,7 +25,6 @@ const projects = chronological(await getProjects(locale));
       {projects.map((p) => (
         <tr>
           <td class="works__name"><a href={localizedPath(locale, 'projects', p.meta.area, p.slug)}>{p.text.title}</a></td>
-          <td class="works__client">{p.meta.company}</td>
           <td class="works__cat">{areaTitles[p.meta.area]}</td>
         </tr>
       ))}
@@ -44,11 +42,11 @@ const projects = chronological(await getProjects(locale));
   .works td { padding: 0.15rem var(--space-4) 0.15rem 0; vertical-align: top; }
   .works th:first-child, .works td:first-child { width: 45%; }
   .works__name a { font-weight: 700; text-transform: lowercase; }
-  .works__client, .works__cat { color: var(--color-muted); }
+  .works__cat { color: var(--color-muted); }
   .works__cat { text-transform: lowercase; }
   .works tr:hover .works__name a { color: var(--color-accent); }
 
-  /* Mobile: each project on two short lines (name, then client - category); headers on one line */
+  /* Mobile: each project on two short lines (name, then category); headers on one line */
   @media (max-width: 47.99rem) {
     .works, .works thead, .works tbody, .works tr, .works td, .works th { display: block; width: auto !important; }
     .works thead tr { display: flex; flex-wrap: wrap; gap: 0 var(--space-3); padding-bottom: var(--space-2); }
@@ -56,7 +54,6 @@ const projects = chronological(await getProjects(locale));
     .works tbody tr { padding: 0.2rem 0; line-height: 1.25; }
     .works td { padding: 0; display: inline; }
     .works__name { display: block !important; }
-    .works__client:not(:empty)::after { content: ' - '; }
-    .works__client, .works__cat { font-size: var(--fs-small); }
+    .works__cat { font-size: var(--fs-small); }
   }
 </style>
