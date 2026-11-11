@@ -11,9 +11,11 @@ import type { Locale } from '../lib/i18n';
 
 interface Props { images: SeriesImage[]; format: 'square' | 'horizontal' | 'vertical' | 'portrait'; locale: Locale }
 const { images, format, locale } = Astro.props;
+// rows stay full: 6 or 9 photos -> 3 columns, otherwise 4
+const threeCols = format !== 'horizontal' && images.length % 4 !== 0 && images.length % 3 === 0;
 const sizes = format === 'horizontal' ? '(max-width: 768px) 100vw, 33vw' : '(max-width: 768px) 50vw, 25vw';
 ---
-<ul class:list={['gallery', `gallery--${format}`]} aria-label={t('gallery', locale)}
+<ul class:list={['gallery', `gallery--${format}`, threeCols && 'gallery--3']} aria-label={t('gallery', locale)}
   data-lightbox data-label-close={t('close', locale)} data-label-prev={t('previous', locale)} data-label-next={t('next', locale)}>
   {images.map((img, i) => (
     <li>
@@ -30,7 +32,7 @@ const sizes = format === 'horizontal' ? '(max-width: 768px) 100vw, 33vw' : '(max
     gap: var(--space-3);
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .gallery--horizontal { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .gallery--horizontal, .gallery--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   @media (max-width: 47.99rem) {
     .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-2); }
     .gallery--horizontal { grid-template-columns: 1fr; }

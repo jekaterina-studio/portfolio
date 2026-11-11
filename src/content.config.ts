@@ -120,7 +120,7 @@ const projectTexts = defineCollection({
           /** subtitle under the section label (left column), bold red; url optional */
           subtitle: z.object({ title: z.string(), url: z.string().url().optional() }).optional(),
           items: z
-            .array(z.object({ title: z.string(), url: z.string().url().optional(), project: z.string().optional(), highlight: z.boolean().optional() }))
+            .array(z.object({ title: z.string(), url: z.string().optional(), project: z.string().optional(), highlight: z.boolean().optional() }))
             .optional(),
         }),
       )
