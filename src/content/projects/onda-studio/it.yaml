@@ -13,18 +13,7 @@ activities:
 - 'ricerca, recupero e riorganizzazione di materiali dall''archivio storico'
 - 'riorganizzazione, pulizia e segmentazione dei database di contatti'
 - 'gestione della migrazione dei database verso una nuova piattaforma di newslettering'
-sections:
-- label: progetti
+results:
   items:
-  - title: FACES - Évora 2027
-    project: faces-evora-2027
-  - title: Varese in Luce
-    project: varese-in-luce
-  - title: VOLUMETRICA
-    project: volumetrica
-  - title: Candidature internazionali
-    project: candidature-internazionali
-  - title: Sviluppo partnership
-    project: sviluppo-partnership
-  - title: Superconnection - Spazio Milesi
-    project: superconnection-spazio-milesi
+  - 'sviluppo di una comunicazione social coordinata per le tre realtà, attraverso piani editoriali, contenuti e linguaggi differenziati'
+  - 'riorganizzazione e pulizia dei database storici delle tre realtà, con segmentazione dei contatti e migrazione alla nuova piattaforma di newslettering'
