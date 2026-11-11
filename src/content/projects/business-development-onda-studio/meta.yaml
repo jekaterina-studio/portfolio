@@ -9,3 +9,7 @@ company: Onda Studio
 parent: onda-studio
 media: []
 documents: []
+# line under the title, without link (owner request)
+parentText:
+  it: cliente Onda Studio
+  en: client Onda Studio
