@@ -70,7 +70,9 @@ const projectHref = (slug: string) => {
         <h1 class:list={[isCase && 'case-title']}>{text.title}</h1>
         {!hidePeriod && <p class="project__period">{period ?? <span class="muted" data-placeholder>[{t('periodTbc', locale)}]</span>}</p>}
       </div>
-      {parent ? (
+      {meta.parentText ? (
+        <p class="project__meta muted">{meta.parentText[locale] ?? meta.parentText.it}</p>
+      ) : parent ? (
         <p class="project__meta muted">{t('partOf', locale)} <a href={localizedPath(locale, 'projects', parent.meta.area, parent.slug)}>{parent.text.title}</a>{meta.place && <> - {meta.place}</>}</p>
       ) : (meta.company && meta.company !== text.title) || meta.place ? (
         <p class="project__meta muted">{[meta.company !== text.title ? meta.company : null, meta.place].filter(Boolean).join(' - ')}</p>
