@@ -7,7 +7,7 @@ import Placeholder from '../../components/dev/Placeholder.astro';
 import { nav, t } from '../../data/ui';
 import { site } from '../../data/site';
 import { getPage } from '../../lib/content';
-import { localeParams, toLocale } from '../../lib/i18n';
+import { localeParams, localizedPath, toLocale } from '../../lib/i18n';
 
 export const getStaticPaths = localeParams;
 const locale = toLocale(Astro.params.locale);
@@ -24,7 +24,10 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
   {isFallback && <p class="muted" data-placeholder>[EN - approved English copy pending]</p>}
 
   <div class="rows">
-    <InfoRow label={t('biography', locale)}><Prose text={page.biography} /></InfoRow>
+    <InfoRow label={t('biography', locale)}>
+      <Prose text={page.biography} />
+      <p class="bio-link"><a href={localizedPath(locale, 'projects')}>{locale === 'en' ? 'my experiences' : 'le mie esperienze'}</a></p>
+    </InfoRow>
     <InfoRow label={t('education', locale)}>
       <ol class="education">
         {page.education.map((e: any) => (
@@ -59,6 +62,9 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
 </BaseLayout>
 
 <style>
+  .bio-link { margin-top: 1em; }
+  .bio-link a { color: var(--color-accent); font-weight: 700; }
+  .bio-link a:hover, .bio-link a:focus-visible { text-decoration: underline; text-underline-offset: 0.2em; }
   .rows { margin-top: var(--space-5); display: grid; gap: var(--space-5); }
   .education { list-style: none; display: grid; gap: var(--space-4); }
   .education h3 { text-transform: none; }
