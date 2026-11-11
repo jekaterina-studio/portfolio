@@ -217,6 +217,8 @@ const projectHref = (slug: string) => {
   .activities, .items { list-style: none; max-width: var(--measure); }
   /* bullet points on activity / result lists (owner request) */
   .activities { list-style: disc; padding-left: 1.2em; }
+  /* a single descriptive item reads as a paragraph: no bullet */
+  .activities:has(> li:only-child) { list-style: none; padding-left: 0; }
   .activities li::marker { color: var(--color-text); }
   .activities li + li, .items li + li { margin-top: var(--space-1); }
   .project__media { margin-top: var(--space-6); display: grid; gap: var(--space-5); }
