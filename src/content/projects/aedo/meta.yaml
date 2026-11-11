@@ -9,3 +9,7 @@ period:
 company: Aedo
 media: []
 documents: []
+# line under the title (owner request)
+parentText:
+  it: "realtà professionale: Aedo Sperimentare Culture"
+  en: "organisation: Aedo Sperimentare Culture"
