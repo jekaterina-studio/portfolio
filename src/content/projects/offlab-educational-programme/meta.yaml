@@ -7,3 +7,7 @@ period: null
 company: OFFLab
 media: []
 documents: []
+# line under the title, without link (owner request)
+parentText:
+  it: progetto di Aedo Sperimentare Culture
+  en: a project by Aedo Sperimentare Culture
