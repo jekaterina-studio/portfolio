@@ -39,6 +39,13 @@ media:
     caption:
       it: 'Contenuti tecnici resi chiari: prodotti per la qualità dell''acqua nello studio odontoiatrico spiegati a un pubblico professionale.'
       en: 'Technical content made clear: water-quality products for dental practices explained to a professional audience.'
+  - file: ../../../assets/images/projects/silver-italia/silver-italia-05-squadra.jpg
+    alt:
+      it: 'Due tecnici Silver aprono una scatola davanti al furgone aziendale con il logo.'
+      en: 'Two Silver technicians opening a box in front of the company van with the logo.'
+    caption:
+      it: 'Le persone dietro il servizio: il pilastro "persone e officina" racconta chi lavora ogni giorno per i clienti, non solo i prodotti.'
+      en: 'The people behind the service: the "people and workshop" pillar shows who works for clients every day, not just the products.'
   - file: ../../../assets/images/projects/silver-italia/silver-italia-06-corso-tecnici.jpg
     alt:
       it: 'Relatore davanti a una slide durante un corso per tecnici, visto dal pubblico.'
@@ -46,6 +53,20 @@ media:
     caption:
       it: 'Contenuti raccolti dal vivo durante un corso di formazione per tecnici specializzati, provincia di Bologna, novembre 2025.'
       en: 'Content captured live during a training course for specialised technicians, province of Bologna, November 2025.'
+  - file: ../../../assets/images/projects/silver-italia/silver-italia-07-officina-bestosmo.jpg
+    alt:
+      it: 'Mani con guanti blu che collegano i cavi di un''unità BestOsmo 100.'
+      en: 'Gloved hands connecting the cables of a BestOsmo 100 unit.'
+    caption:
+      it: 'Dietro le quinte dell''officina: i processi tecnici raccontati attraverso le immagini.'
+      en: 'Behind the scenes in the workshop: technical processes told through images.'
+  - file: ../../../assets/images/projects/silver-italia/silver-italia-08-silvercare.jpg
+    alt:
+      it: 'Mani che tengono un filtro SilverCare su fondo blu.'
+      en: 'Hands holding a SilverCare filter against a blue background.'
+    caption:
+      it: 'Il prodotto al centro: il filtro SilverCare durante lo shooting di prodotto.'
+      en: 'The product in focus: the SilverCare filter during the product shoot.'
 documents: []
 # line under the title (owner request)
 parentText:
