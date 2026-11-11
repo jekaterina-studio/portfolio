@@ -9,3 +9,7 @@ period:
 company: GPone Milano
 media: []
 documents: []
+# line under the title (owner request)
+parentText:
+  it: cliente GPone Milano
+  en: client GPone Milano
