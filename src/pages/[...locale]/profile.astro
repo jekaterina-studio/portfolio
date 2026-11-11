@@ -80,14 +80,15 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
   .references {
     list-style: none;
     margin-top: var(--space-6);
-    max-width: 56rem;
+    max-width: 72rem;
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: var(--space-4);
   }
   .ref-image { aspect-ratio: 4 / 5; } /* owner request: 4:5 */
   .ref-image :global(img) { width: 100%; height: 100%; object-fit: cover; }
   /* reference phrases: uppercase, bold, red (owner request) */
   .references p { margin-top: var(--space-2); text-transform: uppercase; font-weight: 700; color: var(--color-accent); }
+  @media (max-width: 63.99rem) { .references { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 40rem; } }
   @media (max-width: 47.99rem) { .references { grid-template-columns: 1fr; max-width: 24rem; } }
 </style>
