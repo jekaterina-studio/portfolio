@@ -6,17 +6,18 @@ const { text, class: className } = Astro.props;
 const placeholder = !text || /^\[DA FORNIRE/.test(text);
 const paragraphs = (text ?? '').split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
 // **text** = bold (as in the approved documents); [text](url) = link (bold red, new tab);
-// **[text](url)** = bold link
-type Part = { t: string; bold?: boolean; href?: string };
+// **[text](url)** = bold link; {{text}} = small red note (e.g. 'in corso')
+type Part = { t: string; bold?: boolean; href?: string; note?: boolean };
 const parts = (p: string): Part[] => {
   const out: Part[] = [];
-  const re = /\*\*\[(.+?)\]\((.+?)\)\*\*|\[(.+?)\]\((.+?)\)|\*\*(.+?)\*\*/g;
+  const re = /\*\*\[(.+?)\]\((.+?)\)\*\*|\[(.+?)\]\((.+?)\)|\*\*(.+?)\*\*|\{\{(.+?)\}\}/g;
   let last = 0; let m: RegExpExecArray | null;
   while ((m = re.exec(p))) {
     if (m.index > last) out.push({ t: p.slice(last, m.index) });
     if (m[1]) out.push({ t: m[1], href: m[2] });
     else if (m[3]) out.push({ t: m[3], href: m[4] });
-    else out.push({ t: m[5], bold: true });
+    else if (m[5]) out.push({ t: m[5], bold: true });
+    else out.push({ t: m[6], note: true });
     last = re.lastIndex;
   }
   if (last < p.length) out.push({ t: p.slice(last) });
@@ -26,7 +27,7 @@ const parts = (p: string): Part[] => {
 {placeholder ? (
   <p class:list={['placeholder-text', className]} data-placeholder>{text ?? '[DA FORNIRE]'}</p>
 ) : (
-  <div class:list={['prose', className]}>{paragraphs.map((p) => <p>{p.split('\n').map((line, li) => (<>{li > 0 && <br />}{parts(line).map((x) => (x.href ? <a class="prose-link" href={x.href} target="_blank" rel="noopener">{x.t}</a> : x.bold ? <strong>{x.t}</strong> : x.t))}</>))}</p>)}</div>
+  <div class:list={['prose', className]}>{paragraphs.map((p) => <p>{p.split('\n').map((line, li) => (<>{li > 0 && <br />}{parts(line).map((x) => (x.href ? <a class="prose-link" href={x.href} target="_blank" rel="noopener">{x.t}</a> : x.bold ? <strong>{x.t}</strong> : x.note ? <span style="color:var(--color-accent);font-size:var(--fs-small)">{x.t}</span> : x.t))}</>))}</p>)}</div>
 )}
 <style>
   .prose { max-width: var(--measure); }
