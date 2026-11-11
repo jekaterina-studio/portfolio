@@ -49,7 +49,7 @@ const results = typeof text.results === 'string' ? { items: [] as string[], text
 const isCase = caseAreas.includes(meta.area);
 // Independent practice: no dates (owner request)
 const hidePeriod = meta.area === 'independent-practice';
-const galleryImages = meta.media.flatMap((b) => b.images.map((im) => ({ src: im.file, alt: im.alt[locale] ?? im.alt.it, format: b.format })));
+const galleryImages = meta.media.flatMap((b) => b.images.map((im) => ({ src: im.file, alt: im.alt[locale] ?? im.alt.it, caption: im.caption, format: b.format })));
 const galleryFormat = meta.media[0]?.format ?? 'horizontal';
 // a section can host the gallery (e.g. vegetherial in floral design)
 const sectionGallery = text.sections.some((s) => s.gallery);

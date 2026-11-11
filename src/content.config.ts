@@ -62,6 +62,8 @@ const projects = defineCollection({
               z.object({
                 file: image(),
                 alt: z.object({ it: z.string(), en: z.string().optional() }),
+                /** small grey line under the image (e.g. photo credit) */
+                caption: z.string().optional(),
               }),
             ),
           }),
