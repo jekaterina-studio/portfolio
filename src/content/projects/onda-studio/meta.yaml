@@ -9,3 +9,7 @@ period:
 company: Onda Studio
 media: []
 documents: []
+# line under the title (owner request)
+parentText:
+  it: cliente Onda Studio e AreaOdeon
+  en: client Onda Studio and AreaOdeon
