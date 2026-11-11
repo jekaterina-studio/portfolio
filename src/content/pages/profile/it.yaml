@@ -10,13 +10,13 @@ biography: |-
   Sceglierei sempre il confronto aperto, perché mi piace la comunicazione diretta. Credo che il lavoro di squadra non debba soltanto mettere insieme competenze diverse, ma farle incontrare. Attraverso l'apertura e il riconoscimento delle differenze dell'altro.
 education:
 - institution: Università degli Studi di Urbino Carlo Bo
-  years: null # e.g. 2015 - 2018 (shown above the institution)
+  years: '2016 - 2019'
   qualification: Laurea in New Media, Informazione e Pubblicità.
 - institution: Accademia di Belle Arti di Brera
-  years: null # e.g. 2015 - 2018 (shown above the institution)
+  years: '2019 - 2021'
   qualification: Laurea magistrale in Comunicazione e Didattica dell'Arte, indirizzo Multimedia e Arti Visive.
 - institution: MEET Digital Culture Center
-  years: null # e.g. 2015 - 2018 (shown above the institution)
+  years: '2022 - 2023'
   qualification: Executive Master in Digital Curatorship for Creative Industries.
 - institution: VM Academy - International Flower Design School
   years: null # e.g. 2015 - 2018 (shown above the institution)

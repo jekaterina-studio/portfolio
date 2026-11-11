@@ -10,13 +10,13 @@ biography: |-
   I will always choose open dialogue because I value direct communication. I believe teamwork should do more than bring different skills together; it should create opportunities for them to meet and complement one another, through openness and an appreciation of individual differences.
 education:
 - institution: University of Urbino Carlo Bo
-  years: null # e.g. 2015 - 2018 (shown above the institution)
+  years: '2016 - 2019'
   qualification: Degree in New Media, Information and Advertising.
 - institution: Brera Academy of Fine Arts
-  years: null # e.g. 2015 - 2018 (shown above the institution)
+  years: '2019 - 2021'
   qualification: Master's Degree in Art Communication and Education, specialising in Multimedia and Visual Arts.
 - institution: MEET Digital Culture Center
-  years: null # e.g. 2015 - 2018 (shown above the institution)
+  years: '2022 - 2023'
   qualification: Executive Master's in Digital Curatorship for Creative Industries.
 - institution: VM Academy - International Flower Design School
   years: null # e.g. 2015 - 2018 (shown above the institution)
