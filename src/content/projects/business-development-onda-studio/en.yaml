@@ -14,12 +14,11 @@ activities:
 - relationship development with potential partners and clients
 role: Communication, Partnerships and Business Development Coordinator
 links: []
-occasions:
-- title: FACES - Évora 2027
-  text: Research, writing, revision and adaptation of the application for a participatory audiovisual installation. Selected application, securing €80,000 in funding.
-- title: Varese in Luce
-  text: 'Proposal for 12 urban lighting installations at Giardini Estensi in Varese. Indicative budget: €140,000 + VAT. Result: The application was assessed but not selected. The project contributed to the development of an institutional and commercial relationship with a potential client, which remains active today.'
-- title: International applications
-  text: Research and development of opportunities and applications for Uppsala Light Art Festival, Blink Cincinnati, Spectra - Scotland's Festival of Light in Aberdeen 2026, and Orografie Sonore with Fondazione della Comunità di Monza e Brianza. Application documentation is confidential and belongs to the client.
-- title: Partnership development
-  text: Research and development of potential partnerships in international contexts, including Dubai Design Week and the Brand Experience department of Louis Vuitton.
+results:
+  intro: 'Successful applications:'
+  items:
+  - 'FACES - Évora 2027: application prepared and managed, selected with €80,000 in funding'
+  - 'Uppsala Light Art Festival, 2026 edition'
+  - 'Blink Cincinnati, 2026 edition'
+  - 'Spectra - Scotland''s Festival of Light, Aberdeen, 2026 edition'
+  - 'Orografie Sonore project, supported by the Fondazione della Comunità di Monza e Brianza'

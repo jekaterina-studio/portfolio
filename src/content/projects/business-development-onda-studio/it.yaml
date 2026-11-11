@@ -14,12 +14,11 @@ activities:
 - sviluppo di relazioni con potenziali partner e committenti
 role: Communication, Partnerships and Business Development Coordinator
 links: []
-occasions:
-- title: FACES - Évora 2027
-  text: Ricerca, scrittura, revisione e adattamento della candidatura per un'installazione audiovisiva partecipativa. Candidatura selezionata, con un finanziamento di 80.000 €.
-- title: Varese in Luce
-  text: 'Proposta per 12 installazioni luminose urbane presso i Giardini Estensi di Varese. Budget indicativo: 140.000 € + IVA. Risultato: La candidatura è stata valutata ma non vincitrice. Il progetto ha contribuito allo sviluppo di una relazione istituzionale e commerciale con un potenziale committente che continua oggi.'
-- title: Candidature internazionali
-  text: Ricerca e sviluppo di opportunità e candidature per Uppsala Light Art Festival, Blink Cincinnati, Spectra - Scotland's Festival of Light ad Aberdeen 2026 e Orografie Sonore con Fondazione della Comunità di Monza e Brianza. Documentazione riservata al cliente.
-- title: Sviluppo partnership
-  text: Ricerca e sviluppo di potenziali partnership in contesti internazionali, tra cui Dubai Design Week e il dipartimento Brand Experience di Louis Vuitton.
+results:
+  intro: 'Candidature vinte:'
+  items:
+  - 'FACES - Évora 2027: candidatura curata e gestita, selezionata con un finanziamento di 80.000 €'
+  - 'Uppsala Light Art Festival, edizione 2026'
+  - 'Blink Cincinnati, edizione 2026'
+  - 'Spectra - Scotland''s Festival of Light, Aberdeen, edizione 2026'
+  - 'progetto Orografie Sonore, con il sostegno della Fondazione della Comunità di Monza e Brianza'
