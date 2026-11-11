@@ -6,8 +6,14 @@ description: |-
   Mi interessa dare forma a ciò che si nasconde.
 sections:
 - label: the afternoon after
+  subtitle:
+    title: last project
   gallery: true
-  text: 'Progetto fotografico indipendente. Milano, ottobre 2025. Art direction: Jekaterina Kanevskaja. Talent: Marina Quartado.'
+  text: |-
+    Progetto fotografico indipendente.
+    Milano, ottobre 2025.
+    Art direction: Jekaterina Kanevskaja.
+    Talent: Marina Quartado.
   items:
   - title: scarica il progetto (PDF, 11 MB)
     url: /documents/projects/photography-and-art-direction/the-afternoon-after-jekaterina-kanevskaja.pdf

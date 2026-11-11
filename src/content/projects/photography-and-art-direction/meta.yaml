@@ -10,25 +10,21 @@ media:
   images:
   - file: ../../../assets/images/projects/photography-and-art-direction/the-afternoon-after-01.jpg
     alt:
-      it: "Ragazza su una poltrona verde con un pomodoro in mano, in penombra"
-      en: "Woman on a green armchair holding a tomato, in half-light"
-  - file: ../../../assets/images/projects/photography-and-art-direction/the-afternoon-after-02.jpg
-    alt:
       it: "Dettaglio di mani e labbra con un pomodoro morso"
       en: "Close-up of hands and lips with a bitten tomato"
+  - file: ../../../assets/images/projects/photography-and-art-direction/the-afternoon-after-02.jpg
+    alt:
+      it: "Due protee su lenzuola stropicciate, in bianco e nero"
+      en: "Two proteas on crumpled sheets, in black and white"
   - file: ../../../assets/images/projects/photography-and-art-direction/the-afternoon-after-03.jpg
     alt:
-      it: "Ragazza seduta con le gambe accavallate e un pomodoro in mano"
-      en: "Seated woman with crossed legs holding a tomato"
+      it: "Ragazza distesa sul letto con i jeans, in bianco e nero"
+      en: "Woman lying on the bed in jeans, in black and white"
   - file: ../../../assets/images/projects/photography-and-art-direction/the-afternoon-after-04.jpg
     alt:
-      it: "Ritratto in luce radente con capelli sparsi, accanto al letto"
-      en: "Portrait in raking light with loose hair, beside the bed"
+      it: "Ragazza ripresa dal basso su una poltrona verde, con le calze nere"
+      en: "Woman seen from below on a green armchair, in black tights"
   - file: ../../../assets/images/projects/photography-and-art-direction/the-afternoon-after-05.jpg
-    alt:
-      it: "Ragazza in piedi sul letto con una maglia bianca trasparente"
-      en: "Woman standing on the bed in a sheer white top"
-  - file: ../../../assets/images/projects/photography-and-art-direction/the-afternoon-after-06.jpg
     alt:
       it: "Silhouette in bianco e nero davanti alla finestra dell'hotel"
       en: "Black and white silhouette against the hotel window"

@@ -1,5 +1,5 @@
 ---
-/** Renders plain text as paragraphs (blank line = new paragraph).
+/** Renders plain text as paragraphs (blank line = new paragraph, single line break = <br>).
     Text starting with "[DA FORNIRE" is shown as a visible placeholder. */
 interface Props { text?: string | null; class?: string }
 const { text, class: className } = Astro.props;
@@ -26,7 +26,7 @@ const parts = (p: string): Part[] => {
 {placeholder ? (
   <p class:list={['placeholder-text', className]} data-placeholder>{text ?? '[DA FORNIRE]'}</p>
 ) : (
-  <div class:list={['prose', className]}>{paragraphs.map((p) => <p>{parts(p).map((x) => (x.href ? <a class="prose-link" href={x.href} target="_blank" rel="noopener">{x.t}</a> : x.bold ? <strong>{x.t}</strong> : x.t))}</p>)}</div>
+  <div class:list={['prose', className]}>{paragraphs.map((p) => <p>{p.split('\n').map((line, li) => (<>{li > 0 && <br />}{parts(line).map((x) => (x.href ? <a class="prose-link" href={x.href} target="_blank" rel="noopener">{x.t}</a> : x.bold ? <strong>{x.t}</strong> : x.t))}</>))}</p>)}</div>
 )}
 <style>
   .prose { max-width: var(--measure); }
