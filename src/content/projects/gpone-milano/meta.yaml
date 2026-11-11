@@ -46,6 +46,27 @@ media:
     caption:
       it: 'Lo store come spazio di comunicazione: cura dell''esposizione e materiali dedicati, come i biglietti da visita realizzati per un''occasione speciale.'
       en: 'The store as a communication space: careful display and dedicated materials, such as business cards made for a special occasion.'
+  - file: ../../../assets/images/projects/gpone-milano/gpone-06-officina.jpg
+    alt:
+      it: 'Tecnico che lavora sul motore di una moto in officina.'
+      en: 'Technician working on a motorcycle engine in the workshop.'
+    caption:
+      it: 'La vita d''officina, il servizio storico dell''azienda, raccontata dall''interno.'
+      en: 'Life in the workshop, the company''s historic service, told from the inside.'
+  - file: ../../../assets/images/projects/gpone-milano/gpone-07-prodotto.jpg
+    alt:
+      it: 'Moto elettrica verde fotografata all''aperto in un contesto urbano.'
+      en: 'Green electric motorcycle photographed outdoors in an urban setting.'
+    caption:
+      it: 'Scatti di prodotto per campagne dedicate: un''atmosfera più intima per la gamma elettrica high level.'
+      en: 'Product shots for dedicated campaigns: a more intimate mood for the high-end electric range.'
+  - file: ../../../assets/images/projects/gpone-milano/gpone-08-persone.jpg
+    alt:
+      it: 'Tre persone che chiacchierano durante un evento sotto un arco con la scritta "E taggaci su Instagram @gpone_milano".'
+      en: 'Three people chatting at an event under an arch reading "E taggaci su Instagram @gpone_milano".'
+    caption:
+      it: 'Gli eventi come luogo di relazione: team, partner e clienti si incontrano dal vivo, e la community continua online.'
+      en: 'Events as a place for connection: team, partners and customers meet in person, and the community carries on online.'
 # call to action after the gallery (owner request)
 cta:
   area: events-and-brand-activations
