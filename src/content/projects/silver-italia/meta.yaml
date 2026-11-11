@@ -9,3 +9,7 @@ period:
 company: { it: Silver Italia e Silver Snc, en: Silver Italia and Silver Snc }
 media: []
 documents: []
+# line under the title (owner request)
+parentText:
+  it: cliente Silver Italia e Silver Snc
+  en: client Silver Italia and Silver Snc
