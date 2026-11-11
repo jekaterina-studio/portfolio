@@ -8,6 +8,7 @@ sections:
 - label: the afternoon after
   subtitle:
     title: last project
+    italic: true
   gallery: true
   text: |-
     Progetto fotografico indipendente.

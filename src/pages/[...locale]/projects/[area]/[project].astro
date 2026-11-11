@@ -145,7 +145,7 @@ const projectHref = (slug: string) => {
           {text.sections.map((s) => (
             <InfoRow label={s.label}>
               {s.subtitle && (
-                <p slot="sublabel" class="section-subtitle">{s.subtitle.url
+                <p slot="sublabel" class:list={['section-subtitle', s.subtitle.italic && 'section-subtitle--italic']}>{s.subtitle.url
                   ? <a class="item-link" href={s.subtitle.url} target="_blank" rel="noopener">{s.subtitle.title}</a>
                   : <span class="item-link">{s.subtitle.title}</span>}</p>
               )}
@@ -225,6 +225,8 @@ const projectHref = (slug: string) => {
   .case-gallery { margin-top: var(--space-6); }
   .section-gallery { margin-top: var(--space-4); }
   .items--after-gallery { margin-top: var(--space-4); }
+  /* red label, regular italic (owner request for "last project") */
+  .section-subtitle--italic .item-link { font-weight: 400; font-style: italic; }
   span.item-link:hover { text-decoration: none; }
   .occasions { display: grid; gap: var(--space-4); max-width: var(--measure); }
   .occasion__title { text-transform: none; font-size: var(--fs-body); margin-bottom: var(--space-1); }
