@@ -8,3 +8,7 @@ company: Onda Studio
 parent: onda-studio
 media: []
 documents: []
+# line under the title, without link (owner request)
+parentText:
+  it: progetto ideato e sviluppato da Onda Studio
+  en: a project conceived and developed by Onda Studio
