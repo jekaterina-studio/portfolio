@@ -1,5 +1,5 @@
 # Approved British English copy.
-# education: shown in this order. separatorBefore: true draws a thin line above the entry.
+# education: shown in this order (chronological: university, academy, master, then VM Academy). separatorBefore: true draws a thin line above the entry.
 biography: |-
   My professional journey began at the intersection of communication and visual arts, gradually expanding into cultural project development, marketing and project coordination.
 
@@ -9,13 +9,17 @@ biography: |-
 
   I will always choose open dialogue because I value direct communication. I believe teamwork should do more than bring different skills together; it should create opportunities for them to meet and complement one another, through openness and an appreciation of individual differences.
 education:
-- institution: MEET Digital Culture Center
-  qualification: Executive Master's in Digital Curatorship for Creative Industries.
-- institution: Brera Academy of Fine Arts
-  qualification: Master's Degree in Art Communication and Education, specialising in Multimedia and Visual Arts.
 - institution: University of Urbino Carlo Bo
+  years: null # e.g. 2015 - 2018 (shown above the institution)
   qualification: Degree in New Media, Information and Advertising.
+- institution: Brera Academy of Fine Arts
+  years: null # e.g. 2015 - 2018 (shown above the institution)
+  qualification: Master's Degree in Art Communication and Education, specialising in Multimedia and Visual Arts.
+- institution: MEET Digital Culture Center
+  years: null # e.g. 2015 - 2018 (shown above the institution)
+  qualification: Executive Master's in Digital Curatorship for Creative Industries.
 - institution: VM Academy - International Flower Design School
+  years: null # e.g. 2015 - 2018 (shown above the institution)
   qualification: Professional training programme in Floral Design.
   separatorBefore: true
   status: ongoing

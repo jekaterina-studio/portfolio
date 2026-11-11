@@ -5,6 +5,7 @@ import InfoRow from '../../components/InfoRow.astro';
 import Prose from '../../components/Prose.astro';
 import Placeholder from '../../components/dev/Placeholder.astro';
 import { nav, t } from '../../data/ui';
+import { site } from '../../data/site';
 import { getPage } from '../../lib/content';
 import { localeParams, toLocale } from '../../lib/i18n';
 
@@ -28,6 +29,7 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
       <ol class="education">
         {page.education.map((e: any) => (
           <li class:list={[e.separatorBefore && 'has-separator']}>
+            {e.years ? <p class="education__years">{e.years}</p> : site.showPlaceholders && <p class="education__years placeholder-line">{locale === 'it' ? '[anni da fornire]' : '[years to be supplied]'}</p>}
             <h3>{e.institution}</h3>
             <Prose text={e.qualification} />
             {e.description && <Prose text={e.description} class="muted" />}
@@ -61,6 +63,8 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
   .education { list-style: none; display: grid; gap: var(--space-4); }
   .education h3 { text-transform: none; }
   .education__status { color: var(--color-accent); }
+  .education__years { font-size: var(--fs-small); color: var(--color-muted); margin-bottom: var(--space-1); font-variant-numeric: tabular-nums; }
+  .placeholder-line { background: #f2f2f2; width: fit-content; padding: 0 0.2em; }
   /* thin line requested by the owner between the academic path and VM Academy */
   .education .has-separator { border-top: 1px solid var(--color-rule); padding-top: var(--space-4); } /* institution names keep their capitalisation */
   /* playful subtitle: lowercase, large, bold, red asterisk (owner request) */
