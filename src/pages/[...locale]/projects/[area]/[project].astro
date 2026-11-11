@@ -93,7 +93,7 @@ const projectHref = (slug: string) => {
               <>
                 {'intro' in results && results.intro && <p class="results-intro">{results.intro}</p>}
                 <ul class="activities">{results.items.map((r) => <li>{r}</li>)}</ul>
-                {'note' in results && results.note && <p class="muted results-note">{results.note}</p>}
+                {'note' in results && results.note && <div class="muted results-note"><Prose text={results.note} /></div>}
               </>
             )}
           </InfoRow>
@@ -183,7 +183,7 @@ const projectHref = (slug: string) => {
               <>
                 {'intro' in results && results.intro && <p class="results-intro">{results.intro}</p>}
                 <ul class="activities">{results.items.map((r) => <li>{r}</li>)}</ul>
-                {'note' in results && results.note && <p class="muted results-note">{results.note}</p>}
+                {'note' in results && results.note && <div class="muted results-note"><Prose text={results.note} /></div>}
               </>
             )}
           </InfoRow>
