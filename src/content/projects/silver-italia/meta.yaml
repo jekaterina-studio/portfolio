@@ -7,7 +7,45 @@ period:
   it: ottobre 2025 - settembre 2026
   en: October 2025 - September 2026
 company: { it: Silver Italia e Silver Snc, en: Silver Italia and Silver Snc }
-media: []
+media:
+- layout: series
+  format: portrait
+  images:
+  - file: ../../../assets/images/projects/silver-italia/silver-italia-01-sistema-post.jpg
+    alt:
+      it: 'Tre post Silver sovrapposti con le etichette Persone, Assistenza e Prodotti.'
+      en: 'Three overlapping Silver posts labelled People, Service and Products.'
+    caption:
+      it: 'Un sistema riconoscibile: ogni post parte da una foto autentica, con titolo breve e categoria (persone, assistenza, prodotti).'
+      en: 'A recognisable system: every post starts from an authentic photo, with a short headline and a category (people, service, products).'
+  - file: ../../../assets/images/projects/silver-italia/silver-italia-02-prima-dopo.jpg
+    alt:
+      it: 'Due smartphone con il profilo Instagram di Silver prima e dopo il nuovo piano.'
+      en: 'Two smartphones showing Silver''s Instagram profile before and after the new plan.'
+    caption:
+      it: 'Stessa identità, nuova applicazione: dopo l''analisi dell''ultimo anno, il feed è passato dalle grafiche di prodotto a un racconto più vicino alle persone e all''officina.'
+      en: 'Same identity, new approach: after reviewing the past year, the feed moved from product graphics to a story closer to the people and the workshop.'
+  - file: ../../../assets/images/projects/silver-italia/silver-italia-03-piano-editoriale.jpg
+    alt:
+      it: 'Schema del piano editoriale da ottobre a dicembre 2026, con uscite colorate per pilastro.'
+      en: 'Diagram of the October-December 2026 editorial plan, with posts coloured by pillar.'
+    caption:
+      it: 'Il piano editoriale del trimestre: un''uscita a settimana su tre canali, organizzata per pilastri e obiettivi misurabili.'
+      en: 'The quarterly editorial plan: one post a week on three channels, organised by content pillars and measurable goals.'
+  - file: ../../../assets/images/projects/silver-italia/silver-italia-04-post-linkedin.jpg
+    alt:
+      it: 'Portatile con un post LinkedIn di Silver su un filtro multifase per l''odontoiatria.'
+      en: 'Laptop showing a Silver LinkedIn post about a multi-stage dental water filter.'
+    caption:
+      it: 'Contenuti tecnici resi chiari: prodotti per la qualità dell''acqua nello studio odontoiatrico spiegati a un pubblico professionale.'
+      en: 'Technical content made clear: water-quality products for dental practices explained to a professional audience.'
+  - file: ../../../assets/images/projects/silver-italia/silver-italia-06-corso-tecnici.jpg
+    alt:
+      it: 'Relatore davanti a una slide durante un corso per tecnici, visto dal pubblico.'
+      en: 'Speaker in front of a slide during a technicians'' course, seen from the audience.'
+    caption:
+      it: 'Contenuti raccolti dal vivo durante un corso di formazione per tecnici specializzati, provincia di Bologna, novembre 2025.'
+      en: 'Content captured live during a training course for specialised technicians, province of Bologna, November 2025.'
 documents: []
 # line under the title (owner request)
 parentText:
