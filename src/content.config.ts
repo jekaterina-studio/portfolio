@@ -69,6 +69,8 @@ const projects = defineCollection({
           }),
         )
         .default([]),
+      /** call to action shown after the gallery, linking to an area index page */
+      cta: z.object({ area: z.string(), label: z.object({ it: z.string(), en: z.string().optional() }) }).optional(),
       /** plain text shown instead of the linked 'part of' line under the title (no link) */
       parentText: z.object({ it: z.string(), en: z.string().optional() }).optional(),
       /** small reference images shown next to the linked items of a section, in order (e.g. song thumbnails) */

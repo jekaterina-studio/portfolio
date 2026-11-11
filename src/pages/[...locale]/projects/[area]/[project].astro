@@ -205,6 +205,14 @@ const projectHref = (slug: string) => {
       </>
     )}
 
+    {meta.cta && (
+      <>
+        {/* inline so the shared project stylesheet stays unchanged */}
+        <style is:inline>.case-cta{margin-top:var(--space-6)}.case-cta a{color:var(--color-accent);font-weight:700;text-transform:uppercase;text-decoration:none}.case-cta__arrow{display:inline-block;margin-left:.35em;transition:transform .15s ease}.case-cta a:hover .case-cta__arrow,.case-cta a:focus-visible .case-cta__arrow{transform:translateX(.25em)}@media (prefers-reduced-motion:reduce){.case-cta__arrow{transition:none}}</style>
+        <p class="case-cta"><a href={localizedPath(locale, 'projects', meta.cta.area)}>{meta.cta.label[locale] ?? meta.cta.label.it}<span class="case-cta__arrow" aria-hidden="true">→</span></a></p>
+      </>
+    )}
+
     <footer class="project__nav">
       <ProjectPager locale={locale} prev={link(prev)} next={link(next)} area={{ href: areaHref, label: areaTitle }} />
     </footer>

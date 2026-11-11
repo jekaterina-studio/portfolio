@@ -7,7 +7,51 @@ period:
   it: aprile 2023 - ottobre 2025
   en: April 2023 - October 2025
 company: GPone Milano
-media: []
+media:
+- layout: series
+  format: portrait
+  images:
+  - file: ../../../assets/images/projects/gpone-milano/gpone-01-rebranding.jpg
+    alt:
+      it: 'Tre versioni del logo GPone Milano, il sito su un portatile e il feed Instagram su uno smartphone.'
+      en: 'Three versions of the GPone Milano logo, the website on a laptop and the Instagram feed on a smartphone.'
+    caption:
+      it: 'Il rebranding applicato alla comunicazione: dal logo storico al nuovo segno, declinato su sito e social insieme al grafico e allo sviluppatore.'
+      en: 'The rebrand applied to communication: from the original logo to the new mark, rolled out across website and social media with the graphic designer and the developer.'
+  - file: ../../../assets/images/projects/gpone-milano/gpone-02-cluster.jpg
+    alt:
+      it: 'Schema dei tre cluster comunicativi di GPone Milano: motoveicoli tradizionali, servizi di officina, e-mobility.'
+      en: 'Diagram of GPone Milano''s three communication clusters: traditional motorcycles, workshop services, e-mobility.'
+    caption:
+      it: 'Tre cluster, un solo marchio: vendita, officina ed e-mobility richiedevano linguaggi e obiettivi distinti.'
+      en: 'Three clusters, one brand: sales, workshop and e-mobility each needed their own language and goals.'
+  - file: ../../../assets/images/projects/gpone-milano/gpone-03-report.jpg
+    alt:
+      it: 'Copertine e una pagina dei report social di GPone Milano, con dati di engagement e visite.'
+      en: 'Covers and a page of GPone Milano''s social media reports, with engagement and visit data.'
+    caption:
+      it: 'Report trimestrali, semestrali e annuali: ogni periodo veniva misurato e analizzato per orientare quello successivo.'
+      en: 'Quarterly, half-yearly and annual reports: each period was measured and analysed to guide the next one.'
+  - file: ../../../assets/images/projects/gpone-milano/gpone-04-foto-campagna.jpg
+    alt:
+      it: 'Persona su uno scooter Askoll e due annunci social realizzati con le stesse foto.'
+      en: 'Person on an Askoll scooter and two social ads made with the same photos.'
+    caption:
+      it: 'Dallo scatto autentico alla campagna: le foto prodotte in casa diventavano annunci e contenuti dei canali, come per il noleggio Askoll durante la Fashion Week.'
+      en: 'From authentic shot to campaign: in-house photos became ads and channel content, as for the Askoll rental during Fashion Week.'
+  - file: ../../../assets/images/projects/gpone-milano/gpone-05-store.jpg
+    alt:
+      it: 'Moto esposta nello store davanti a una carta da parati tropicale e biglietti da visita GPone Milano.'
+      en: 'Motorcycle on display in the store against tropical wallpaper, and GPone Milano business cards.'
+    caption:
+      it: 'Lo store come spazio di comunicazione: cura dell''esposizione e materiali dedicati, come i biglietti da visita realizzati per un''occasione speciale.'
+      en: 'The store as a communication space: careful display and dedicated materials, such as business cards made for a special occasion.'
+# call to action after the gallery (owner request)
+cta:
+  area: events-and-brand-activations
+  label:
+    it: SCOPRI EVENTI E BRAND ACTIVATIONS
+    en: DISCOVER EVENTS AND BRAND ACTIVATIONS
 documents: []
 # line under the title (owner request)
 parentText:
