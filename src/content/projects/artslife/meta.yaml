@@ -9,3 +9,7 @@ period:
 company: ArtsLife
 media: []
 documents: []
+# line under the title (owner request)
+parentText:
+  it: cliente ArtsLife - We Web Company
+  en: client ArtsLife - We Web Company
