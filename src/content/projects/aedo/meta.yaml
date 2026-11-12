@@ -46,6 +46,13 @@ media:
     caption:
       it: 'Strategia e contenuti social: progetti, territori e persone raccontati con un linguaggio coerente.'
       en: 'Social media strategy and content: projects, places and people told in a consistent voice.'
+  - file: ../../../assets/images/projects/aedo/aedo-06-relazione.jpg
+    alt:
+      it: 'Copertina stampata della relazione sui podcast per Palazzo Moroni e Castello e Parco di Masino.'
+      en: 'Printed cover of the report on the podcasts for Palazzo Moroni and Castello e Parco di Masino.'
+    caption:
+      it: 'Anche i documenti ufficiali, come preventivi, relazioni e presentazioni non digitali, impaginati secondo la nuova identità.'
+      en: 'Official documents too, such as quotes, reports and printed presentations, laid out according to the new identity.'
 # call to action after the gallery (owner request)
 cta:
   area: cultural-and-creative-projects
