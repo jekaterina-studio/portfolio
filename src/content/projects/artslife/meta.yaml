@@ -46,6 +46,20 @@ media:
     caption:
       it: 'Otto mesi di comunicazione, dalla curatela al finissage, in parallelo alla Biennale di Venezia 2024.'
       en: 'Eight months of communication, from curation to finissage, alongside the 2024 Venice Biennale.'
+  - file: ../../../assets/images/projects/artslife/artslife-06-feed-mostra.jpg
+    alt:
+      it: 'Smartphone inclinato con il profilo Instagram esionov_italy e la griglia dei post.'
+      en: 'Tilted smartphone showing the esionov_italy Instagram profile and post grid.'
+    caption:
+      it: 'Il feed della mostra: post di lancio, opere, schizzi e i reel "venezia autunno 2024".'
+      en: 'The exhibition feed: teaser posts, artworks, sketches and the "venezia autunno 2024" reels.'
+  - file: ../../../assets/images/projects/artslife/artslife-07-emergent-talents.jpg
+    alt:
+      it: 'Smartphone con lo schermo pieno dell''hashtag #artslife_emergent_talents in nero, rosso e grigio.'
+      en: 'Smartphone screen filled with the hashtag #artslife_emergent_talents in black, red and grey.'
+    caption:
+      it: 'Seconda fase: la proposta per i canali di ArtsLife, costruita attorno a #artslife_emergent_talents.'
+      en: 'Second phase: a proposal for ArtsLife''s channels, built around #artslife_emergent_talents.'
 documents: []
 # line under the title (owner request)
 parentText:
