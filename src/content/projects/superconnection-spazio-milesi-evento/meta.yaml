@@ -12,6 +12,12 @@ parent: onda-studio
 media: []
 # slow looping slideshow (owner request): ready-made WebP in public/images/superconnection/, no captions
 slideshow:
+- src: /images/superconnection/superconnection-00
+  width: 810
+  height: 456
+  alt:
+    it: 'Vetrina di Spazio Milesi con la scritta "Superconnection, 28.11 - 14.12, Onda Studio", con le auto della strada riflesse nel vetro'
+    en: 'Spazio Milesi shop window with the lettering "Superconnection, 28.11 - 14.12, Onda Studio", with cars from the street reflected in the glass'
 - src: /images/superconnection/superconnection-01
   width: 1600
   height: 900
