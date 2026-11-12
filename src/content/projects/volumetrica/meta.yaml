@@ -7,6 +7,38 @@ period: null
 company: Onda Studio
 parent: onda-studio
 media: []
+# slow looping slideshow with thumbnails (owner request): WebP in public/images/volumetrica/
+slideshow:
+- src: /images/volumetrica/volumetrica-01
+  width: 1600
+  height: 900
+  alt:
+    it: 'Tre persone in una sala con finestre ad arco osservano la struttura in allestimento, accanto a una scala e a un portatile'
+    en: 'Three people in a room with arched windows looking at the structure being set up, next to a ladder and a laptop'
+- src: /images/volumetrica/volumetrica-02
+  width: 1600
+  height: 900
+  alt:
+    it: 'Due persone in controluce lavorano a un portatile dentro la struttura di americane rivestita di tessuto nero'
+    en: 'Two silhouetted people working at a laptop inside the truss structure lined with black fabric'
+- src: /images/volumetrica/volumetrica-03
+  width: 1600
+  height: 900
+  alt:
+    it: 'Mani che fissano un modulo laser a un''americana metallica'
+    en: 'Hands fixing a laser module to a metal truss'
+- src: /images/volumetrica/volumetrica-04
+  width: 1600
+  height: 900
+  alt:
+    it: 'Moduli laser accesi montati in fila su un''americana metallica'
+    en: 'Lit laser modules mounted in a row on a metal truss'
+- src: /images/volumetrica/volumetrica-05
+  width: 1600
+  height: 900
+  alt:
+    it: 'Una persona seduta a terra nella sala buia accanto a un faro e a un''americana con i moduli laser'
+    en: 'A person sitting on the floor of the dark room next to a spotlight and a truss fitted with laser modules'
 documents: []
 # line under the title, without link (owner request)
 parentText:
