@@ -7,7 +7,45 @@ period:
   it: '2024'
   en: '2024'
 company: ArtsLife
-media: []
+media:
+- layout: series
+  format: portrait
+  images:
+  - file: ../../../assets/images/projects/artslife/artslife-01-story-venezia.jpg
+    alt:
+      it: 'Smartphone con una storia Instagram: acquerello blu e la scritta "Venezia, autunno 2024".'
+      en: 'Smartphone showing an Instagram story: blue watercolour with the words "Venezia, autunno 2024".'
+    caption:
+      it: 'Venezia, autunno 2024: l''acquerello di Esionov diventa l''immagine d''apertura della comunicazione social.'
+      en: 'Venice, autumn 2024: Esionov''s watercolour becomes the opening image of the social campaign.'
+  - file: ../../../assets/images/projects/artslife/artslife-02-carosello-focus-processo-bio.jpg
+    alt:
+      it: 'Quattro slide di un carosello sovrapposte: ritratto dell''artista, Focus, Processo e Bio.'
+      en: 'Four overlapping carousel slides: artist portrait, Focus, Process and Bio.'
+    caption:
+      it: 'Ritratto, focus, processo, bio: un carosello per presentare l''artista, il suo metodo e il suo percorso.'
+      en: 'Portrait, focus, process, bio: a carousel introducing the artist, his method and his career.'
+  - file: ../../../assets/images/projects/artslife/artslife-03-tipologie-post.jpg
+    alt:
+      it: 'Sei miniature su fondo arancio: schizzo, opera in cornice, opera, simulazione in sala, ritratto e ritratto a colori.'
+      en: 'Six thumbnails on an orange background: sketch, framed artwork, artwork, room mockup, portrait and colour portrait.'
+    caption:
+      it: 'Un''opera, sei modalità di presentazione, tra cui una simulazione dell''opera in sala.'
+      en: 'One artwork, six ways to present it, including a simulated room view.'
+  - file: ../../../assets/images/projects/artslife/artslife-04-struttura-carosello.jpg
+    alt:
+      it: 'Schema di un carosello in cinque slide: copertina, opera, due dettagli e chiusura.'
+      en: 'Five-slide carousel diagram: cover, artwork, two details and closing slide.'
+    caption:
+      it: 'La struttura del carosello, dalla copertina ai dettagli dell''opera fino alla chiusura.'
+      en: 'Carousel structure, from the cover to the details of the artwork, through to the closing slide.'
+  - file: ../../../assets/images/projects/artslife/artslife-05-timeline.jpg
+    alt:
+      it: 'Timeline da aprile a dicembre 2024 con le fasi curation, dissemination, action, flow e closing.'
+      en: 'Timeline from April to December 2024 with the phases curation, dissemination, action, flow and closing.'
+    caption:
+      it: 'Otto mesi di comunicazione, dalla curatela al finissage, in parallelo alla Biennale di Venezia 2024.'
+      en: 'Eight months of communication, from curation to finissage, alongside the 2024 Venice Biennale.'
 documents: []
 # line under the title (owner request)
 parentText:
