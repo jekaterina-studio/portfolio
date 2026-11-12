@@ -23,6 +23,8 @@ const { src, alt, format, locale, caption, loading = 'lazy', zoom = false,
   sizes = '(max-width: 768px) 100vw, 50vw' } = Astro.props;
 const full = zoom ? await getImage({ src, width: Math.min(src.width, 2000), format: 'webp' }) : null;
 const Frame = zoom ? 'button' : 'div';
+// caption: a line break starts a new line; **text** = bold
+const captionLines = (caption ?? '').split('\n').map((l) => l.split(/\*\*(.+?)\*\*/g));
 ---
 <figure class:list={['doc-image', `doc-image--${format}`]}>
   <Frame class="doc-image__frame" {...(zoom ? { type: 'button', 'data-zoom': full!.src, 'aria-label': `${t('enlarge', locale)}: ${alt}` } : {})}>
@@ -36,7 +38,7 @@ const Frame = zoom ? 'button' : 'div';
       decoding="async"
     />
   </Frame>
-  {caption && <figcaption class="muted">{caption}</figcaption>}
+  {caption && <figcaption class="muted">{captionLines.map((parts, li) => (<>{li > 0 && <br />}{parts.map((x, i) => (i % 2 ? <strong>{x}</strong> : x))}</>))}</figcaption>}
 </figure>
 
 <style>
