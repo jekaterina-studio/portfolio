@@ -46,13 +46,13 @@ media:
     caption:
       it: 'Migrazione dei contatti da MailUp a Brevo: esportazione delle liste storiche, pulizia e mappatura dei dati, importazione in un unico CRM per le tre realtà.'
       en: 'Contact migration from MailUp to Brevo: exporting the historical lists, cleaning and mapping the data, importing into one CRM for the three organisations.'
-  - file: ../../../assets/images/projects/onda-studio/onda-06-acquisizione-materiali.jpg
+  - file: ../../../assets/images/projects/onda-studio/onda-06-acquisizione-in-loco.jpg
     alt:
-      it: 'Due momenti di un evento: il pubblico sotto una proiezione immersiva blu e una ripresa con smartphone su stabilizzatore in una galleria.'
-      en: 'Two moments at an event: the audience beneath a blue immersive projection, and filming with a smartphone on a stabiliser in a gallery.'
+      it: 'Un uomo alza la mano verso una proiezione immersiva blu durante un evento, tra il pubblico.'
+      en: 'A man raises his hand towards a blue immersive projection during an event, among the audience.'
     caption:
-      it: 'Coordinamento dell''acquisizione dei materiali durante eventi e occasioni, anche guidando altre persone nelle riprese.'
-      en: 'Coordinating content capture during events and special occasions, including directing others during filming.'
+      it: 'Acquisizione dei materiali in loco durante gli eventi.'
+      en: 'On-site content capture during events.'
   - file: ../../../assets/images/projects/onda-studio/onda-07-sound-safari.jpg
     alt:
       it: 'Il software Sound Safari su portatile e smartphone, con mappe interattive, il logo, i piani di abbonamento e il profilo Instagram.'
@@ -60,6 +60,13 @@ media:
     caption:
       it: 'Sound Safari, software web-based di Onda Studio: ho contribuito allo sviluppo grafico e commerciale del prodotto.'
       en: 'Sound Safari, Onda Studio''s web-based software: I contributed to the product''s graphic and commercial development.'
+  - file: ../../../assets/images/projects/onda-studio/onda-08-coordinamento-riprese.jpg
+    alt:
+      it: 'Ripresa con uno smartphone su stabilizzatore in una galleria, davanti al pubblico di una mostra.'
+      en: 'Filming with a smartphone on a stabiliser in a gallery, in front of exhibition visitors.'
+    caption:
+      it: 'Coordinamento dell''acquisizione dei materiali durante gli eventi live.'
+      en: 'Coordinating content capture during live events.'
 documents: []
 # line under the title (owner request)
 parentText:
