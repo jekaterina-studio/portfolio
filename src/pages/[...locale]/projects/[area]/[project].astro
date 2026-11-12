@@ -192,6 +192,13 @@ const projectHref = (slug: string) => {
           </InfoRow>
         </div>
 
+        {meta.slideshow.length > 0 && (
+          <section class="case-gallery">
+            <h2 class="case-gallery__label">{t('gallery', locale)}</h2>
+            <SlowSlideshow slides={meta.slideshow} locale={locale} />
+          </section>
+        )}
+
         {meta.media.length > 0 && !sectionGallery && (
           <div class="project__media">
             {meta.media.map((block) => (
