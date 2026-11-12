@@ -12,10 +12,6 @@ media:
     alt:
       it: Foglie verdi intrecciate a sfera in un vaso di pietra
       en: Green leaves woven into a sphere in a stone vase
-  - file: ../../../assets/images/projects/floral-design/floral-design-02.jpg
-    alt:
-      it: Dettaglio delle foglie verdi intrecciate
-      en: Detail of the woven green leaves
   - file: ../../../assets/images/projects/floral-design/floral-design-03.jpg
     alt:
       it: Graminacee secche con boccioli viola in un vaso di vetro
@@ -59,4 +55,8 @@ media:
     alt:
       it: Dettaglio della cascata di anelli dorati con orchidee bianche ed edera
       en: Detail of the gold ring cascade with white orchids and ivy
+  - file: ../../../assets/images/projects/floral-design/floral-design-13-feed-instagram.jpg
+    alt:
+      it: Smartphone con il feed Instagram di vegetherial, composizioni floreali alternate a immagini di ispirazione
+      en: Smartphone showing the vegetherial Instagram feed, floral compositions alternating with inspiration images
 documents: []
