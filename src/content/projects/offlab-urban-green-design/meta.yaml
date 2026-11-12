@@ -45,6 +45,26 @@ media:
     caption:
       it: 'Dal sistema alla stampa: tutti gli elementi confluiscono nella brochure pieghevole, poi la prova reale del pezzo stampato.'
       en: 'From system to print: every element comes together in the folded brochure, then the real test of the printed piece.'
+  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-06-struttura.jpg
+    alt:
+      it: 'Disegno a linee rosa della struttura in legno del padiglione e, in primo piano, il modello 3D wireframe su fondo nero.'
+      en: 'Pink line drawing of the pavilion''s wooden structure and, in the foreground, the wireframe 3D model on a black background.'
+  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-07-quartiere.jpg
+    alt:
+      it: 'Strada di Milano con un cavalcavia decorato dalla scritta "Corvetto" e un''auto in movimento sfocata.'
+      en: 'A Milan street with an overpass painted with the word "Corvetto" and a blurred moving car.'
+  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-08-modellino.jpg
+    alt:
+      it: 'Mani che assemblano il modellino in legno della struttura del padiglione su un tavolo da lavoro.'
+      en: 'Hands assembling the wooden scale model of the pavilion''s structure on a workbench.'
+  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-09-pattern-tipografico.jpg
+    alt:
+      it: 'Pagina con la parola OFFLAB ripetuta in onde di lettere nere, magenta, gialle e rosa.'
+      en: 'Page with the word OFFLAB repeated in waves of black, magenta, yellow and pink letters.'
+  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-10-brochure-stampata.jpg
+    alt:
+      it: 'Mani che sfogliano la brochure stampata di OFFLab, aperta sulla pagina "cos''è".'
+      en: 'Hands leafing through the printed OFFLab brochure, open at the "cos''è" page.'
 documents: []
 # line under the title, without link (owner request)
 parentText:
