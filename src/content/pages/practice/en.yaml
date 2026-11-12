@@ -20,16 +20,6 @@ steps:
   text: oversee execution, involve people and manage activities.
 - title: review
   text: evaluate results and feedback, and identify next steps.
-researchTitle: research tools
-research:
-- title: visual exploration
-  items: Pinterest · Are.na
-- title: documentary research
-  items: Web · Google Scholar · Europeana · ChatGPT · Claude
-- title: AI-assisted research
-  items: ChatGPT · Perplexity · Gemini · Claude
-- title: knowledge organisation
-  items: Notion · Zotero · Paperblanks · reMarkable
 tools:
 - label: Organisation
   items: Notion, Google Workspace, Microsoft Office, Excel.
@@ -37,4 +27,6 @@ tools:
   items: Canva, Figma, CapCut, WordPress.
 - label: Analysis and marketing
   items: Metricool, Brevo, Meta Business Suite.
+- label: Visual research
+  items: Pinterest, Are.na.
 documents: []
