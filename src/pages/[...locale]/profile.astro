@@ -44,7 +44,7 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
   </div>
 
   <!-- Personal references: playful subtitle requested by the owner (replaces the "no heading" rule). -->
-  {page.referencesTitle && <h2 class="references-title"><span class="star" aria-hidden="true">*</span>{page.referencesTitle}</h2>}
+  {page.referencesTitle && <h2 class="references-title">{page.referencesTitle}</h2>}
   <ul class="references">
     {page.references.map((r: any) => {
       const src = img(r.image);
