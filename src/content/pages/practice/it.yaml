@@ -21,12 +21,12 @@ steps:
 - title: verificare
   text: analizzare risultati e feedback, definire i prossimi passaggi.
 tools:
+- label: Ricerca visiva
+  items: Pinterest, Are.na.
 - label: Organizzazione
   items: Notion, Google Workspace, Microsoft Office, Excel.
 - label: Comunicazione e produzione
   items: Canva, Figma, CapCut, WordPress.
 - label: Analisi e marketing
   items: Metricool, Brevo, Meta Business Suite.
-- label: Ricerca visiva
-  items: Pinterest, Are.na.
 documents: []

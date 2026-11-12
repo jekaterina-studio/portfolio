@@ -21,12 +21,12 @@ steps:
 - title: review
   text: evaluate results and feedback, and identify next steps.
 tools:
+- label: Visual research
+  items: Pinterest, Are.na.
 - label: Organisation
   items: Notion, Google Workspace, Microsoft Office, Excel.
 - label: Communication and production
   items: Canva, Figma, CapCut, WordPress.
 - label: Analysis and marketing
   items: Metricool, Brevo, Meta Business Suite.
-- label: Visual research
-  items: Pinterest, Are.na.
 documents: []
