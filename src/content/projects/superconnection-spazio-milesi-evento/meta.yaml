@@ -10,4 +10,102 @@ period: null
 company: Onda Studio
 parent: onda-studio
 media: []
+# slow looping slideshow (owner request): ready-made WebP in public/images/superconnection/, no captions
+slideshow:
+- src: /images/superconnection/superconnection-01
+  width: 1600
+  height: 900
+  alt:
+    it: 'Tre donne in controluce in una sala buia attraversata da laser rossi a pavimento e linee di luce blu'
+    en: 'Three silhouetted women standing in a dark room crossed by red floor lasers and blue light lines'
+- src: /images/superconnection/superconnection-02
+  width: 1366
+  height: 768
+  alt:
+    it: 'Folla vista attraverso una porta a vetri, raccolta davanti a schermi con primi piani di occhi in bianco e nero'
+    en: 'Crowd seen through a glass door, gathered in front of wall screens showing black-and-white close-ups of eyes'
+- src: /images/superconnection/superconnection-03
+  width: 1600
+  height: 900
+  alt:
+    it: 'Due donne guardano in alto e indicano schermi pieni di dettagli di volti in bianco e nero'
+    en: 'Two women looking up and pointing at screens filled with black-and-white details of faces'
+- src: /images/superconnection/superconnection-04
+  width: 1600
+  height: 900
+  alt:
+    it: 'Visitatori in una sala nebbiosa illuminata di rosso e viola, un uomo allunga la mano verso un fascio laser blu'
+    en: 'Visitors in a hazy room lit in red and violet, one man reaching out towards a blue laser beam'
+- src: /images/superconnection/superconnection-05
+  width: 1600
+  height: 900
+  alt:
+    it: 'Silhouette di una donna con i capelli lunghi davanti a fasci di luce blu a ventaglio, linee laser rosse a pavimento'
+    en: 'Silhouette of a woman with long hair against fanning blue light beams, red laser lines on the floor'
+- src: /images/superconnection/superconnection-06
+  width: 1600
+  height: 900
+  alt:
+    it: 'Sala della galleria gremita, con grandi pannelli LED che mostrano grafiche caleidoscopiche blu'
+    en: 'Crowded gallery room with large LED panels showing blue kaleidoscopic graphics'
+- src: /images/superconnection/superconnection-07
+  width: 1600
+  height: 900
+  alt:
+    it: 'Donne in cappotto chiacchierano davanti a schermi neri con grafiche a linee bianche e scie di luce colorata'
+    en: 'Women in winter coats chatting in front of black screens with white line graphics and coloured light trails'
+- src: /images/superconnection/superconnection-08
+  width: 1600
+  height: 900
+  alt:
+    it: 'Una donna appoggiata al muro accanto a una scala di metallo, la sala in luce rossa e blu con linee laser a pavimento'
+    en: 'A woman leaning against a wall next to a metal staircase, the room lit in red and blue with laser lines on the floor'
+- src: /images/superconnection/superconnection-09
+  width: 1600
+  height: 900
+  alt:
+    it: 'Primo piano di una videocamera con microfono direzionale puntata su un grande occhio in bianco e nero su uno schermo'
+    en: 'Close-up of a video camera with a shotgun microphone pointed at a large black-and-white eye on a screen'
+- src: /images/superconnection/superconnection-10
+  width: 1600
+  height: 900
+  alt:
+    it: 'Persone che parlano dentro la galleria davanti a grandi vetrate, altri ospiti radunati in strada'
+    en: 'People talking inside the gallery in front of large windows, more guests gathered on the street outside'
+- src: /images/superconnection/superconnection-11
+  width: 1600
+  height: 900
+  alt:
+    it: 'Mani che tengono una cartellina con la lista degli ospiti e un piccolo cartoncino della mostra, in un ingresso buio'
+    en: 'Hands holding a clipboard with a guest list and a small exhibition card, in a dark entrance'
+- src: /images/superconnection/superconnection-12
+  width: 1600
+  height: 900
+  alt:
+    it: 'Una visitatrice sfoglia i fogli di sala stampati su un tavolo di metallo accanto a un espositore con QR code "scan me"'
+    en: 'A visitor leafing through printed exhibition sheets on a metal table next to a "scan me" QR code stand'
+- src: /images/superconnection/superconnection-13
+  width: 1600
+  height: 900
+  alt:
+    it: 'Due cappotti incorniciano una porta a vetri con la scritta "please come in"'
+    en: 'Two coats framing a glass door with the words "please come in"'
+- src: /images/superconnection/superconnection-14
+  width: 1600
+  height: 900
+  alt:
+    it: 'Due tecnici, uno su una scala, montano un grande pannello LED nero su una parete bianca'
+    en: 'Two technicians, one on a ladder, mounting a large black LED panel on a white wall'
+- src: /images/superconnection/superconnection-15
+  width: 1600
+  height: 900
+  alt:
+    it: 'Un uomo accovacciato vicino alla parete allinea i fasci laser rossi che attraversano il pavimento di una sala vuota'
+    en: 'A man crouching by the wall to align red laser beams crossing the floor of an empty room'
+- src: /images/superconnection/superconnection-16
+  width: 1600
+  height: 900
+  alt:
+    it: 'Un portatile con il software di controllo dei laser su un tavolo nero, in una sala inondata di luce rossa'
+    en: 'A laptop showing laser control software on a black table, in a room flooded with red light'
 documents: []

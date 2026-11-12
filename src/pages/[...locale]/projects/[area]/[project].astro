@@ -6,6 +6,7 @@ import InfoRow from '../../../../components/InfoRow.astro';
 import Prose from '../../../../components/Prose.astro';
 import DocumentList from '../../../../components/DocumentList.astro';
 import ImageSeries from '../../../../components/ImageSeries.astro';
+import SlowSlideshow from '../../../../components/SlowSlideshow.astro';
 import Gallery from '../../../../components/Gallery.astro';
 import { site } from '../../../../data/site';
 import ProjectPager from '../../../../components/ProjectPager.astro';
@@ -126,10 +127,12 @@ const projectHref = (slug: string) => {
             </div>
           </InfoRow>
         </div>
-        {(galleryImages.length > 0 || site.showPlaceholders) && (
+        {(galleryImages.length > 0 || meta.slideshow.length > 0 || site.showPlaceholders) && (
           <section class="case-gallery">
             <h2 class="case-gallery__label">{t('gallery', locale)}</h2>
-            {galleryImages.length > 0 ? (
+            {meta.slideshow.length > 0 ? (
+              <SlowSlideshow slides={meta.slideshow} locale={locale} />
+            ) : galleryImages.length > 0 ? (
               <Gallery images={galleryImages} format={galleryFormat} locale={locale} />
             ) : (
               <div class="case-gallery__placeholder" data-placeholder><span>{t('imagesToCome', locale)}</span></div>

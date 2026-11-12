@@ -69,6 +69,8 @@ const projects = defineCollection({
           }),
         )
         .default([]),
+      /** slow looping slideshow instead of the photo grid; src = public path without the -800/-1600.webp suffix */
+      slideshow: z.array(z.object({ src: z.string(), width: z.number(), height: z.number(), alt: z.object({ it: z.string(), en: z.string().optional() }) })).default([]),
       /** call to action shown after the gallery, linking to an area index page */
       cta: z.object({ area: z.string(), label: z.object({ it: z.string(), en: z.string().optional() }) }).optional(),
       /** plain text shown instead of the linked 'part of' line under the title (no link) */
