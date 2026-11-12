@@ -1,47 +1,61 @@
 ---
 /**
- * Slow, endless horizontal slideshow (owner request for Superconnection):
- * photos glide from right to left in a loop, no captions. The strip is
- * repeated once so the loop has no gap; it pauses on hover/focus and stops
- * (scrollable by hand) for people who prefer reduced motion.
+ * Superconnection gallery (owner request):
+ * 1. a strip of photos that glides from right to left in an endless loop,
+ *    on its own: it does not react to the cursor (no pause, no clicks);
+ * 2. below it, small thumbnails of every photo that open the lightbox
+ *    (src/scripts/lightbox.ts), so visitors can look at each one closely.
  * Images come ready-made from public/ (800 and 1600 px WebP, not recompressed).
+ * The strip is repeated once so the loop has no gap; with reduced motion it stays still.
  */
 import type { Locale } from '../lib/i18n';
 import { t } from '../data/ui';
 
 interface Slide { src: string; width: number; height: number; alt: { it: string; en?: string } }
 interface Props { slides: Slide[]; locale: Locale; secondsPerSlide?: number }
-const { slides, locale, secondsPerSlide = 20 } = Astro.props;
+const { slides, locale, secondsPerSlide = 12 } = Astro.props;
 const duration = slides.length * secondsPerSlide;
-const img = (s: Slide, i: number, copy: boolean) => ({
+const alt = (s: Slide) => s.alt[locale] ?? s.alt.it;
+const strip = (s: Slide, i: number) => ({
   src: `${s.src}-800.webp`,
   srcset: `${s.src}-800.webp 800w, ${s.src}-1600.webp 1600w`,
   sizes: '(max-width: 768px) 26rem, 40rem',
-  width: s.width,
-  height: s.height,
-  alt: copy ? '' : (s.alt[locale] ?? s.alt.it),
-  loading: (!copy && i < 3 ? 'eager' : 'lazy') as 'eager' | 'lazy',
-  decoding: 'async' as const,
+  width: s.width, height: s.height, alt: '',
+  loading: (i < 3 ? 'eager' : 'lazy') as 'eager' | 'lazy', decoding: 'async' as const,
 });
 ---
-<div class="slow-slideshow" role="region" aria-label={t('gallery', locale)} tabindex="0" style={`--slow-duration:${duration}s`}>
+<div class="slow-slideshow" aria-hidden="true" style={`--slow-duration:${duration}s`}>
   <ul class="slow-slideshow__track">
-    {slides.map((s, i) => <li><img {...img(s, i, false)} /></li>)}
-    {slides.map((s, i) => <li aria-hidden="true"><img {...img(s, i, true)} /></li>)}
+    {slides.map((s, i) => <li><img {...strip(s, i)} /></li>)}
+    {slides.map((s) => <li><img {...strip(s, 99)} /></li>)}
   </ul>
 </div>
+<ul class="slow-thumbs" aria-label={t('gallery', locale)}
+  data-lightbox data-label-close={t('close', locale)} data-label-prev={t('previous', locale)} data-label-next={t('next', locale)}>
+  {slides.map((s) => (
+    <li>
+      <button type="button" class="slow-thumbs__btn" data-zoom={`${s.src}-1600.webp`} aria-label={`${t('enlarge', locale)}: ${alt(s)}`}>
+        <img src={`${s.src}-800.webp`} width={s.width} height={s.height} alt={alt(s)} loading="lazy" decoding="async" />
+      </button>
+    </li>
+  ))}
+</ul>
 <style is:inline>
-  .slow-slideshow { overflow: hidden; width: 100%; }
-  .slow-slideshow__track { display: flex; gap: var(--space-3); width: max-content; list-style: none; margin: 0; padding: 0;
-    animation: slow-slideshow-loop var(--slow-duration, 220s) linear infinite; }
-  .slow-slideshow:hover .slow-slideshow__track, .slow-slideshow:focus-within .slow-slideshow__track { animation-play-state: paused; }
+  .slow-slideshow { overflow: hidden; width: 100%; pointer-events: none; user-select: none; }
+  .slow-slideshow__track { display: flex; gap: 4px; width: max-content; list-style: none; margin: 0; padding: 0;
+    animation: slow-slideshow-loop var(--slow-duration, 190s) linear infinite; }
   .slow-slideshow__track li { flex: none; }
   .slow-slideshow__track img { display: block; height: 22rem; width: auto; aspect-ratio: 16 / 9; object-fit: cover; }
-  @keyframes slow-slideshow-loop { to { transform: translateX(calc(-50% - var(--space-3) / 2)); } }
-  @media (max-width: 47.99rem) { .slow-slideshow__track img { height: 14rem; } }
-  @media (prefers-reduced-motion: reduce) {
-    .slow-slideshow { overflow-x: auto; }
-    .slow-slideshow__track { animation: none; }
-    .slow-slideshow__track li[aria-hidden="true"] { display: none; }
+  @keyframes slow-slideshow-loop { to { transform: translateX(calc(-50% - 2px)); } }
+  .slow-thumbs { list-style: none; margin: var(--space-4) 0 0; padding: 0; display: grid; gap: 4px;
+    grid-template-columns: repeat(8, minmax(0, 1fr)); }
+  .slow-thumbs__btn { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+  .slow-thumbs__btn img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; transition: opacity .15s ease; }
+  .slow-thumbs__btn:hover img { opacity: .75; }
+  .slow-thumbs__btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  @media (max-width: 47.99rem) {
+    .slow-slideshow__track img { height: 14rem; }
+    .slow-thumbs { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   }
+  @media (prefers-reduced-motion: reduce) { .slow-slideshow__track { animation: none; } }
 </style>
