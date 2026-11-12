@@ -6,7 +6,45 @@ sort: 2024-09
 period: null
 company: Aedo
 parent: aedo
-media: []
+media:
+- layout: series
+  format: portrait
+  images:
+  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-01-edificio.jpg
+    alt:
+      it: 'Render del padiglione modulare in legno di OFFLab con tetto spiovente, e due disegni tecnici: prospetto laterale e pianta.'
+      en: 'Render of OFFLab''s modular wooden pavilion with a sloping roof, and two technical drawings: side elevation and plan.'
+    caption:
+      it: 'Il punto di partenza: l''edificio. Dal render e dai disegni tecnici ho estratto le forme che sarebbero diventate l''identità del progetto.'
+      en: 'Starting point: the building. From the render and the technical drawings I extracted the shapes that would become the project''s identity.'
+  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-02-schizzi.jpg
+    alt:
+      it: 'Tre schizzi a matita del padiglione visto da angolazioni diverse, con ombre grigie.'
+      en: 'Three pencil sketches of the pavilion seen from different angles, with grey shadows.'
+    caption:
+      it: 'Gli schizzi: il volume dell''edificio ridotto a poche linee, da diverse angolazioni.'
+      en: 'The sketches: the building''s volume reduced to a few lines, from different angles.'
+  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-03-tipografia.jpg
+    alt:
+      it: 'Due pagine di layout: un elenco numerato "cos''è" e un titolo curvo "OffLab è il contenitore per" sopra un testo evidenziato.'
+      en: 'Two layout pages: a numbered "cos''è" list and a curved headline "OffLab è il contenitore per" above highlighted text.'
+    caption:
+      it: 'Una voce tipografica: la forma del tetto diventa movimento nel testo, con righe che si piegano, numeri che crescono e parole evidenziate che danno il ritmo alla lettura.'
+      en: 'A typographic voice: the shape of the roof turns into movement in the text, with lines that bend, numbers that grow and highlighted words that set the pace of reading.'
+  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-04-colore-immagine.jpg
+    alt:
+      it: 'Palette di quattro colori, lime, magenta, giallo e nero, e una pagina con foto in bicromia e testo.'
+      en: 'Four-colour palette, lime, magenta, yellow and black, and a page with duotone photos and text.'
+    caption:
+      it: 'Colore e immagine: lime, magenta, giallo e nero, con render e foto in bicromia, un codice cromatico che tiene insieme immagini e testi in ogni pagina.'
+      en: 'Colour and image: lime, magenta, yellow and black, with renders and photos in duotone, a colour code that holds images and text together on every page.'
+  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-05-stampa.jpg
+    alt:
+      it: 'Le due facciate della brochure pieghevole di OFFLab e la brochure stampata appoggiata su un tavolo.'
+      en: 'Both sides of the OFFLab folded brochure and the printed brochure resting on a table.'
+    caption:
+      it: 'Dal sistema alla stampa: tutti gli elementi confluiscono nella brochure pieghevole, poi la prova reale del pezzo stampato.'
+      en: 'From system to print: every element comes together in the folded brochure, then the real test of the printed piece.'
 documents: []
 # line under the title, without link (owner request)
 parentText:

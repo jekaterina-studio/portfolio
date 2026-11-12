@@ -3,7 +3,7 @@
  * Documentary image for project pages, shown in its original colours
  * (the red overlay was removed at the owner's request).
  */
-import { Picture, getImage } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import { t } from '../data/ui';
 import type { ImageMetadata } from 'astro';
 import type { Locale } from '../lib/i18n';
@@ -28,10 +28,10 @@ const captionLines = (caption ?? '').split('\n').map((l) => l.split(/\*\*(.+?)\*
 ---
 <figure class:list={['doc-image', `doc-image--${format}`]}>
   <Frame class="doc-image__frame" {...(zoom ? { type: 'button', 'data-zoom': full!.src, 'aria-label': `${t('enlarge', locale)}: ${alt}` } : {})}>
-    <Picture
+    <Image
       src={src}
       alt={alt}
-      formats={['webp']}
+      format="webp"
       widths={[480, 800, 1200, 1600].filter((w) => w <= src.width)}
       sizes={sizes}
       loading={loading}
