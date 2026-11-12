@@ -39,6 +39,36 @@ slideshow:
   alt:
     it: 'Una persona seduta a terra nella sala buia accanto a un faro e a un''americana con i moduli laser'
     en: 'A person sitting on the floor of the dark room next to a spotlight and a truss fitted with laser modules'
+- src: /images/volumetrica/volumetrica-06
+  width: 1600
+  height: 900
+  alt:
+    it: 'Un uomo in controluce indica verso l''alto dentro il tunnel di laser rossi e blu'
+    en: 'A silhouetted man pointing upwards inside the tunnel of red and blue lasers'
+- src: /images/volumetrica/volumetrica-07
+  width: 1600
+  height: 900
+  alt:
+    it: 'Fasci laser bianchi a ventaglio al centro, tra linee laser rosse verticali'
+    en: 'White laser beams fanning out in the centre, between vertical red laser lines'
+- src: /images/volumetrica/volumetrica-08
+  width: 1600
+  height: 900
+  alt:
+    it: 'Fasci laser rossi e azzurri che si incrociano in diagonale nel tunnel'
+    en: 'Red and light-blue laser beams crossing diagonally in the tunnel'
+- src: /images/volumetrica/volumetrica-09
+  width: 1600
+  height: 900
+  alt:
+    it: 'Il tunnel di laser blu e rossi visto dall''ingresso, nel buio'
+    en: 'The tunnel of blue and red lasers seen from the entrance, in the dark'
+- src: /images/volumetrica/volumetrica-10
+  width: 1600
+  height: 900
+  alt:
+    it: 'Il tunnel di laser rossi in prospettiva centrale'
+    en: 'The tunnel of red lasers in central perspective'
 documents: []
 # line under the title, without link (owner request)
 parentText:
