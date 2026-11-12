@@ -11,13 +11,6 @@ media:
 - layout: series
   format: portrait
   images:
-  - file: ../../../assets/images/projects/gpone-milano/gpone-01-rebranding.jpg
-    alt:
-      it: 'Tre versioni del logo GPone Milano, il sito su un portatile e il feed Instagram su uno smartphone.'
-      en: 'Three versions of the GPone Milano logo, the website on a laptop and the Instagram feed on a smartphone.'
-    caption:
-      it: 'Il rebranding applicato alla comunicazione: dal logo storico al nuovo segno, declinato su sito e social insieme al grafico e allo sviluppatore.'
-      en: 'The rebrand applied to communication: from the original logo to the new mark, rolled out across website and social media with the graphic designer and the developer.'
   - file: ../../../assets/images/projects/gpone-milano/gpone-02-cluster.jpg
     alt:
       it: 'Schema dei tre cluster comunicativi di GPone Milano: motoveicoli tradizionali, servizi di officina, e-mobility.'
@@ -25,6 +18,34 @@ media:
     caption:
       it: 'Tre cluster, un solo marchio: vendita, officina ed e-mobility richiedevano linguaggi e obiettivi distinti.'
       en: 'Three clusters, one brand: sales, workshop and e-mobility each needed their own language and goals.'
+  - file: ../../../assets/images/projects/gpone-milano/gpone-09-feed-instagram.jpg
+    alt:
+      it: 'Smartphone con il feed Instagram di GPone Milano: foto di moto e grafiche nere e verdi con titoli.'
+      en: 'Smartphone showing the GPone Milano Instagram feed: motorcycle photos and black and green graphics with headlines.'
+    caption:
+      it: 'Il feed Instagram dopo il rebranding: foto autentiche alternate a grafiche dedicate a promozioni, officina e accessori.'
+      en: 'The Instagram feed after the rebrand: authentic photos alternating with graphics for promotions, the workshop and accessories.'
+  - file: ../../../assets/images/projects/gpone-milano/gpone-10-product-service-stories.jpg
+    alt:
+      it: 'Griglia di contenuti GPone Milano divisi in tre righe: product, service e stories.'
+      en: 'Grid of GPone Milano content in three rows: product, service and stories.'
+    caption:
+      it: 'Contenuti organizzati per tipologia: prodotto, servizio d''officina e stories.'
+      en: 'Content organised by type: product, workshop service and stories.'
+  - file: ../../../assets/images/projects/gpone-milano/gpone-11-tiktok.jpg
+    alt:
+      it: 'Tre smartphone con video TikTok di GPone Milano girati in officina e nello store.'
+      en: 'Three smartphones showing GPone Milano TikTok videos filmed in the workshop and the store.'
+    caption:
+      it: 'Video brevi per TikTok, girati in officina e nello store con il team come protagonista.'
+      en: 'Short TikTok videos, filmed in the workshop and the store with the team in the lead.'
+  - file: ../../../assets/images/projects/gpone-milano/gpone-01-rebranding.jpg
+    alt:
+      it: 'Tre versioni del logo GPone Milano, il sito su un portatile e il feed Instagram su uno smartphone.'
+      en: 'Three versions of the GPone Milano logo, the website on a laptop and the Instagram feed on a smartphone.'
+    caption:
+      it: 'Il rebranding applicato alla comunicazione: dal logo storico al nuovo segno, declinato su sito e social insieme al grafico e allo sviluppatore.'
+      en: 'The rebrand applied to communication: from the original logo to the new mark, rolled out across website and social media with the graphic designer and the developer.'
   - file: ../../../assets/images/projects/gpone-milano/gpone-03-report.jpg
     alt:
       it: 'Copertine e una pagina dei report social di GPone Milano, con dati di engagement e visite.'
@@ -46,13 +67,6 @@ media:
     caption:
       it: 'Lo store come spazio di comunicazione: cura dell''esposizione e materiali dedicati, come i biglietti da visita realizzati per un''occasione speciale.'
       en: 'The store as a communication space: careful display and dedicated materials, such as business cards made for a special occasion.'
-  - file: ../../../assets/images/projects/gpone-milano/gpone-06-officina.jpg
-    alt:
-      it: 'Tecnico che lavora sul motore di una moto in officina.'
-      en: 'Technician working on a motorcycle engine in the workshop.'
-    caption:
-      it: 'La vita d''officina, il servizio storico dell''azienda, raccontata dall''interno.'
-      en: 'Life in the workshop, the company''s historic service, told from the inside.'
   - file: ../../../assets/images/projects/gpone-milano/gpone-07-prodotto.jpg
     alt:
       it: 'Moto elettrica verde fotografata all''aperto in un contesto urbano.'
