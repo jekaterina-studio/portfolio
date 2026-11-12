@@ -7,7 +7,51 @@ period:
   it: settembre 2022 - settembre 2024
   en: September 2022 - September 2024
 company: Aedo
-media: []
+media:
+- layout: series
+  format: portrait
+  images:
+  - file: ../../../assets/images/projects/aedo/aedo-01-identita.jpg
+    alt:
+      it: 'Il vecchio logo Aedo, la palette e il lettering del nuovo marchio, il feed Instagram su smartphone e biglietti da visita.'
+      en: 'The old Aedo logo, the new brand''s palette and lettering, the Instagram feed on smartphones and business cards.'
+    caption:
+      it: 'Dal vecchio logo al nuovo brand book firmato da Studio 48: il mio lavoro è stato applicare la nuova identità alla comunicazione online e offline.'
+      en: 'From the old logo to the new brand book created by Studio 48: my role was to apply the new identity across online and offline communication.'
+  - file: ../../../assets/images/projects/aedo/aedo-02-ricerca.jpg
+    alt:
+      it: 'Mano che posiziona un supporto trasparente su un violino storico, illuminato da un puntatore laser rosso.'
+      en: 'Hand placing a transparent support on a historic violin, lit by a red laser pointer.'
+    caption:
+      it: 'Progetti tra patrimonio culturale, ricerca e tecnologia: una complessità da tradurre in un racconto chiaro.'
+      en: 'Projects bridging cultural heritage, research and technology: complexity to be turned into a clear story.'
+  - file: ../../../assets/images/projects/aedo/aedo-03-sito.jpg
+    alt:
+      it: 'Homepage del sito Aedo su un portatile, con i progetti Smart Schooling, Il Gioco della Guerra e AscoltaMI.'
+      en: 'Aedo website homepage on a laptop, showing the projects Smart Schooling, Il Gioco della Guerra and AscoltaMI.'
+    caption:
+      it: 'Il nuovo sito: architettura, racconto dei progetti e grafica, sviluppati in squadra. Ho contribuito alla definizione dei contenuti.'
+      en: 'The new website: structure, project storytelling and design, developed as a team. I contributed to defining the content.'
+  - file: ../../../assets/images/projects/aedo/aedo-04-presentazioni.jpg
+    alt:
+      it: 'Presentazione "per Agenda 2030" su un tablet e pagina di un report OFFLab con il grafico delle attività su un portatile.'
+      en: '"per Agenda 2030" presentation on a tablet and an OFFLab report page with an activity chart on a laptop.'
+    caption:
+      it: 'Un codice grafico istituzionale pulito ma riconoscibile, applicato a presentazioni di progetto e report di attività.'
+      en: 'A clean yet recognisable institutional visual code, applied to project presentations and activity reports.'
+  - file: ../../../assets/images/projects/aedo/aedo-05-social.jpg
+    alt:
+      it: 'Tre smartphone con un post, un video e una storia Instagram di Aedo.'
+      en: 'Three smartphones showing an Aedo Instagram post, video and story.'
+    caption:
+      it: 'Strategia e contenuti social: progetti, territori e persone raccontati con un linguaggio coerente.'
+      en: 'Social media strategy and content: projects, places and people told in a consistent voice.'
+# call to action after the gallery (owner request)
+cta:
+  area: cultural-and-creative-projects
+  label:
+    it: SCOPRI I PROGETTI CULTURALI E CREATIVI
+    en: DISCOVER CULTURAL AND CREATIVE PROJECTS
 documents: []
 # line under the title (owner request)
 parentText:
