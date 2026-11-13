@@ -190,6 +190,9 @@ const projectHref = (slug: string) => {
               </>
             )}
           </InfoRow>
+          <InfoRow label={t('usefulLinks', locale)} show={text.links.length > 0}>
+            <ul class="items case-links">{text.links.map((l) => <li><a href={l.url} target="_blank" rel="noopener">{l.label}</a></li>)}</ul>
+          </InfoRow>
         </div>
 
         {meta.slideshow.length > 0 && (

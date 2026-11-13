@@ -16,7 +16,15 @@ activities:
 - business development and partnership research
 - relationship development with potential partners and clients
 role: Communication, Partnerships and Business Development Coordinator
-links: []
+links:
+- label: FACES - Évora 2027 application
+  url: https://ondastudio.art/evora/
+- label: Évora 2027 - Official selection results
+  url: https://www.evora2027.com/fileadmin/E__27_OurLab_results_17APR26.pdf
+- label: Sound Safari
+  url: https://soundsafari.it/it/
+- label: Onda Studio
+  url: https://ondastudio.art/
 results:
   intro: 'Successful applications:'
   items:
