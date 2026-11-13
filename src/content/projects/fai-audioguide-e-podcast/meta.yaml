@@ -45,6 +45,27 @@ media:
     caption:
       it: 'Il patrimonio storico e artistico dei beni FAI, raccontato attraverso narrazioni audio e paesaggi sonori.'
       en: 'The historical and artistic heritage of FAI sites, told through audio narratives and soundscapes.'
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-06.jpg
+    alt:
+      it: 'Mani su un tavolo con opuscoli e cartoline FAI, un taccuino di appunti scritti a mano e un portatile.'
+      en: 'Hands on a table with FAI brochures and postcards, a handwritten notebook and a laptop.'
+    caption:
+      it: 'La fase di ricerca: materiali FAI, appunti e riferimenti da cui prendono forma le narrazioni.'
+      en: 'The research phase: FAI materials, notes and references from which the narratives take shape.'
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-07.jpg
+    alt:
+      it: 'Mappa illustrata del Parco di Villa Gregoriana con le tappe numerate e il lettore audio FAI con le prime tracce del percorso.'
+      en: 'Illustrated map of Parco di Villa Gregoriana with numbered stops, and the FAI audio player with the first tracks of the route.'
+    caption:
+      it: 'L''audioguida del Parco di Villa Gregoriana: le tappe del percorso sulla mappa e le tracce audio sul sito FAI.'
+      en: 'The Parco di Villa Gregoriana audio tour: the route''s stops on the map and the audio tracks on the FAI website.'
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-08.jpg
+    alt:
+      it: 'Un uomo sorridente davanti a un microfono con filtro antipop, cuffie e leggio, in una cabina di registrazione.'
+      en: 'A smiling man in front of a microphone with a pop filter, headphones and music stand, in a recording booth.'
+    caption:
+      it: 'In cabina: la registrazione delle voci narranti.'
+      en: 'In the booth: recording the narrating voices.'
 documents: []
 # line under the title, without link (owner request)
 parentText:
