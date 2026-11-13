@@ -11,19 +11,54 @@ media:
   images:
   - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-01.jpg
     alt:
+      it: 'Rendering di OFFLab: una costruzione in legno con le porte aperte, un tavolo con sedie all''interno e fioriere a parete.'
+      en: 'Rendering of OFFLab: a wooden building with open doors, a table and chairs inside and wall planters.'
+    caption:
+      it: 'Il rendering di OFFLab: un laboratorio in legno circondato da giardini verticali.'
+      en: 'The OFFLab rendering: a wooden lab surrounded by vertical gardens.'
+  - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-02.jpg
+    alt:
+      it: 'Tabella della proposta di percorsi didattici OFFLab, con cinque moduli per le classi dalla prima alla quinta, accanto a tre foto di attività.'
+      en: 'Table of the OFFLab learning path proposal, with five modules for classes from first to fifth year, next to three activity photos.'
+    caption:
+      it: 'La proposta di percorsi didattici: cinque moduli tematici per ogni classe, dalla prima alla quinta, legati agli obiettivi dell''Agenda 2030.'
+      en: 'The learning path proposal: five thematic modules for each class, from first to fifth year, linked to the 2030 Agenda goals.'
+  - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-03.jpg
+    alt:
+      it: 'La mano di un bambino si avvicina alla terra lavorata in una giornata di sole.'
+      en: 'A child''s hand reaching towards tilled soil on a sunny day.'
+    caption:
+      it: 'Il contatto diretto con la terra: l''apprendimento passa dall''esperienza.'
+      en: 'Direct contact with the soil: learning through experience.'
+  - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-04.jpg
+    alt:
+      it: 'Tre persone in riunione attorno a un tavolo; sotto, pallet dipinti appoggiati a una siepe in un giardino.'
+      en: 'Three people in a meeting around a table; below, painted pallets leaning against a hedge in a garden.'
+    caption:
+      it: 'Incontri con le scuole e gli interlocutori coinvolti e sopralluoghi negli spazi verdi.'
+      en: 'Meetings with the schools and stakeholders involved, and site visits to green spaces.'
+  - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-05.jpg
+    alt:
+      it: 'Rendering dell''interno di OFFLab con un tavolo esagonale e sgabelli colorati; sotto, il modellino di OFFLab presentato su un tavolo.'
+      en: 'Rendering of the OFFLab interior with a hexagonal table and colourful stools; below, the OFFLab model presented on a table.'
+    caption:
+      it: 'Lo spazio interno pensato per i laboratori e il modellino di OFFLab presentato agli interlocutori.'
+      en: 'The interior designed for the workshops and the OFFLab model presented to stakeholders.'
+  - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-06.jpg
+    alt:
       it: 'Mani che compongono fiori secchi rosa e rossi dentro una piccola cornice in legno, su un tavolo coperto di steli.'
       en: 'Hands arranging pink and red dried flowers inside a small wooden frame, on a table covered with stems.'
     caption:
       it: 'Laboratorio con fiori secchi: la natura diventa materia da comporre con le mani.'
       en: 'Dried flower workshop: nature becomes material to arrange by hand.'
-  - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-02.jpg
+  - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-07.jpg
     alt:
       it: 'Copertina del toolkit OFFLab - Our Future Fab Lab, la guida pratica per gli esploratori del mondo.'
       en: 'Cover of the OFFLab - Our Future Fab Lab toolkit, the practical guide for explorers of the world.'
     caption:
       it: 'Il toolkit educativo "OFFLab - Our Future Fab Lab, la guida pratica per gli esploratori del mondo".'
       en: 'The educational toolkit "OFFLab - Our Future Fab Lab, la guida pratica per gli esploratori del mondo".'
-  - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-03.jpg
+  - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-08.jpg
     alt:
       it: 'Blocchi in legno impilati con triangoli rossi; sotto, una persona tiene tra le braccia un mazzo di piante grasse avvolte nella carta.'
       en: 'Stacked wooden blocks marked with red triangles; below, a person holding a bunch of succulents wrapped in paper.'
