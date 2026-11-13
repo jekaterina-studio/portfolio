@@ -6,7 +6,30 @@ sort: 2024-09
 period: null
 company: Aedo
 parent: aedo
-media: []
+media:
+- layout: series
+  format: portrait
+  images:
+  - file: ../../../assets/images/projects/ascoltami/ascoltami-01.jpg
+    alt:
+      it: 'Un ragazzo e una ragazza davanti a una vetrina di orologi antichi; sotto, il gruppo sui gradini davanti al Duomo di Milano.'
+      en: 'A young man and woman in front of a display case of antique watches; below, the group on the steps in front of Milan Cathedral.'
+  - file: ../../../assets/images/projects/ascoltami/ascoltami-02.jpg
+    alt:
+      it: 'Ragazze con smartphone e una cassa portatile durante l''ascolto all''aperto.'
+      en: 'Young women with smartphones and a portable speaker, listening outdoors.'
+  - file: ../../../assets/images/projects/ascoltami/ascoltami-03.jpg
+    alt:
+      it: 'Un libro aperto con la pianta di una casa museo; sotto, ragazze e ragazzi sorridenti in un cortile.'
+      en: 'An open book showing the floor plan of a house museum; below, smiling young people in a courtyard.'
+  - file: ../../../assets/images/projects/ascoltami/ascoltami-04.jpg
+    alt:
+      it: 'Tre schede di lavoro compilate a mano, con la sezione #ESPLORARE dedicata al Parco Montanelli.'
+      en: 'Three handwritten worksheets from the #ESPLORARE section about Parco Montanelli.'
+  - file: ../../../assets/images/projects/ascoltami/ascoltami-05.jpg
+    alt:
+      it: 'Ragazze in ascolto davanti a un dipinto antico in una sala della casa museo.'
+      en: 'Young women listening in front of an old painting in a room of the house museum.'
 documents: []
 # line under the title, without link (owner request)
 parentText:
