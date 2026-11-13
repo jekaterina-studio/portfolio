@@ -94,7 +94,7 @@ const projectHref = (slug: string) => {
             {results && 'items' in results && results.items.length > 0 && (
               <>
                 {'intro' in results && results.intro && <p class="results-intro">{results.intro}</p>}
-                <ul class="activities">{results.items.map((r) => <li>{r}</li>)}</ul>
+                <ul class="activities">{results.items.map((r) => <li><Prose text={r} /></li>)}</ul>
                 {'note' in results && results.note && <div class="muted results-note"><Prose text={results.note} /></div>}
               </>
             )}
