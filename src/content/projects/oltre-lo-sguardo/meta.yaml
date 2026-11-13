@@ -2,8 +2,10 @@
 # period: null = not supplied yet (shown as a placeholder).
 area: cultural-and-creative-projects
 order: 3.5
-sort: null
-period: null
+sort: 2024-06
+period:
+  it: giugno 2024
+  en: June 2024
 company: Aedo
 parent: aedo
 media:
