@@ -10,4 +10,108 @@ company: GPone Milano
 parent: gpone-milano
 place: GPone Milano, Darsena, Milano
 media: []
+# slow looping slideshow with thumbnails (owner request): WebP in public/images/askoll/, no captions
+slideshow:
+- src: /images/askoll/askoll-00
+  width: 1600
+  height: 900
+  alt:
+    it: 'Rendering e realizzazione dell''allestimento: a sinistra la simulazione della facciata dello store con le grandi sagome gialle XKP 80, a destra un allestitore che applica la grafica adesiva sul pannello giallo'
+    en: 'Rendering and realisation of the set-up: on the left the simulated store façade with the large yellow XKP 80 shapes, on the right an installer applying the vinyl graphic to the yellow panel'
+- src: /images/askoll/askoll-01
+  width: 1600
+  height: 900
+  alt:
+    it: 'Facciata di un negozio a Milano con insegna XKP, due grandi sagome gialle a forma di 8 e 0 attorno agli ingressi e una fila di scooter elettrici neri sul marciapiede.'
+    en: 'Milan shopfront with an XKP sign, two large yellow 8- and 0-shaped cut-outs framing the entrances and a row of black electric scooters on the pavement.'
+- src: /images/askoll/askoll-02
+  width: 1600
+  height: 900
+  alt:
+    it: 'Scooter elettrico nero Askoll XKP su una pedana nera e gialla davanti allo store, con altri scooter con la scritta Test Ride sullo sfondo.'
+    en: 'Black Askoll XKP electric scooter on a black and yellow platform in front of the store, with other scooters marked Test Ride behind it.'
+- src: /images/askoll/askoll-03
+  width: 1600
+  height: 900
+  alt:
+    it: 'Due grandi sagome gialle a forma di 8 e 0 con i loghi Askoll Store Darsena e GP One Milano; dentro l''apertura si vedono uno scooter e il DJ.'
+    en: 'Two large yellow 8- and 0-shaped cut-outs with the Askoll Store Darsena and GP One Milano logos; a scooter and the DJ are visible through the opening.'
+- src: /images/askoll/askoll-04
+  width: 1600
+  height: 900
+  alt:
+    it: 'Tre scooter elettrici Askoll XKP parcheggiati sul marciapiede in porfido, uno con la scritta Test Ride; sullo sfondo passa un altro scooter.'
+    en: 'Three Askoll XKP electric scooters parked on a cobbled pavement, one marked Test Ride; another scooter passes in the background.'
+- src: /images/askoll/askoll-05
+  width: 1600
+  height: 900
+  alt:
+    it: 'Una donna con il casco prende in mano uno scooter mentre un uomo in camicia bianca spiega il mezzo a un ospite con il casco, davanti all''ingresso giallo GP One Milano.'
+    en: 'A woman in a helmet takes hold of a scooter while a man in a white shirt explains the vehicle to a helmeted guest, by the yellow GP One Milano entrance.'
+- src: /images/askoll/askoll-06
+  width: 1600
+  height: 900
+  alt:
+    it: 'Una donna sorridente con casco jet guida uno scooter elettrico nero in strada, con il faro acceso.'
+    en: 'A smiling woman in an open-face helmet rides a black electric scooter on the street, headlight on.'
+- src: /images/askoll/askoll-07
+  width: 1600
+  height: 900
+  alt:
+    it: 'Una ragazza con casco argento e un ragazzo con casco nero su uno scooter, lei controlla il manubrio; dietro, auto e siepi.'
+    en: 'A young woman in a silver helmet and a young man in a black helmet on a scooter, she checks the handlebar; cars and hedges behind them.'
+- src: /images/askoll/askoll-08
+  width: 1600
+  height: 900
+  alt:
+    it: 'Un consulente in camicia bianca con il badge Askoll illustra uno scooter a una coppia di ospiti con un bicchiere in mano.'
+    en: 'A consultant in a white shirt with an Askoll lanyard presents a scooter to two guests holding drinks.'
+- src: /images/askoll/askoll-09
+  width: 1600
+  height: 900
+  alt:
+    it: 'Interno dello store con palloncini verdi, uno scooter esposto, un tavolo buffet con flûte e stuzzichini, due ospiti a un tavolino e un cameriere.'
+    en: 'Store interior with green balloons, a scooter on display, a buffet table with flutes and finger food, two guests at a high table and a waiter.'
+- src: /images/askoll/askoll-10
+  width: 1600
+  height: 900
+  alt:
+    it: 'Un DJ con cuffie al collo e occhiali da sole davanti al banner XKP e a un grappolo di palloncini verdi e bianchi.'
+    en: 'A DJ with headphones around his neck and sunglasses in front of the XKP banner and a cluster of green and white balloons.'
+- src: /images/askoll/askoll-11
+  width: 1600
+  height: 900
+  alt:
+    it: 'File di flûte vuote su un tavolo bianco, bottiglie nel secchiello e un cameriere che appoggia un calice pieno.'
+    en: 'Rows of empty flutes on a white table, bottles in an ice bucket and a waiter setting down a full glass.'
+- src: /images/askoll/askoll-12
+  width: 1600
+  height: 900
+  alt:
+    it: 'Primo piano di bottiglie di Prosecco nel ghiaccio dentro un secchiello trasparente, con flûte in primo piano.'
+    en: 'Close-up of Prosecco bottles on ice in a clear bucket, with flutes in the foreground.'
+- src: /images/askoll/askoll-13
+  width: 1600
+  height: 900
+  alt:
+    it: 'Un cameriere sorridente offre un vassoio di flûte a un gruppo di ospiti nello store, sotto un banner OJ.'
+    en: 'A smiling waiter offers a tray of flutes to a group of guests in the store, beneath an OJ banner.'
+- src: /images/askoll/askoll-14
+  width: 1600
+  height: 900
+  alt:
+    it: 'Un cameriere taglia un dolce lievitato a forma di lettere, spolverato di zucchero a velo, su un tavolo con piatti e posate in legno.'
+    en: 'A waiter cuts a sugar-dusted pastry shaped like letters, on a table with plates and wooden cutlery.'
+- src: /images/askoll/askoll-15
+  width: 1600
+  height: 900
+  alt:
+    it: 'Quattro uomini con le magliette GP One Milano posano abbracciati con i calici in mano, mentre una donna li fotografa con lo smartphone.'
+    en: 'Four men in GP One Milano T-shirts pose arm in arm holding glasses while a woman photographs them on her smartphone.'
+- src: /images/askoll/askoll-16
+  width: 1600
+  height: 900
+  alt:
+    it: 'Dettaglio di una persona con la maglietta nera GP One Milano «20 years» che tiene una flûte di spumante.'
+    en: 'Detail of a person in a black GP One Milano “20 years” T-shirt holding a flute of sparkling wine.'
 documents: []
