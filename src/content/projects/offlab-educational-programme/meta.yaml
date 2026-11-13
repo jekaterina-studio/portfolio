@@ -5,7 +5,31 @@ order: 5
 sort: 2024-09
 period: null
 company: OFFLab
-media: []
+media:
+- layout: series
+  format: portrait
+  images:
+  - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-01.jpg
+    alt:
+      it: 'Mani che compongono fiori secchi rosa e rossi dentro una piccola cornice in legno, su un tavolo coperto di steli.'
+      en: 'Hands arranging pink and red dried flowers inside a small wooden frame, on a table covered with stems.'
+    caption:
+      it: 'Laboratorio con fiori secchi: la natura diventa materia da comporre con le mani.'
+      en: 'Dried flower workshop: nature becomes material to arrange by hand.'
+  - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-02.jpg
+    alt:
+      it: 'Copertina del toolkit OFFLab - Our Future Fab Lab, la guida pratica per gli esploratori del mondo.'
+      en: 'Cover of the OFFLab - Our Future Fab Lab toolkit, the practical guide for explorers of the world.'
+    caption:
+      it: 'Il toolkit educativo "OFFLab - Our Future Fab Lab, la guida pratica per gli esploratori del mondo".'
+      en: 'The educational toolkit "OFFLab - Our Future Fab Lab, la guida pratica per gli esploratori del mondo".'
+  - file: ../../../assets/images/projects/offlab-educational-programme/offlab-edu-03.jpg
+    alt:
+      it: 'Blocchi in legno impilati con triangoli rossi; sotto, una persona tiene tra le braccia un mazzo di piante grasse avvolte nella carta.'
+      en: 'Stacked wooden blocks marked with red triangles; below, a person holding a bunch of succulents wrapped in paper.'
+    caption:
+      it: 'Materiali per le attività didattiche: blocchi in legno e piante da osservare, toccare e trasformare.'
+      en: 'Materials for the learning activities: wooden blocks and plants to observe, touch and transform.'
 documents: []
 # line under the title, without link (owner request)
 parentText:
