@@ -17,18 +17,14 @@ activities:
 - relationship development with potential partners and clients
 role: Communication, Partnerships and Business Development Coordinator
 links:
-- label: FACES - Évora 2027 application
-  url: https://ondastudio.art/evora/
-- label: Évora 2027 - Official selection results
-  url: https://www.evora2027.com/fileadmin/E__27_OurLab_results_17APR26.pdf
-- label: Sound Safari
+- label: 'sound safari web site'
   url: https://soundsafari.it/it/
-- label: Area Odeon
-  url: https://www.areaodeon.org/
-- label: Kernel Festival
+- label: 'kernelfestival web site'
   url: https://www.kernelfestival.net/
-- label: Onda Studio
-  url: https://ondastudio.art/
+- label: 'faces - évora 2027 application'
+  url: https://ondastudio.art/evora/
+- label: 'évora 2027 - official selection results'
+  url: https://www.evora2027.com/fileadmin/E__27_OurLab_results_17APR26.pdf
 results:
   intro: 'Successful applications:'
   items:

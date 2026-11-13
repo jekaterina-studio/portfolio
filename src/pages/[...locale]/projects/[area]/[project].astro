@@ -110,13 +110,6 @@ const projectHref = (slug: string) => {
               )}
             </InfoRow>
           ))}
-          <InfoRow label={t('usefulLinks', locale)} show={text.links.length > 0 || site.showPlaceholders}>
-            {text.links.length > 0 ? (
-              <ul class="items case-links">{text.links.map((l) => <li><a href={l.url} target="_blank" rel="noopener">{l.label}</a></li>)}</ul>
-            ) : (
-              <p class="placeholder-line" data-placeholder>[{t('linksToCome', locale)}]</p>
-            )}
-          </InfoRow>
           <InfoRow label={t('occasions', locale)} show={text.occasions.length > 0}>
             <div class="occasions">
               {text.occasions.map((o) => (
@@ -193,9 +186,6 @@ const projectHref = (slug: string) => {
               </>
             )}
           </InfoRow>
-          <InfoRow label={t('usefulLinks', locale)} show={text.links.length > 0}>
-            <ul class="items case-links">{text.links.map((l) => <li><a href={l.url} target="_blank" rel="noopener">{l.label}</a></li>)}</ul>
-          </InfoRow>
         </div>
 
         {meta.slideshow.length > 0 && (
@@ -226,6 +216,14 @@ const projectHref = (slug: string) => {
         )}
 
       </>
+    )}
+
+    {/* Useful links: always right below the photo gallery, only when there are links (owner request) */}
+    {text.links.length > 0 && (
+      <section class="useful-links">
+        <h2 class="case-gallery__label">{t('usefulLinks', locale)}</h2>
+        <ul>{text.links.map((l) => <li><a href={l.url} target="_blank" rel="noopener">{l.label}</a></li>)}</ul>
+      </section>
     )}
 
     {meta.cta && (
@@ -265,7 +263,11 @@ const projectHref = (slug: string) => {
   .case-title { text-transform: none; } /* exact case titles as given by the owner */
   .item-link { color: var(--color-accent); font-weight: 700; }
   .item-link:hover { text-decoration: underline; text-underline-offset: 0.2em; }
-  .case-links a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 0.2em; }
+  .useful-links { margin-top: var(--space-6); }
+  .useful-links ul { list-style: none; }
+  .useful-links li + li { margin-top: var(--space-1); }
+  .useful-links a { color: var(--color-muted); font-weight: 400; text-transform: lowercase; text-decoration: none; }
+  .useful-links a:hover, .useful-links a:focus-visible { color: var(--color-text); text-decoration: underline; text-underline-offset: 0.2em; }
   .placeholder-line { color: var(--color-muted); background: #f2f2f2; width: fit-content; padding: 0 0.2em; }
   .case-gallery { margin-top: var(--space-6); }
   .section-gallery { margin-top: var(--space-4); }
