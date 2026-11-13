@@ -1,0 +1,52 @@
+# Language-neutral data. Images: src/assets/images/projects/<slug>/  PDFs: public/documents/projects/<slug>/
+# period: null = not supplied yet (shown as a placeholder).
+area: cultural-and-creative-projects
+order: 3.5
+sort: null
+period: null
+company: Aedo
+parent: aedo
+media:
+- layout: series
+  format: portrait
+  images:
+  - file: ../../../assets/images/projects/oltre-lo-sguardo/oltre-lo-sguardo-01.jpg
+    alt:
+      it: 'Un uomo con gli occhiali esplora con il dito una tavola tattile con un ritratto femminile di profilo, accanto a una mediatrice.'
+      en: 'A man in glasses explores with his finger a tactile panel showing a female portrait in profile, next to a mediator.'
+    caption:
+      it: 'La lettura tattile: la stampa in rilievo restituisce forme e dettagli dell''opera.'
+      en: 'Tactile reading: relief printing conveys the shapes and details of the artwork.'
+  - file: ../../../assets/images/projects/oltre-lo-sguardo/oltre-lo-sguardo-02.jpg
+    alt:
+      it: 'Etichetta della Fondazione Arte della Seta Lisio su un campione di velluto unito rosso in seta; sotto, due donne esplorano insieme una tavola visivo-tattile.'
+      en: 'Fondazione Arte della Seta Lisio label on a sample of plain red silk velvet; below, two women exploring a visual-tactile panel together.'
+    caption:
+      it: 'Un campione di velluto di seta della Fondazione Arte della Seta Lisio e una tavola esplorata insieme.'
+      en: 'A silk velvet sample from the Fondazione Arte della Seta Lisio and a panel explored together.'
+  - file: ../../../assets/images/projects/oltre-lo-sguardo/oltre-lo-sguardo-03.jpg
+    alt:
+      it: 'Primo piano di due mani che toccano il rilievo di una tavola, sui dettagli di una collana di perle.'
+      en: 'Close-up of two hands touching the relief of a panel, on the details of a pearl necklace.'
+    caption:
+      it: 'Mani sul rilievo: i dettagli dell''opera diventano leggibili al tatto.'
+      en: 'Hands on the relief: the artwork''s details become readable by touch.'
+  - file: ../../../assets/images/projects/oltre-lo-sguardo/oltre-lo-sguardo-04.jpg
+    alt:
+      it: 'Una mediatrice accompagna la mano di un visitatore sulla tavola tattile con trascrizione in braille e QR code.'
+      en: 'A mediator guides a visitor''s hand across a tactile panel with braille transcription and QR code.'
+    caption:
+      it: 'La mediazione: accompagnare la mano nella scoperta dell''opera.'
+      en: 'Mediation: guiding the hand in discovering the artwork.'
+  - file: ../../../assets/images/projects/oltre-lo-sguardo/oltre-lo-sguardo-05.jpg
+    alt:
+      it: 'Mani su tavole visivo-tattili con il Sant''Agostino di Piero della Francesca, testo in braille e QR code.'
+      en: 'Hands on visual-tactile panels showing Piero della Francesca''s Saint Augustine, with braille text and QR code.'
+    caption:
+      it: 'Le tavole visivo-tattili di Tactile Vision Onlus: immagine in alta definizione, rilievo, braille e QR code per le audiodescrizioni.'
+      en: 'Tactile Vision Onlus''s visual-tactile panels: high-definition image, relief, braille and QR codes for audio descriptions.'
+documents: []
+# line under the title, without link (owner request)
+parentText:
+  it: progetto di Aedo Sperimentare Culture al Museo Poldi Pezzoli
+  en: a project by Aedo Sperimentare Culture at the Museo Poldi Pezzoli
