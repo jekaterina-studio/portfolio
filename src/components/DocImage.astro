@@ -32,7 +32,7 @@ const captionLines = (caption ?? '').split('\n').map((l) => l.split(/\*\*(.+?)\*
       src={src}
       alt={alt}
       format="webp"
-      widths={[480, 800, 1200, 1600].filter((w) => w <= src.width)}
+      widths={[800, 1200, 1600].filter((w) => w <= src.width)}
       sizes={sizes}
       loading={loading}
       decoding="async"
