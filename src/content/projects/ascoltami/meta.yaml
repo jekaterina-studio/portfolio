@@ -14,22 +14,58 @@ media:
     alt:
       it: 'Un ragazzo e una ragazza davanti a una vetrina di orologi antichi; sotto, il gruppo sui gradini davanti al Duomo di Milano.'
       en: 'A young man and woman in front of a display case of antique watches; below, the group on the steps in front of Milan Cathedral.'
+    caption:
+      it: 'Il percorso audio unisce le Case Museo e la città: dalle vetrine delle collezioni a piazza del Duomo.'
+      en: 'The audio route connects the House Museums and the city: from the collection display cases to Piazza del Duomo.'
   - file: ../../../assets/images/projects/ascoltami/ascoltami-02.jpg
     alt:
       it: 'Ragazze con smartphone e una cassa portatile durante l''ascolto all''aperto.'
       en: 'Young women with smartphones and a portable speaker, listening outdoors.'
+    caption:
+      it: 'Edizione 0: l''ascolto delle tracce audio in gruppo, con smartphone e cassa portatile.'
+      en: 'Edition 0: listening to the audio tracks as a group, with smartphones and a portable speaker.'
   - file: ../../../assets/images/projects/ascoltami/ascoltami-03.jpg
     alt:
       it: 'Un libro aperto con la pianta di una casa museo; sotto, ragazze e ragazzi sorridenti in un cortile.'
       en: 'An open book showing the floor plan of a house museum; below, smiling young people in a courtyard.'
+    caption:
+      it: 'Piante, testi e momenti di confronto: il museo diventa un luogo di cui fare parte.'
+      en: 'Floor plans, texts and moments of exchange: the museum becomes a place to be part of.'
   - file: ../../../assets/images/projects/ascoltami/ascoltami-04.jpg
     alt:
       it: 'Tre schede di lavoro compilate a mano, con la sezione #ESPLORARE dedicata al Parco Montanelli.'
       en: 'Three handwritten worksheets from the #ESPLORARE section about Parco Montanelli.'
+    caption:
+      it: 'Il toolkit educativo che ho impaginato: le schede #ESPLORARE invitano a raccontare un''esperienza al parco con le proprie parole.'
+      en: 'The educational toolkit I laid out: the #ESPLORARE worksheets invite participants to describe an experience in the park in their own words.'
   - file: ../../../assets/images/projects/ascoltami/ascoltami-05.jpg
     alt:
       it: 'Ragazze in ascolto davanti a un dipinto antico in una sala della casa museo.'
       en: 'Young women listening in front of an old painting in a room of the house museum.'
+    caption:
+      it: 'Nelle sale delle Case Museo l''ascolto diventa anche osservazione.'
+      en: 'In the rooms of the House Museums, listening also becomes looking.'
+  - file: ../../../assets/images/projects/ascoltami/ascoltami-06.jpg
+    alt:
+      it: 'Un uomo in ascolto tra i partecipanti, in una sala in penombra.'
+      en: 'A man listening among the participants in a dimly lit room.'
+    caption:
+      it: 'Durante il percorso: mediazione e raccolta di feedback con i partecipanti.'
+      en: 'Along the route: mediation and feedback collection with the participants.'
+  - file: ../../../assets/images/projects/ascoltami/ascoltami-07.jpg
+    alt:
+      it: 'Un gruppo di ragazze cammina davanti a un ristorante, con insegne e menu in più lingue.'
+      en: 'A group of young women walking past a restaurant with signs and menus in several languages.'
+    caption:
+      it: 'La città come aula: l''uso quotidiano della lingua, tra insegne e menu.'
+      en: 'The city as a classroom: everyday language, among signs and menus.'
+  - file: ../../../assets/images/projects/ascoltami/ascoltami-08.jpg
+    alt:
+      it: 'Un ragazzo di profilo davanti a un ritratto di San Pietro in cornice dorata.'
+      en: 'A young man in profile facing a portrait of Saint Peter in a gilded frame.'
+    caption:
+      it: 'Un''esperienza di apprendimento immersiva, davanti all''opera.'
+      en: 'An immersive learning experience, in front of the artwork.'
 documents: []
 # line under the title, without link (owner request)
 parentText:
