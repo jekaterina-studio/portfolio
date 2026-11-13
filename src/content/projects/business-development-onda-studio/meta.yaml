@@ -7,7 +7,14 @@ period:
   en: November 2024 - April 2026
 company: Onda Studio
 parent: onda-studio
-media: []
+media:
+- layout: slideshow
+  format: wide
+  images:
+  - file: ../../../assets/images/projects/business-development-onda-studio/business-development-01-mappa.jpg
+    alt:
+      it: 'Mappa del mio lavoro di business development per Onda Studio, in quattro rami: festival internazionali e open call, outreach, comunicazione digitale e Sound Safari, con progetti promossi, servizi, attività e canali.'
+      en: 'Map of my business development work for Onda Studio, in four branches: international festivals and open calls, outreach, digital communication and Sound Safari, with projects promoted, services, activities and channels.'
 documents: []
 # line under the title, without link (owner request)
 parentText:
