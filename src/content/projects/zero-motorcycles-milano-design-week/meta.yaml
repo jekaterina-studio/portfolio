@@ -11,4 +11,138 @@ period:
   it: '2024'
   en: '2024'
 media: []
+# slow looping slideshow with thumbnails (owner request): WebP in public/images/zero/, no captions
+slideshow:
+- src: /images/zero/zero-01
+  width: 1600
+  height: 900
+  alt:
+    it: 'Moto elettrica Zero DSR/X nera su una chiatta, in controluce sul Naviglio.'
+    en: 'Black Zero DSR/X electric motorcycle on a barge, backlit on the Naviglio canal.'
+- src: /images/zero/zero-02
+  width: 1600
+  height: 900
+  alt:
+    it: 'Profilo della Zero DSR/X in controluce, con le case del Naviglio sullo sfondo.'
+    en: 'Backlit profile of the Zero DSR/X with Naviglio buildings behind.'
+- src: /images/zero/zero-03
+  width: 1600
+  height: 900
+  alt:
+    it: 'Partecipanti con il casco in sella alle moto Zero davanti allo store, pronti per il test ride.'
+    en: 'Helmeted participants on Zero bikes outside the store, ready for the test ride.'
+- src: /images/zero/zero-04
+  width: 1600
+  height: 900
+  alt:
+    it: 'Due uomini parlano accanto a una Zero DSR brandizzata GPone Milano, davanti alla bandiera Zero.'
+    en: 'Two men talk beside a GPone Milano–branded Zero DSR, in front of the Zero flag.'
+- src: /images/zero/zero-05
+  width: 1600
+  height: 900
+  alt:
+    it: 'Un membro del team Zero mostra i comandi al manubrio a un partecipante con il casco.'
+    en: 'A Zero team member shows the handlebar controls to a helmeted participant.'
+- src: /images/zero/zero-06
+  width: 1600
+  height: 900
+  alt:
+    it: 'Partecipante con casco e gilet mimetico in sella a una Zero, mentre un membro del team indica il cruscotto.'
+    en: 'Participant in a helmet and camo vest on a Zero while a team member points to the dashboard.'
+- src: /images/zero/zero-07
+  width: 1600
+  height: 900
+  alt:
+    it: 'Zero FXE con le grafiche TEST RIDE e GPone Milano, esposta sul Naviglio.'
+    en: 'Zero FXE with TEST RIDE and GPone Milano graphics, on display by the Naviglio.'
+- src: /images/zero/zero-08
+  width: 1600
+  height: 900
+  alt:
+    it: 'Manubrio e serbatoio di una Zero FXE con i loghi Zero e GPone Milano, sole radente.'
+    en: 'Handlebar and tank of a Zero FXE with Zero and GPone Milano logos, low sun.'
+- src: /images/zero/zero-09
+  width: 1600
+  height: 900
+  alt:
+    it: 'Una naked Zero e una DSR/X parcheggiate sul pavé con un totem informativo.'
+    en: 'A Zero naked bike and a DSR/X parked on cobblestones with an info stand.'
+- src: /images/zero/zero-10
+  width: 1600
+  height: 900
+  alt:
+    it: 'Una DSR/X con bauletto e una naked Zero di profilo sul marciapiede, davanti alla bandiera Zero.'
+    en: 'A DSR/X with top case and a Zero naked bike in profile on the pavement, by the Zero flag.'
+- src: /images/zero/zero-11
+  width: 1600
+  height: 900
+  alt:
+    it: 'Il team Zero prepara una DSR/X con bauletto per un partecipante.'
+    en: 'The Zero team prepares a DSR/X with top case for a participant.'
+- src: /images/zero/zero-12
+  width: 1600
+  height: 900
+  alt:
+    it: 'Un motociclista con giacca tecnica e due persone parlano accanto a una moto con la scritta TEST RIDE.'
+    en: 'A rider in a technical jacket and two people talk next to a motorcycle marked TEST RIDE.'
+- src: /images/zero/zero-13
+  width: 1600
+  height: 900
+  alt:
+    it: 'Briefing prima del test ride: tre uomini accanto alle moto, con la bandiera Zero a destra.'
+    en: 'Pre-ride briefing: three men beside the bikes, Zero flag on the right.'
+- src: /images/zero/zero-14
+  width: 1600
+  height: 900
+  alt:
+    it: 'Due uomini conversano appoggiati a una Zero DSR/X, accanto a una bandiera Zero.'
+    en: 'Two men talk leaning on a Zero DSR/X, next to a Zero flag.'
+- src: /images/zero/zero-15
+  width: 1600
+  height: 900
+  alt:
+    it: 'Dalla vetrina: team Zero e partecipanti in strada attorno a una moto.'
+    en: 'Through the store window: Zero team and participants on the street around a motorcycle.'
+- src: /images/zero/zero-16
+  width: 1600
+  height: 900
+  alt:
+    it: 'Ospiti in conversazione con due membri del team Zero davanti alla bandiera del brand.'
+    en: 'Guests chatting with two Zero team members in front of the brand flag.'
+- src: /images/zero/zero-17
+  width: 1600
+  height: 900
+  alt:
+    it: 'Tre ospiti sorridenti chiacchierano sul marciapiede davanti allo store.'
+    en: 'Three smiling guests chat on the pavement outside the store.'
+- src: /images/zero/zero-18
+  width: 1600
+  height: 900
+  alt:
+    it: 'Un gruppo di ospiti nello store GPone Milano, tra piante e moto.'
+    en: 'A group of guests inside the GPone Milano store, among plants and motorcycles.'
+- src: /images/zero/zero-19
+  width: 1600
+  height: 900
+  alt:
+    it: 'Tra le piante dello store, due persone guardano un tablet accanto a una Zero bianca.'
+    en: 'Seen through the store plants, two people look at a tablet beside a white Zero.'
+- src: /images/zero/zero-20
+  width: 1600
+  height: 900
+  alt:
+    it: 'Nello store un membro dello staff consegna le chiavi a un ospite in giacca di pelle.'
+    en: 'In the store, a staff member hands keys to a guest in a leather jacket.'
+- src: /images/zero/zero-21
+  width: 1600
+  height: 900
+  alt:
+    it: 'Due uomini nello store, accanto a una moto Zero bianca e a palloncini neri e argento.'
+    en: 'Two men in the store beside a white Zero motorcycle and black and silver balloons.'
+- src: /images/zero/zero-22
+  width: 1600
+  height: 900
+  alt:
+    it: 'Secchiello con ghiaccio, bottiglia e lattine, con snack e bicchieri sul tavolo dell''accoglienza.'
+    en: 'Ice bucket with a bottle and cans, with snacks and cups on the welcome table.'
 documents: []
