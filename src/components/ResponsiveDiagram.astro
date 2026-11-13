@@ -1,0 +1,29 @@
+---
+/**
+ * A diagram with two layouts (owner request, Onda Studio business development):
+ * a vertical version under 768 px and a 16:9 version above. Files come ready-made
+ * from public/ (not recompressed). On desktop a click opens the full-size JPG in the lightbox.
+ */
+import type { Locale } from '../lib/i18n';
+import { t } from '../data/ui';
+
+interface Props { src: string; alt: { it: string; en?: string }; locale: Locale }
+const { src, alt: altText, locale } = Astro.props;
+const alt = altText[locale] ?? altText.it;
+---
+<div class="rdiagram" data-lightbox data-label-close={t('close', locale)} data-label-prev={t('previous', locale)} data-label-next={t('next', locale)}>
+  <button type="button" class="rdiagram__btn" data-zoom={`${src}.jpg`} aria-label={`${t('enlarge', locale)}: ${alt}`}>
+    <picture>
+      <source media="(max-width: 767px)" type="image/webp" srcset={`${src}-mobile-750.webp 750w, ${src}-mobile-1080.webp 1080w`} sizes="100vw" width="1080" height="3880" />
+      <source media="(min-width: 768px)" type="image/webp" srcset={`${src}-800.webp 800w, ${src}-1600.webp 1600w`} sizes="(min-width: 1200px) 64rem, 100vw" width="1600" height="900" />
+      <img src={`${src}-1600.webp`} width="1600" height="900" alt={alt} loading="lazy" decoding="async" />
+    </picture>
+  </button>
+</div>
+<style is:inline>
+  .rdiagram { max-width: 64rem; }
+  .rdiagram__btn { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+  .rdiagram__btn:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  .rdiagram img { display: block; width: 100%; height: auto; }
+  @media (max-width: 47.99rem) { .rdiagram__btn { cursor: default; pointer-events: none; } }
+</style>

@@ -6,6 +6,7 @@ import InfoRow from '../../../../components/InfoRow.astro';
 import Prose from '../../../../components/Prose.astro';
 import DocumentList from '../../../../components/DocumentList.astro';
 import ImageSeries from '../../../../components/ImageSeries.astro';
+import ResponsiveDiagram from '../../../../components/ResponsiveDiagram.astro';
 import SlowSlideshow from '../../../../components/SlowSlideshow.astro';
 import Gallery from '../../../../components/Gallery.astro';
 import { site } from '../../../../data/site';
@@ -127,10 +128,12 @@ const projectHref = (slug: string) => {
             </div>
           </InfoRow>
         </div>
-        {(galleryImages.length > 0 || meta.slideshow.length > 0 || site.showPlaceholders) && (
+        {(galleryImages.length > 0 || meta.slideshow.length > 0 || meta.diagram || site.showPlaceholders) && (
           <section class="case-gallery">
             <h2 class="case-gallery__label">{t('gallery', locale)}</h2>
-            {meta.slideshow.length > 0 ? (
+            {meta.diagram ? (
+              <ResponsiveDiagram src={meta.diagram.src} alt={meta.diagram.alt} locale={locale} />
+            ) : meta.slideshow.length > 0 ? (
               <SlowSlideshow slides={meta.slideshow} locale={locale} />
             ) : galleryImages.length > 0 ? (
               <Gallery images={galleryImages} format={galleryFormat} locale={locale} />
@@ -199,6 +202,13 @@ const projectHref = (slug: string) => {
           <section class="case-gallery">
             <h2 class="case-gallery__label">{t('gallery', locale)}</h2>
             <SlowSlideshow slides={meta.slideshow} locale={locale} />
+          </section>
+        )}
+
+        {meta.diagram && (
+          <section class="case-gallery">
+            <h2 class="case-gallery__label">{t('gallery', locale)}</h2>
+            <ResponsiveDiagram src={meta.diagram.src} alt={meta.diagram.alt} locale={locale} />
           </section>
         )}
 
