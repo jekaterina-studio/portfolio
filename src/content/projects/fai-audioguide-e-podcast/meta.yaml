@@ -6,7 +6,45 @@ sort: 2024-09
 period: null
 company: Aedo
 parent: aedo
-media: []
+media:
+- layout: series
+  format: portrait
+  images:
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-01.jpg
+    alt:
+      it: 'Un tecnico del suono con le cuffie durante una sessione di registrazione.'
+      en: 'A sound engineer wearing headphones during a recording session.'
+    caption:
+      it: 'In ascolto: ogni narrazione nasce da un lavoro attento sul suono.'
+      en: 'Listening closely: every narrative starts with careful work on sound.'
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-02.jpg
+    alt:
+      it: 'Scheda audio, portatile e cuffie su un tavolo; sotto, una registrazione con microfono e leggio in una cabina fonoassorbente, ripresa da una fotocamera.'
+      en: 'Audio interface, laptop and headphones on a table; below, a recording with microphone and music stand in a sound booth, filmed by a camera.'
+    caption:
+      it: 'Le fasi di produzione: postazione di registrazione, voce e documentazione del lavoro.'
+      en: 'The production stages: recording setup, voice work and documentation.'
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-03.jpg
+    alt:
+      it: 'Copertina della relazione descrittiva delle attività sui podcast per Palazzo Moroni a Bergamo e Castello di Masino a Caravino.'
+      en: 'Cover of the activity report on the podcasts for Palazzo Moroni in Bergamo and Castello di Masino in Caravino.'
+    caption:
+      it: 'La relazione descrittiva delle attività sui podcast per Palazzo Moroni e Castello e Parco di Masino.'
+      en: 'The activity report on the podcasts for Palazzo Moroni and Castello e Parco di Masino.'
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-04.jpg
+    alt:
+      it: 'Una donna vestita di nero cammina di spalle in un sentiero tra alte siepi.'
+      en: 'A woman dressed in black walks away along a path between tall hedges.'
+    caption:
+      it: 'Il paesaggio come parte del racconto: luoghi da attraversare e da ascoltare.'
+      en: 'Landscape as part of the story: places to walk through and to listen to.'
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-05.jpg
+    alt:
+      it: 'Un grande lampadario di cristallo acceso in un salone storico decorato.'
+      en: 'A large lit crystal chandelier in a decorated historic hall.'
+    caption:
+      it: 'Il patrimonio storico e artistico dei beni FAI, raccontato attraverso narrazioni audio e paesaggi sonori.'
+      en: 'The historical and artistic heritage of FAI sites, told through audio narratives and soundscapes.'
 documents: []
 # line under the title, without link (owner request)
 parentText:
