@@ -47,6 +47,13 @@ media:
     caption:
       it: 'Le tavole visivo-tattili di Tactile Vision Onlus: immagine in alta definizione, rilievo, braille e QR code per le audiodescrizioni.'
       en: 'Tactile Vision Onlus''s visual-tactile panels: high-definition image, relief, braille and QR codes for audio descriptions.'
+  - file: ../../../assets/images/projects/oltre-lo-sguardo/oltre-lo-sguardo-06.jpg
+    alt:
+      it: 'Mani di più persone esplorano al tatto un campione di tessuto con decori in velluto rosso su fondo chiaro.'
+      en: 'Several people''s hands exploring by touch a fabric sample with red velvet patterns on a light ground.'
+    caption:
+      it: 'Mani su un campione di tessuto: anche la materia diventa parte della lettura dell''opera.'
+      en: 'Hands on a fabric sample: material, too, becomes part of reading the artwork.'
 documents: []
 # line under the title, without link (owner request)
 parentText:
