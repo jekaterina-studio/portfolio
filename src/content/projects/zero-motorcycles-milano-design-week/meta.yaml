@@ -8,8 +8,8 @@ area: events-and-brand-activations
 order: 2
 sort: 2024-04
 period:
-  it: '2024'
-  en: '2024'
+  it: aprile 2024
+  en: April 2024
 media: []
 # slow looping slideshow with thumbnails (owner request): WebP in public/images/zero/, no captions
 slideshow:
