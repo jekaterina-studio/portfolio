@@ -6,7 +6,7 @@ import { defineConfig } from 'astro/config';
 // URL slugs are identical in both languages.
 export default defineConfig({
   // Replace with the free subdomain once hosting is set up (e.g. https://<name>.pages.dev).
-  site: 'https://example.invalid',
+  site: 'https://jekaterina.eu',
   trailingSlash: 'always',
   build: { format: 'directory', assets: 'assets' },
   devToolbar: { enabled: false },

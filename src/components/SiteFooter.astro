@@ -12,7 +12,7 @@ const c = site.contact;
   <h2 class="visually-hidden">{t('contacts', locale)}</h2>
   <ul class="contacts">
     <li><a href={`mailto:${c.email}`}>{c.email}</a></li>
-    <li><a href={`tel:${c.phoneHref}`}>{c.phoneDisplay}</a></li>
+    {/* phone number removed from the public site (owner request) */}
     <li>{c.linkedin ? <a href={c.linkedin} rel="me noopener" target="_blank">LinkedIn</a> : <span class="muted">LinkedIn</span>}</li>
     <li>{c.instagram ? <a href={c.instagram} rel="me noopener" target="_blank">Instagram</a> : <span class="muted">Instagram</span>}</li>
     <li>{c.city[locale]}</li>
