@@ -5,8 +5,10 @@
 #   alt: { it: ..., en: ... }
 area: events-and-brand-activations
 order: 3
-sort: 2026-04
-period: null
+sort: 2024-12
+period:
+  it: novembre - dicembre 2024
+  en: November - December 2024
 company: Onda Studio
 parent: onda-studio
 media: []
