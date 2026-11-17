@@ -26,11 +26,8 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
   <div class="rows">
     <InfoRow label={t('biography', locale)}>
       <Prose text={page.biography} />
-    </InfoRow>
-    <!-- Experience heading with the existing link and a minimal arrow (master document) -->
-    <InfoRow label={locale === 'en' ? 'experience' : 'esperienze'}>
+      <!-- link only, no separate heading (owner request) -->
       <p class="bio-link"><a href={localizedPath(locale, 'projects')}>{locale === 'en' ? 'my experiences' : 'le mie esperienze'} <span aria-hidden="true">→</span></a></p>
-    </InfoRow>
     <InfoRow label={t('education', locale)}>
       <ol class="education">
         {page.education.map((e: any) => (
@@ -65,7 +62,7 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
 </BaseLayout>
 
 <style>
-  .bio-link { margin-top: 0; }
+  .bio-link { margin-top: 1em; }
   .bio-link a { color: var(--color-accent); font-weight: 700; }
   .bio-link a:hover, .bio-link a:focus-visible { text-decoration: underline; text-underline-offset: 0.2em; }
   .rows { margin-top: var(--space-5); display: grid; gap: var(--space-5); }
