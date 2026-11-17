@@ -3,7 +3,9 @@
 area: communication-and-editorial
 order: 4
 sort: 2024-09
-period: null
+period:
+  it: luglio 2023 - settembre 2024
+  en: July 2023 - September 2024
 company: Aedo
 parent: aedo
 media:
@@ -15,58 +17,79 @@ media:
       it: 'Render del padiglione modulare in legno di OFFLab con tetto spiovente, e due disegni tecnici: prospetto laterale e pianta.'
       en: 'Render of OFFLab''s modular wooden pavilion with a sloping roof, and two technical drawings: side elevation and plan.'
     caption:
-      it: 'Il punto di partenza: l''edificio. Dal render e dai disegni tecnici ho estratto le forme che sarebbero diventate l''identità del progetto.'
-      en: 'Starting point: the building. From the render and the technical drawings I extracted the shapes that would become the project''s identity.'
+      it: Il punto di partenza è l'edificio. Dai rendering e dai disegni tecnici ho estratto le forme che sarebbero diventate l'identità grafica e narrativa del progetto.
+      en: The building is the starting point. I drew forms from the renderings and technical drawings that would become the project's visual and narrative identity.
   - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-02-schizzi.jpg
     alt:
       it: 'Tre schizzi a matita del padiglione visto da angolazioni diverse, con ombre grigie.'
       en: 'Three pencil sketches of the pavilion seen from different angles, with grey shadows.'
     caption:
-      it: 'Gli schizzi: il volume dell''edificio ridotto a poche linee, da diverse angolazioni.'
-      en: 'The sketches: the building''s volume reduced to a few lines, from different angles.'
-  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-03-tipografia.jpg
+      it: "Gli schizzi: il volume dell'edificio ridotto a poche linee, osservato da diverse angolazioni."
+      en: "The sketches: the building's volume reduced to a few lines, viewed from different angles."
+  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-06-struttura.jpg
     alt:
-      it: 'Due pagine di layout: un elenco numerato "cos''è" e un titolo curvo "OffLab è il contenitore per" sopra un testo evidenziato.'
-      en: 'Two layout pages: a numbered "cos''è" list and a curved headline "OffLab è il contenitore per" above highlighted text.'
+      it: 'Disegno a linee rosa della struttura in legno del padiglione e, in primo piano, il modello 3D wireframe su fondo nero.'
+      en: 'Pink line drawing of the pavilion''s wooden structure and, in the foreground, the wireframe 3D model on a black background.'
     caption:
-      it: 'Una voce tipografica: la forma del tetto diventa movimento nel testo, con righe che si piegano, numeri che crescono e parole evidenziate che danno il ritmo alla lettura.'
-      en: 'A typographic voice: the shape of the roof turns into movement in the text, with lines that bend, numbers that grow and highlighted words that set the pace of reading.'
+      it: La documentazione tecnica diventa fonte d'ispirazione per la costruzione del layout e del linguaggio visivo.
+      en: Technical documentation becomes a source of inspiration for the layout and visual language.
   - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-04-colore-immagine.jpg
     alt:
       it: 'Palette di quattro colori, lime, magenta, giallo e nero, e una pagina con foto in bicromia e testo.'
       en: 'Four-colour palette, lime, magenta, yellow and black, and a page with duotone photos and text.'
     caption:
-      it: 'Colore e immagine: lime, magenta, giallo e nero, con render e foto in bicromia, un codice cromatico che tiene insieme immagini e testi in ogni pagina.'
-      en: 'Colour and image: lime, magenta, yellow and black, with renders and photos in duotone, a colour code that holds images and text together on every page.'
+      it: 'La definizione della palette cromatica: lime, magenta, giallo e nero.'
+      en: 'Defining the colour palette: lime, magenta, yellow and black.'
+  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-03-tipografia.jpg
+    alt:
+      it: 'Due pagine di layout: un elenco numerato "cos''è" e un titolo curvo "OffLab è il contenitore per" sopra un testo evidenziato.'
+      en: 'Two layout pages: a numbered "cos''è" list and a curved headline "OffLab è il contenitore per" above highlighted text.'
+    caption:
+      it: Una voce tipografica coerente con l'identità del progetto, costruita a partire dalle forme e dalle geometrie dell'edificio.
+      en: A typographic voice consistent with the project's identity, developed from the building's forms and geometry.
   - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-05-stampa.jpg
     alt:
       it: 'Le due facciate della brochure pieghevole di OFFLab e la brochure stampata appoggiata su un tavolo.'
       en: 'Both sides of the OFFLab folded brochure and the printed brochure resting on a table.'
     caption:
-      it: 'Dal sistema alla stampa: tutti gli elementi confluiscono nella brochure pieghevole, poi la prova reale del pezzo stampato.'
-      en: 'From system to print: every element comes together in the folded brochure, then the real test of the printed piece.'
-  - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-06-struttura.jpg
-    alt:
-      it: 'Disegno a linee rosa della struttura in legno del padiglione e, in primo piano, il modello 3D wireframe su fondo nero.'
-      en: 'Pink line drawing of the pavilion''s wooden structure and, in the foreground, the wireframe 3D model on a black background.'
+      it: Il sistema visivo prende forma anche in una brochure pieghevole, pensata per presentare il progetto e distribuirlo ai potenziali stakeholder, mantenendone la coerenza narrativa.
+      en: The visual system also takes shape in a folded brochure, designed to present the project to prospective stakeholders while maintaining narrative consistency.
   - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-07-quartiere.jpg
     alt:
       it: 'Strada di Milano con un cavalcavia decorato dalla scritta "Corvetto" e un''auto in movimento sfocata.'
       en: 'A Milan street with an overpass painted with the word "Corvetto" and a blurred moving car.'
+    caption:
+      it: La produzione di materiali fotografici originali per documentare il progetto, il suo contesto culturale e gli ambienti in cui nasce e trova una possibile realizzazione.
+      en: Original photographic material produced to document the project, its cultural context and the environments in which it originates and may be realised.
   - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-08-modellino.jpg
     alt:
       it: 'Mani che assemblano il modellino in legno della struttura del padiglione su un tavolo da lavoro.'
       en: 'Hands assembling the wooden scale model of the pavilion''s structure on a workbench.'
+    caption:
+      it: La documentazione fotografica delle procedure operative e delle fasi di realizzazione del progetto.
+      en: Photographic documentation of the operating procedures and stages of the project's development.
   - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-09-pattern-tipografico.jpg
     alt:
       it: 'Pagina con la parola OFFLAB ripetuta in onde di lettere nere, magenta, gialle e rosa.'
       en: 'Page with the word OFFLAB repeated in waves of black, magenta, yellow and pink letters.'
+    caption:
+      it: La copertina del booklet ufficiale.
+      en: The cover of the official booklet.
   - file: ../../../assets/images/projects/offlab-urban-green-design/offlab-10-brochure-stampata.jpg
     alt:
       it: 'Mani che sfogliano la brochure stampata di OFFLab, aperta sulla pagina "cos''è".'
       en: 'Hands leafing through the printed OFFLab brochure, open at the "cos''è" page.'
+    caption:
+      it: Il prodotto editoriale finale, depositato presso l'Ufficio Brevetti di Milano a corredo del progetto di ingegneria edile.
+      en: The final editorial publication, deposited with the Milan Patent Office as supporting documentation for the building engineering project.
 documents: []
 # line under the title, without link (owner request)
 parentText:
   it: progetto di Aedo Sperimentare Culture
   en: a project by Aedo Sperimentare Culture
+cta:
+  label:
+    it: SCOPRI OFFLAB EDUCATIONAL
+    en: DISCOVER OFFLAB EDUCATIONAL
+  project: offlab-educational-programme
+  area: cultural-and-creative-projects

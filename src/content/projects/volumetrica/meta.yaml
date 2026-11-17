@@ -3,7 +3,9 @@
 area: cultural-and-creative-projects
 order: 4
 sort: 2026-04
-period: null
+period:
+  it: luglio 2025 · 19,5 × 4,1 × 4,1 m
+  en: July 2025 · 19.5 × 4.1 × 4.1 m
 company: Onda Studio
 parent: onda-studio
 media: []
@@ -63,12 +65,18 @@ slideshow:
   alt:
     it: 'Il tunnel di laser blu e rossi visto dall''ingresso, nel buio'
     en: 'The tunnel of blue and red lasers seen from the entrance, in the dark'
+  credit:
+    it: Photo by Filippo Traversa. All rights reserved © Onda Studio.
+    en: Photo by Filippo Traversa. All rights reserved © Onda Studio.
 - src: /images/volumetrica/volumetrica-10
   width: 1600
   height: 900
   alt:
     it: 'Il tunnel di laser rossi in prospettiva centrale'
     en: 'The tunnel of red lasers in central perspective'
+  credit:
+    it: Photo by Filippo Traversa. All rights reserved © Onda Studio.
+    en: Photo by Filippo Traversa. All rights reserved © Onda Studio.
 documents: []
 # line under the title, without link (owner request)
 parentText:

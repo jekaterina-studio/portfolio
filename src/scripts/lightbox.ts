@@ -6,7 +6,7 @@ if (galleries.length) {
   const dialog = document.createElement('dialog');
   dialog.className = 'lightbox';
   dialog.innerHTML = `
-    <figure class="lightbox__figure"><img class="lightbox__img" alt=""></figure>
+    <figure class="lightbox__figure"><img class="lightbox__img" alt=""><figcaption class="lightbox__caption" hidden></figcaption></figure>
     <div class="lightbox__bar">
       <button type="button" class="lightbox__btn" data-lb-prev></button>
       <span class="lightbox__count" aria-live="polite"></span>
@@ -16,6 +16,7 @@ if (galleries.length) {
   document.body.append(dialog);
   const img = dialog.querySelector<HTMLImageElement>('.lightbox__img')!;
   const count = dialog.querySelector<HTMLElement>('.lightbox__count')!;
+  const caption = dialog.querySelector<HTMLElement>('.lightbox__caption')!;
   const prev = dialog.querySelector<HTMLButtonElement>('[data-lb-prev]')!;
   const next = dialog.querySelector<HTMLButtonElement>('[data-lb-next]')!;
   const close = dialog.querySelector<HTMLButtonElement>('[data-lb-close]')!;
@@ -28,6 +29,9 @@ if (galleries.length) {
     const btn = items[index];
     img.src = btn.dataset.zoom!;
     img.alt = btn.querySelector('img')?.alt ?? '';
+    // optional credit shown only here (data-caption), e.g. photo credits
+    caption.textContent = btn.dataset.caption ?? '';
+    caption.hidden = !btn.dataset.caption;
     count.textContent = `${index + 1} / ${items.length}`;
     prev.disabled = index === 0;
     next.disabled = index === items.length - 1;

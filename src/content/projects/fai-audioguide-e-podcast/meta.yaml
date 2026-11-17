@@ -3,69 +3,71 @@
 area: cultural-and-creative-projects
 order: 3
 sort: 2024-09
-period: null
+period:
+  it: marzo - maggio 2024
+  en: March - May 2024
 company: Aedo
 parent: aedo
 media:
 - layout: series
   format: portrait
   images:
-  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-01.jpg
-    alt:
-      it: 'Un tecnico del suono con le cuffie durante una sessione di registrazione.'
-      en: 'A sound engineer wearing headphones during a recording session.'
-    caption:
-      it: 'In ascolto: ogni narrazione nasce da un lavoro attento sul suono.'
-      en: 'Listening closely: every narrative starts with careful work on sound.'
-  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-02.jpg
-    alt:
-      it: 'Scheda audio, portatile e cuffie su un tavolo; sotto, una registrazione con microfono e leggio in una cabina fonoassorbente, ripresa da una fotocamera.'
-      en: 'Audio interface, laptop and headphones on a table; below, a recording with microphone and music stand in a sound booth, filmed by a camera.'
-    caption:
-      it: 'Le fasi di produzione: postazione di registrazione, voce e documentazione del lavoro.'
-      en: 'The production stages: recording setup, voice work and documentation.'
-  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-03.jpg
-    alt:
-      it: 'Copertina della relazione descrittiva delle attività sui podcast per Palazzo Moroni a Bergamo e Castello di Masino a Caravino.'
-      en: 'Cover of the activity report on the podcasts for Palazzo Moroni in Bergamo and Castello di Masino in Caravino.'
-    caption:
-      it: 'La relazione descrittiva delle attività sui podcast per Palazzo Moroni e Castello e Parco di Masino.'
-      en: 'The activity report on the podcasts for Palazzo Moroni and Castello e Parco di Masino.'
-  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-04.jpg
-    alt:
-      it: 'Una donna vestita di nero cammina di spalle in un sentiero tra alte siepi.'
-      en: 'A woman dressed in black walks away along a path between tall hedges.'
-    caption:
-      it: 'Il paesaggio come parte del racconto: luoghi da attraversare e da ascoltare.'
-      en: 'Landscape as part of the story: places to walk through and to listen to.'
-  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-05.jpg
-    alt:
-      it: 'Un grande lampadario di cristallo acceso in un salone storico decorato.'
-      en: 'A large lit crystal chandelier in a decorated historic hall.'
-    caption:
-      it: 'Il patrimonio storico e artistico dei beni FAI, raccontato attraverso narrazioni audio e paesaggi sonori.'
-      en: 'The historical and artistic heritage of FAI sites, told through audio narratives and soundscapes.'
   - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-06.jpg
     alt:
       it: 'Mani su un tavolo con opuscoli e cartoline FAI, un taccuino di appunti scritti a mano e un portatile.'
       en: 'Hands on a table with FAI brochures and postcards, a handwritten notebook and a laptop.'
     caption:
-      it: 'La fase di ricerca: materiali FAI, appunti e riferimenti da cui prendono forma le narrazioni.'
-      en: 'The research phase: FAI materials, notes and references from which the narratives take shape.'
-  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-07.jpg
+      it: La ricerca come fase preliminare di ogni produzione.
+      en: Research as the starting point for each production.
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-03.jpg
     alt:
-      it: 'Mappa illustrata del Parco di Villa Gregoriana con le tappe numerate e il lettore audio FAI con le prime tracce del percorso.'
-      en: 'Illustrated map of Parco di Villa Gregoriana with numbered stops, and the FAI audio player with the first tracks of the route.'
+      it: 'Copertina della relazione descrittiva delle attività sui podcast per Palazzo Moroni a Bergamo e Castello di Masino a Caravino.'
+      en: 'Cover of the activity report on the podcasts for Palazzo Moroni in Bergamo and Castello di Masino in Caravino.'
     caption:
-      it: 'L''audioguida del Parco di Villa Gregoriana: le tappe del percorso sulla mappa e le tracce audio sul sito FAI.'
-      en: 'The Parco di Villa Gregoriana audio tour: the route''s stops on the map and the audio tracks on the FAI website.'
+      it: Relazione descrittiva delle attività presentata al cliente.
+      en: Descriptive report of the activities submitted to the client.
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-01.jpg
+    alt:
+      it: 'Un tecnico del suono con le cuffie durante una sessione di registrazione.'
+      en: 'A sound engineer wearing headphones during a recording session.'
+    caption:
+      it: Fase di acquisizione dei contenuti presso Palazzo Moroni.
+      en: Content recording at Palazzo Moroni.
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-02.jpg
+    alt:
+      it: 'Scheda audio, portatile e cuffie su un tavolo; sotto, una registrazione con microfono e leggio in una cabina fonoassorbente, ripresa da una fotocamera.'
+      en: 'Audio interface, laptop and headphones on a table; below, a recording with microphone and music stand in a sound booth, filmed by a camera.'
+    caption:
+      it: Postazione di registrazione e documentazione del lavoro.
+      en: Recording and work-documentation setup.
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-05.jpg
+    alt:
+      it: 'Un grande lampadario di cristallo acceso in un salone storico decorato.'
+      en: 'A large lit crystal chandelier in a decorated historic hall.'
+    caption:
+      it: Gli ambienti del Castello di Masino.
+      en: The interiors of Castello di Masino.
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-04.jpg
+    alt:
+      it: 'Una donna vestita di nero cammina di spalle in un sentiero tra alte siepi.'
+      en: 'A woman dressed in black walks away along a path between tall hedges.'
+    caption:
+      it: Il paesaggio come elemento da esplorare e studiare prima di raccontarlo.
+      en: The landscape as something to explore and study before telling its story.
   - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-08.jpg
     alt:
       it: 'Un uomo sorridente davanti a un microfono con filtro antipop, cuffie e leggio, in una cabina di registrazione.'
       en: 'A smiling man in front of a microphone with a pop filter, headphones and music stand, in a recording booth.'
     caption:
-      it: 'In cabina: la registrazione delle voci narranti.'
-      en: 'In the booth: recording the narrating voices.'
+      it: Un membro del team istituzionale del Bene durante la registrazione della propria intervista.
+      en: A member of the property's institutional team during the recording of their interview.
+  - file: ../../../assets/images/projects/fai-audioguide-e-podcast/fai-07.jpg
+    alt:
+      it: 'Mappa illustrata del Parco di Villa Gregoriana con le tappe numerate e il lettore audio FAI con le prime tracce del percorso.'
+      en: 'Illustrated map of Parco di Villa Gregoriana with numbered stops, and the FAI audio player with the first tracks of the route.'
+    caption:
+      it: L'audioguida del Parco di Villa Gregoriana, accessibile attraverso il sito FAI.
+      en: The audio guide to Parco di Villa Gregoriana, accessible through the FAI website.
 documents: []
 # line under the title, without link (owner request)
 parentText:

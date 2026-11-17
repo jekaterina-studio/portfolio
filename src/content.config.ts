@@ -70,11 +70,11 @@ const projects = defineCollection({
         )
         .default([]),
       /** slow looping slideshow instead of the photo grid; src = public path without the -800/-1600.webp suffix */
-      slideshow: z.array(z.object({ src: z.string(), width: z.number(), height: z.number(), alt: z.object({ it: z.string(), en: z.string().optional() }) })).default([]),
+      slideshow: z.array(z.object({ src: z.string(), width: z.number(), height: z.number(), alt: z.object({ it: z.string(), en: z.string().optional() }), /** photo credit shown only in the lightbox */ credit: z.object({ it: z.string(), en: z.string().optional() }).optional() })).default([]),
       /** responsive diagram (vertical on mobile, 16:9 on desktop); src = public path without suffix */
       diagram: z.object({ src: z.string(), alt: z.object({ it: z.string(), en: z.string().optional() }) }).optional(),
       /** call to action shown after the gallery, linking to an area index page */
-      cta: z.object({ area: z.string(), label: z.object({ it: z.string(), en: z.string().optional() }) }).optional(),
+      cta: z.object({ area: z.string(), /** optional: link to this project page instead of the area index */ project: z.string().optional(), label: z.object({ it: z.string(), en: z.string().optional() }) }).optional(),
       /** plain text shown instead of the linked 'part of' line under the title (no link) */
       parentText: z.object({ it: z.string(), en: z.string().optional() }).optional(),
       /** small reference images shown next to the linked items of a section, in order (e.g. song thumbnails) */

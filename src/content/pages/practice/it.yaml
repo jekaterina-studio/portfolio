@@ -1,32 +1,34 @@
 # Approved Italian copy. documents: examples of working documents (PDF in public/documents/practice/ or external links)
 intro: |-
-  Nel mio metodo di lavoro cerco di partire dalla comprensione del contesto e dalla raccolta delle informazioni necessarie. Prima di sviluppare una proposta, considero gli obiettivi, le risorse disponibili, i vincoli e le persone coinvolte.
+  Un progetto non coincide sempre con ciò che dichiara di voler raggiungere. Prima di individuare una direzione, cerco di comprendere le intenzioni, le aspettative e le motivazioni che lo attraversano, anche quelle che non trovano immediatamente posto in un brief o in un obiettivo misurabile.
 
-  Definisco una direzione, organizzo le attività e traduco gli obiettivi in passaggi concreti. Durante il percorso verifico l'avanzamento, raccolgo riscontri e adatto il lavoro quando necessario. Il processo non è rigido: cambia in base alla natura del progetto e alle sue esigenze.
+  Mi interessa conoscere a fondo ciò che contribuisco a sviluppare: il prodotto, il contesto, le persone e le relazioni che lo definiscono. È una conoscenza che non si esaurisce nella ricerca iniziale, ma prende forma nel tempo, attraverso il confronto e il lavoro stesso.
 
-  Nel lavoro di squadra considero fondamentali la comunicazione chiara, la condivisione delle informazioni e la collaborazione tra competenze diverse. Mi piace lavorare in ambienti in cui le persone possano confrontarsi apertamente, assumersi le proprie responsabilità e contribuire alla costruzione di una direzione comune. Credo in un approccio pratico e collaborativo, in cui il confronto aiuta a risolvere i problemi e a far avanzare il lavoro.
+  Nel mio approccio convivono attenzione concettuale e concretezza. Cerco il significato che rende un progetto riconoscibile, senza perdere di vista le condizioni che gli permettono di esistere, evolvere e trovare il proprio spazio.
 steps:
 - title: osservare
-  text: comprendere contesto, brief, necessità.
+  text: Comprendere il contesto, le intenzioni e le necessità.
 - title: ricercare
-  text: raccogliere informazioni, analizzare e individuare possibilità.
-- title: definire
-  text: obiettivi, priorità e direzione.
+  text: Raccogliere informazioni, esplorare e approfondire.
+- title: interpretare
+  text: Individuare significati, obiettivi e direzioni.
 - title: pianificare
-  text: attività, tempi, risorse e responsabilità.
-- title: sviluppare
-  text: tradurre idee in contenuti, materiali e azioni.
-- title: coordinare
-  text: seguire l'esecuzione, coinvolgere persone e gestire attività.
-- title: verificare
-  text: analizzare risultati e feedback, definire i prossimi passaggi.
+  text: Organizzare attività, tempi, risorse e priorità.
+- title: costruire
+  text: Dare forma alle idee attraverso contenuti, azioni e materiali.
+- title: mettere in relazione
+  text: Coinvolgere persone, competenze e prospettive.
+- title: riconsiderare
+  text: Osservare ciò che emerge, raccogliere riscontri e ridefinire i passaggi.
 tools:
-- label: Ricerca visiva
-  items: Pinterest, Are.na.
-- label: Organizzazione
-  items: Notion, Google Workspace, Microsoft Office, Excel.
-- label: Comunicazione e produzione
-  items: Canva, Figma, CapCut, WordPress.
-- label: Analisi e marketing
-  items: Metricool, Brevo, Meta Business Suite.
+- label: research and visual references
+  items: Pinterest · are.na · same.energy · Google Scholar
+- label: AI and digital tools
+  items: ChatGPT · Claude · Claude Code
+- label: project organisation
+  items: Notion · Google Workspace · Microsoft Excel
+- label: visual and content production
+  items: Canva · Figma · CapCut
+- label: communication and marketing platforms
+  items: Meta Business Suite · TikTok Business · Brevo
 documents: []

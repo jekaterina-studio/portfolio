@@ -3,7 +3,9 @@
 area: cultural-and-creative-projects
 order: 5
 sort: 2024-09
-period: null
+period:
+  it: luglio 2023 - settembre 2024
+  en: July 2023 - September 2024
 company: OFFLab
 media:
 - layout: series

@@ -22,7 +22,7 @@ const tiles = (page.tiles ?? [])
   </div>
   <!-- Quote next to the two tiles, aligned right (owner request) -->
   <div class="home__feature">
-    <blockquote class="home__quote"><p>“{page.statement}”</p></blockquote>
+    <blockquote class="home__quote"><p>{page.statement}</p></blockquote>
     <div class="home__tiles">
       {tiles.map((t) => (
         <Image src={t.src!} alt={t.alt} widths={[200, 373].filter((w) => w <= t.src!.width)} sizes="8rem" loading="eager" class="home__tile" />

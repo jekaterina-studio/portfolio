@@ -1,32 +1,34 @@
 # Approved British English copy.
 intro: |-
-  In my working approach, I start by understanding the context and gathering the information needed to move forward. Before developing a proposal, I consider the objectives, available resources, constraints and people involved.
+  A project does not always coincide with what it claims it wants to achieve. Before identifying a direction, I seek to understand the intentions, expectations and motivations that shape it, including those that do not immediately fit into a brief or a measurable objective.
 
-  I define a direction, organise activities and translate objectives into concrete steps. Throughout the process, I monitor progress, gather feedback and adapt the work whenever necessary. The process is not rigid: it evolves according to the nature and requirements of each project.
+  I am interested in gaining an in-depth understanding of what I help develop: the product, the context, the people and the relationships that define it. This understanding does not end with the initial research; it takes shape over time, through discussion and the work itself.
 
-  When working in a team, I consider clear communication, shared information and collaboration between different areas of expertise essential. I enjoy working in environments where people can exchange ideas openly, take responsibility and contribute to a shared direction. I believe in a practical and collaborative approach, where discussion helps solve problems and move work forward.
+  My approach combines conceptual attention with practicality. I look for the meaning that makes a project distinctive, without losing sight of the conditions that allow it to exist, evolve and find its place.
 steps:
 - title: observe
-  text: understand the context, brief and requirements.
+  text: Understand the context, intentions and needs.
 - title: research
-  text: gather information, analyse the situation and identify opportunities.
-- title: define
-  text: establish objectives, priorities and direction.
+  text: Gather information, explore and investigate further.
+- title: interpret
+  text: Identify meanings, objectives and possible directions.
 - title: plan
-  text: organise activities, timelines, resources and responsibilities.
-- title: develop
-  text: translate ideas into content, materials and actions.
-- title: coordinate
-  text: oversee execution, involve people and manage activities.
-- title: review
-  text: evaluate results and feedback, and identify next steps.
+  text: Organise activities, timings, resources and priorities.
+- title: build
+  text: Give ideas form through content, actions and materials.
+- title: connect
+  text: Bring people, skills and perspectives together.
+- title: reconsider
+  text: Review what emerges, gather feedback and redefine the next steps.
 tools:
-- label: Visual research
-  items: Pinterest, Are.na.
-- label: Organisation
-  items: Notion, Google Workspace, Microsoft Office, Excel.
-- label: Communication and production
-  items: Canva, Figma, CapCut, WordPress.
-- label: Analysis and marketing
-  items: Metricool, Brevo, Meta Business Suite.
+- label: research and visual references
+  items: Pinterest · are.na · same.energy · Google Scholar
+- label: AI and digital tools
+  items: ChatGPT · Claude · Claude Code
+- label: project organisation
+  items: Notion · Google Workspace · Microsoft Excel
+- label: visual and content production
+  items: Canva · Figma · CapCut
+- label: communication and marketing platforms
+  items: Meta Business Suite · TikTok Business · Brevo
 documents: []

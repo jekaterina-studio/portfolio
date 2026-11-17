@@ -11,7 +11,7 @@
 import type { Locale } from '../lib/i18n';
 import { t } from '../data/ui';
 
-interface Slide { src: string; width: number; height: number; alt: { it: string; en?: string } }
+interface Slide { src: string; width: number; height: number; alt: { it: string; en?: string }; credit?: { it: string; en?: string } }
 interface Props { slides: Slide[]; locale: Locale; secondsPerSlide?: number }
 const { slides, locale, secondsPerSlide = 12 } = Astro.props;
 const duration = slides.length * secondsPerSlide;
@@ -34,7 +34,7 @@ const strip = (s: Slide, i: number) => ({
   data-lightbox data-label-close={t('close', locale)} data-label-prev={t('previous', locale)} data-label-next={t('next', locale)}>
   {slides.map((s) => (
     <li>
-      <button type="button" class="slow-thumbs__btn" data-zoom={`${s.src}-1600.webp`} aria-label={`${t('enlarge', locale)}: ${alt(s)}`}>
+      <button type="button" class="slow-thumbs__btn" data-zoom={`${s.src}-1600.webp`} data-caption={s.credit ? (s.credit[locale] ?? s.credit.it) : undefined} aria-label={`${t('enlarge', locale)}: ${alt(s)}`}>
         <img src={`${s.src}-800.webp`} width={s.width} height={s.height} alt={alt(s)} loading="lazy" decoding="async" />
       </button>
     </li>

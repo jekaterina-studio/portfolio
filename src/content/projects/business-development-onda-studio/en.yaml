@@ -1,20 +1,20 @@
 # Case page (approved Onda Studio texts, business development part). Empty fields are hidden.
-sector: new media art studio
+sector: independent new media art studio
 keywords:
-- international project development
-- funding applications
+- international business development
+- opportunity scouting
 - partnership development
+- funding calls
 title: Collaboration with Onda Studio
 description: |-
-  Onda Studio is an independent new media art studio based in Monza with an international outlook, specialising in the development and production of audiovisual projects, immersive installations and interactive experiences.
+  Onda Studio is an independent new media art studio based in Monza, working internationally on the development and production of audiovisual projects, immersive installations and interactive experiences.
 
-  I worked with the studio on its business development and on strengthening its institutional presence, managing corporate communication, developing editorial and multichannel strategies, and carrying out research and outreach. The work involved both promoting the studio's identity and projects and identifying new opportunities, contacts and collaboration contexts at national and international level.
+  I contributed to the development of new project and business opportunities, helping to expand the studio's activities and build relationships with partners, institutions and prospective clients.
 activities:
-- research and development of international opportunities
-- development, writing and coordination of project applications
-- preparation of proposals and presentation materials
-- business development and partnership research
-- relationship development with potential partners and clients
+- research and identification of international project and festival opportunities
+- scouting of funding calls, funding programmes and participation opportunities
+- development and coordination of applications and project proposals
+- research and activation of contacts with partners, festivals and prospective clients
 role: Communication, Partnerships and Business Development Coordinator
 links:
 - label: 'onda web site'
@@ -23,6 +23,8 @@ links:
   url: https://www.areaodeon.org/
 - label: 'kernelfestival web site'
   url: https://www.kernelfestival.net/
+- label: instagram ondastudio.art
+  url: https://www.instagram.com/ondastudio.art/
 - label: 'instagram areaodeon'
   url: https://www.instagram.com/areaodeon/
 - label: 'instagram kernelfestival'
@@ -34,9 +36,11 @@ links:
 results:
   intro: 'Successful applications:'
   items:
-  - 'FACES - Évora 2027 [application](https://ondastudio.art/evora/)'
-  - 'Uppsala Light Art Festival, 2026 edition'
-  - 'Blink Cincinnati, 2026 edition'
-  - 'Spectra - Scotland''s Festival of Light, Aberdeen, 2026 edition'
-  - 'Orografie Sonore project, supported by the Fondazione della Comunità di Monza e Brianza'
-  note: 'The collaboration also helped develop new business opportunities and international relationships through research and direct contact with potential partners, leading to meetings with organisations such as **Dubai Design Week** and **Louis Vuitton''s Global Digital Store Brand Experience department**.'
+  - FACES - Évora 2027 [application ↗](https://ondastudio.art/evora/)
+  - Uppsala Light Art Festival, 2026 edition
+  - Blink Cincinnati, 2026 edition
+  - Spectra - Scotland's Festival of Light, Aberdeen, 2026 edition
+  - Orografie Sonore project, supported by the Fondazione della Comunità di Monza e Brianza
+sections:
+- label: relationships
+  text: Research and direct outreach helped expand the studio's international network and develop new collaboration opportunities, including meetings with Dubai Design Week and Louis Vuitton's Global Digital Store Brand Experience department.

@@ -1,14 +1,28 @@
 # Approved British English copy (portfolio_website_copy_british_english.pdf)
-sector: cultural enterprise
+sector: cultural and creative organisation
 keywords:
-- archival research and recovery
-- social media management
+- digital communication and visual identity
+- website development
+- archive research and organisation
 title: Aedo Sperimentare Culture
 role: Communication and Project Assistant
-results: 'The creation and launch of the new website and the relaunch of communication on social media.'
-description: 'Aedo is a cultural enterprise that has been active in Lombardy for around ten years, developing cultural, educational and digital projects. It has a social calling that is at the same time an artistic one. After defining its institutional identity, Aedo began renewing its communication, applying the new visual and narrative system across its channels and materials: website, social media, institutional presentations and printed communication tools.'
+results:
+  items:
+  - Creation and launch of the new website
+  - renewal of communication across social channels
+  - application of the new visual identity to the organisation's main communication tools and materials
+description: |-
+  Aedo Sperimentare Culture is a cultural organisation specialising in innovative cultural and educational projects, with a strong social and artistic focus.
+
+  During my time working with the organisation, I contributed to the renewal of its corporate communication, overseeing the application of the new visual identity and narrative system across its channels and materials. The work involved the website, social media, institutional presentations and communication tools, with the aim of building a recognisable image and a language consistent with Aedo's activities and projects.
 activities:
-- 'I was responsible for implementing the cultural enterprise''s new visual code and visual identity. First and foremost, this meant handling institutional and stakeholder presentations. I then recovered archive materials for the new website, managed the social media channels and developed their content strategies.'
+- application and development of the new visual identity system across company channels and materials
+- retrieval and organisation of archive materials for communication
+- contribution to the content and structure of the new website
+- editorial planning and development of content strategies for social channels
+- ideation, production and publication of digital content
+- creation and updating of institutional presentations and stakeholder materials
+- coordination with the people involved in communication and graphic-material development
 links:
 - label: 'aedo web site'
   url: https://www.aedolab.com/

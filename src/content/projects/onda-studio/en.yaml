@@ -1,22 +1,26 @@
 # Approved British English copy (portfolio_website_copy_british_english.pdf)
 sector: new media art studio
 keywords:
-- multichannel social media strategy
-- database restructuring and migration
+- multi-channel editorial strategy
+- database management and migration
+- communication coordination
 title: Onda Studio communication
 role: Communication, Partnerships and Business Development Coordinator
-description: 'Onda Studio is a creative new media art studio based in Monza with an international outlook, working in digital arts and multimedia projects. Alongside the studio''s activities, its history and identity are intertwined with those of Kernel Festival and AreaOdeon, a non-profit cultural organisation active in the Monza area for over twenty years. The range of organisations and activities involved called for more structured digital communication, able to use different channels, formats and languages while maintaining editorial and identity consistency.'
+description: |-
+  Onda Studio, Kernel Festival and AreaOdeon share a common history, but each has a distinct activity and identity: an independent new media art studio, an international festival dedicated to digital arts, and a local non-profit cultural organisation.
+
+  Onda Studio engaged me to identify and develop a digital communication approach suited to the needs of all three organisations and their respective channels. The work involved defining distinct editorial strategies and languages that could highlight each organisation's specific character while maintaining a coherent overall direction. It also included organising archive materials, managing contact databases and migrating the newsletter platform.
 activities:
-- 'development of the digital and editorial communication strategy for the three organisations'
-- 'definition of editorial plans, content and tone of voice for the different channels'
-- 'updating and managing the social media channels and developing content independently or by coordinating support staff'
-- 'research, recovery and reorganisation of materials from the historical archive'
-- 'reorganisation, cleaning and segmentation of the contact databases'
-- 'management of the database migration to a new newsletter platform'
+- development of digital and editorial communication strategies for the three organisations
+- definition of editorial plans, content and tone of voice for the different channels
+- management of social channels and independent content production, coordinating supporting resources
+- research, selection and reorganisation of archive materials
+- review, cleaning and segmentation of contact databases
+- coordination of database migration to a new newsletter platform
 results:
   items:
-  - 'development of coordinated social media communication for the three organisations, through differentiated editorial plans, content and languages'
-  - 'reorganisation and cleaning of the three organisations'' historical databases, with contact segmentation and migration to the new newsletter platform'
+  - Definition of a coordinated editorial direction, with distinct content and language for each organisation
+  - reorganisation of historical databases, including contact segmentation and migration to the new newsletter platform
 links:
 - label: 'onda web site'
   url: https://ondastudio.art/
