@@ -28,6 +28,7 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
       <Prose text={page.biography} />
       <!-- link only, no separate heading (owner request) -->
       <p class="bio-link"><a href={localizedPath(locale, 'projects')}>{locale === 'en' ? 'my experiences' : 'le mie esperienze'} <span aria-hidden="true">→</span></a></p>
+    </InfoRow>
     <InfoRow label={t('education', locale)}>
       <ol class="education">
         {page.education.map((e: any) => (
