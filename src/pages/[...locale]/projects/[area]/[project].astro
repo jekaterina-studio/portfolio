@@ -221,7 +221,7 @@ const projectHref = (slug: string) => {
     {/* Useful links: always right below the photo gallery, only when there are links (owner request) */}
     {text.links.length > 0 && (
       <section class="useful-links">
-        <h2 class="case-gallery__label">{t('usefulLinks', locale)}</h2>
+        <h2 class="case-gallery__label useful-links__label">{t('usefulLinks', locale)}</h2>
         <ul>{text.links.map((l) => <li><a href={l.url} target="_blank" rel="noopener">{l.label}</a></li>)}</ul>
       </section>
     )}
@@ -265,6 +265,8 @@ const projectHref = (slug: string) => {
   .item-link:hover { text-decoration: underline; text-underline-offset: 0.2em; }
   .useful-links { margin-top: var(--space-6); }
   .useful-links ul { list-style: none; font-size: var(--fs-small); }
+  /* heading: grey, bold, one point smaller than the other labels (owner request) */
+  .useful-links__label { color: var(--color-muted); font-weight: 700; font-size: calc(var(--fs-body) - 1pt); }
   .useful-links li + li { margin-top: var(--space-1); }
   .useful-links a { color: var(--color-muted); font-weight: 400; text-transform: lowercase; text-decoration: none; }
   .useful-links a:hover, .useful-links a:focus-visible { color: var(--color-text); text-decoration: underline; text-underline-offset: 0.2em; }
