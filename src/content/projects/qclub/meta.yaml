@@ -13,9 +13,8 @@ media:
   images:
   - file: ../../../assets/images/projects/qclub/qclub-01.jpg
     alt:
-      it: Pubblico in controluce con le braccia alzate davanti a luci arancioni durante un evento al QClub
-      en: Crowd silhouetted with raised arms against orange lights during an event at QClub
-    caption: "photo by sofia ballabeni for ratava by dkrmilano in collaboration with qclub\n**dj set illumination by me**"
+      it: Ritratto di profilo di una persona con occhiali scuri, illuminata da luci blu durante un evento al QClub
+      en: Profile portrait of a person in dark glasses, lit by blue lights during an event at QClub
 documents: []
 parentText:
   it: cliente QClub
