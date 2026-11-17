@@ -1,7 +1,7 @@
 # The four areas. Italian titles: PROPOSALS pending owner approval.
 # description: optional short text for the projects landing page. intro: text on the area page.
 - id: communication-and-editorial
-  number: 4
+  number: 3
   title:
     it: comunicazione
     en: communication
@@ -16,7 +16,7 @@
     it: eventi e brand activation
     en: events and brand activations
 - id: independent-practice
-  number: 3
+  number: 4
   title:
     it: pratica creativa indipendente
     en: independent creative practice
