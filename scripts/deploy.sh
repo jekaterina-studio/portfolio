@@ -10,7 +10,8 @@ REMOTE="${REMOTE:-../portfolio-remote}"
 npm run build
 rm -rf .deploy && python3 scripts/relativize.py dist .deploy >/dev/null
 # mirror the built site into the repo clone, keeping its .git folder and README
-rsync -a --delete --exclude .git --exclude README.md .deploy/ "$REMOTE"/
+find "$REMOTE" -mindepth 1 -maxdepth 1 ! -name .git ! -name README.md -exec rm -rf {} +
+cp -R .deploy/. "$REMOTE"/
 cd "$REMOTE"
 git add -A
 if git diff --cached --quiet; then echo "nothing to publish"; exit 0; fi
