@@ -23,9 +23,9 @@ steps:
 tools:
 - label: research and visual references
   items: Pinterest · are.na · same.energy · Google Scholar
-- items: ChatGPT · Claude · Claude Code · Perplexity
+- items: ChatGPT · Claude · Perplexity
 - label: project organisation
-  items: Notion · Google Workspace · Microsoft Excel
+  items: Notion · Google Workspace · Microsoft Excel · Claude Code
 - label: visual and content production
   items: Canva · Figma · CapCut
 - label: communication and marketing platforms
