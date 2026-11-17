@@ -14,9 +14,11 @@ const { images, format, locale } = Astro.props;
 // 5, 6 or 9 photos -> 3 columns (fuller rows), otherwise 4
 const threeCols = format !== 'horizontal' && images.length % 4 !== 0 && (images.length % 3 === 0 || images.length === 5);
 const single = images.length === 1;
-const sizes = single ? (format === 'wide' ? '(max-width: 768px) 100vw, 64rem' : '(max-width: 768px) 100vw, 32rem') : format === 'horizontal' ? '(max-width: 768px) 100vw, 33vw' : '(max-width: 768px) 50vw, 25vw';
+// two portrait photos: both shown large, at the same size as a lone photo (QClub)
+const pair = images.length === 2 && format === 'portrait';
+const sizes = pair ? '(max-width: 768px) 50vw, 32rem' : single ? (format === 'wide' ? '(max-width: 768px) 100vw, 64rem' : '(max-width: 768px) 100vw, 32rem') : format === 'horizontal' ? '(max-width: 768px) 100vw, 33vw' : '(max-width: 768px) 50vw, 25vw';
 ---
-<ul class:list={['gallery', `gallery--${format}`, threeCols && 'gallery--3', single && 'gallery--single']} aria-label={t('gallery', locale)}
+<ul class:list={['gallery', `gallery--${format}`, threeCols && 'gallery--3', single && 'gallery--single', pair && 'gallery--pair']} aria-label={t('gallery', locale)}
   data-lightbox data-label-close={t('close', locale)} data-label-prev={t('previous', locale)} data-label-next={t('next', locale)}>
   {images.map((img, i) => (
     <li>
@@ -25,6 +27,9 @@ const sizes = single ? (format === 'wide' ? '(max-width: 768px) 100vw, 64rem' : 
     </li>
   ))}
 </ul>
+{pair && (
+  <style is:inline>.gallery.gallery--pair{grid-template-columns:repeat(2,minmax(0,32rem))}</style>
+)}
 {single && (
   /* a lone photo is shown large (inline so the shared stylesheet stays unchanged) */
   <style is:inline>.gallery.gallery--single{grid-template-columns:minmax(0,32rem)}.gallery.gallery--single.gallery--wide{grid-template-columns:minmax(0,64rem)}@media (max-width:47.99rem){.gallery.gallery--single{grid-template-columns:1fr}}</style>
