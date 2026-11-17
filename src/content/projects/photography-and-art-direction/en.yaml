@@ -12,6 +12,7 @@ sections:
     title: latest project
     italic: true
   gallery: true
+  itemsFirst: true
   text: |-
     Independent photographic project.
     Milan, October 2025.

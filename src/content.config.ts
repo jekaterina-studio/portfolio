@@ -133,6 +133,8 @@ const projectTexts = defineCollection({
           text: z.string().optional(),
           /** true: show the project's image gallery inside this section */
           gallery: z.boolean().optional(),
+          /** true: the items (e.g. a download link) come before the gallery */
+          itemsFirst: z.boolean().optional(),
           /** small grey note after the items; an e-mail address in it becomes a mailto link */
           note: z.string().optional(),
           /** subtitle under the section label (left column), bold red; url optional */

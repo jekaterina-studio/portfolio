@@ -12,6 +12,7 @@ sections:
     title: last project
     italic: true
   gallery: true
+  itemsFirst: true
   text: |-
     Progetto fotografico indipendente.
     Milano, ottobre 2025.

@@ -152,11 +152,11 @@ const projectHref = (slug: string) => {
                   : <span class="item-link">{s.subtitle.title}</span>}</p>
               )}
               {s.text && <Prose text={s.text} />}
-              {s.gallery && galleryImages.length > 0 && (
+              {s.gallery && !s.itemsFirst && galleryImages.length > 0 && (
                 <div class="section-gallery"><Gallery images={galleryImages} format={galleryFormat} locale={locale} /></div>
               )}
               {s.items && (
-                <ul class:list={['items', s.gallery && 'items--after-gallery', meta.thumbnails.length > 0 && 'items--thumbs']}>{s.items.map((it, idx) => {
+                <ul class:list={['items', s.gallery && !s.itemsFirst && 'items--after-gallery', meta.thumbnails.length > 0 && 'items--thumbs']}>{s.items.map((it, idx) => {
                   const href = it.project ? projectHref(it.project) : undefined;
                   const thumb = it.url ? meta.thumbnails[idx] : undefined;
                   if (thumb) return (
@@ -170,6 +170,9 @@ const projectHref = (slug: string) => {
                   // url: external link (bold red); highlight without url: same style, link still to come
                   return <li>{href ? <a href={href}>{it.title}</a> : it.url ? <a class="item-link" href={it.url} target="_blank" rel="noopener">{it.title}</a> : it.highlight ? <span class="item-link">{it.title}</span> : it.title}</li>;
                 })}</ul>
+              )}
+              {s.gallery && s.itemsFirst && galleryImages.length > 0 && (
+                <div class="section-gallery"><Gallery images={galleryImages} format={galleryFormat} locale={locale} /></div>
               )}
               {s.note && (
                 <p class="section-note">{s.note.split(/([\w.+-]+@[\w-]+\.[\w.]+)/).map((part, k) => k % 2 ? <a href={`mailto:${part}`}>{part}</a> : part)}</p>
