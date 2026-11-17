@@ -224,20 +224,20 @@ const projectHref = (slug: string) => {
       </>
     )}
 
-    {/* Useful links: always right below the photo gallery, only when there are links (owner request) */}
-    {text.links.length > 0 && (
-      <section class="useful-links">
-        <h2 class="case-gallery__label useful-links__label">{t('usefulLinks', locale)}</h2>
-        <ul>{text.links.map((l) => <li><a href={l.url} target="_blank" rel="noopener">{l.label}</a></li>)}</ul>
-      </section>
-    )}
-
     {meta.cta && (
       <>
         {/* inline so the shared project stylesheet stays unchanged */}
         <style is:inline>.case-cta{margin-top:var(--space-6)}.case-cta a{color:var(--color-accent);font-weight:700;text-transform:uppercase;text-decoration:none}.case-cta__arrow{display:inline-block;margin-left:.35em;transition:transform .15s ease}.case-cta a:hover .case-cta__arrow,.case-cta a:focus-visible .case-cta__arrow{transform:translateX(.25em)}@media (prefers-reduced-motion:reduce){.case-cta__arrow{transition:none}}</style>
         <p class="case-cta"><a href={meta.cta.project ? projectHref(meta.cta.project) : localizedPath(locale, 'projects', meta.cta.area)}>{meta.cta.label[locale] ?? meta.cta.label.it}<span class="case-cta__arrow" aria-hidden="true">→</span></a></p>
       </>
+    )}
+
+    {/* Useful links: always right below the photo gallery, only when there are links (owner request) */}
+    {text.links.length > 0 && (
+      <section class="useful-links">
+        <h2 class="case-gallery__label useful-links__label">{t('usefulLinks', locale)}</h2>
+        <ul>{text.links.map((l) => <li><a href={l.url} target="_blank" rel="noopener">{l.label}</a></li>)}</ul>
+      </section>
     )}
 
     <footer class="project__nav">
