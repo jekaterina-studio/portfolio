@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jekaterina-kanevskaja.pages.dev/sitemap.xml
+Sitemap: https://jekaterina.eu/sitemap.xml
