@@ -171,6 +171,9 @@ const projectHref = (slug: string) => {
                   return <li>{href ? <a href={href}>{it.title}</a> : it.url ? <a class="item-link" href={it.url} target="_blank" rel="noopener">{it.title}</a> : it.highlight ? <span class="item-link">{it.title}</span> : it.title}</li>;
                 })}</ul>
               )}
+              {s.note && (
+                <p class="section-note">{s.note.split(/([\w.+-]+@[\w-]+\.[\w.]+)/).map((part, k) => k % 2 ? <a href={`mailto:${part}`}>{part}</a> : part)}</p>
+              )}
             </InfoRow>
           ))}
           <InfoRow label={t('documentation', locale)} show={meta.documents.length > 0}>
@@ -263,6 +266,8 @@ const projectHref = (slug: string) => {
   .case-title { text-transform: none; } /* exact case titles as given by the owner */
   .item-link { color: var(--color-accent); font-weight: 700; }
   .item-link:hover { text-decoration: underline; text-underline-offset: 0.2em; }
+  .section-note { margin-top: var(--space-3); font-size: var(--fs-small); color: var(--color-muted); text-transform: lowercase; }
+  .section-note a { color: inherit; text-decoration: underline; text-underline-offset: 0.2em; }
   .useful-links { margin-top: var(--space-6); }
   .useful-links ul { list-style: none; font-size: var(--fs-small); }
   /* heading: grey, bold, one point smaller than the other labels (owner request) */

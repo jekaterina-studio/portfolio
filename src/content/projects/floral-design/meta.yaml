@@ -6,7 +6,7 @@ sort: null
 period: null
 media:
 - layout: series
-  format: vertical
+  format: portrait
   images:
   - file: ../../../assets/images/projects/floral-design/floral-design-01.jpg
     alt:
