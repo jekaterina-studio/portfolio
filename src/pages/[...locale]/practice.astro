@@ -46,7 +46,7 @@ const isFallback = !(await getPage('practice', locale));
       </ol>
     </InfoRow>
     <InfoRow label={t('tools', locale)} show={page.tools?.length > 0}>
-      <ul class="tools">{page.tools.map((x: any) => <li><strong>{x.label}:</strong> {x.items}</li>)}</ul>
+      <ul class="tools">{page.tools.map((x: any) => <li>{x.label && <strong>{x.label}:</strong>} {x.items}</li>)}</ul>
     </InfoRow>
     <InfoRow label={t('examples', locale)} show={page.examples?.length > 0}>
       <ul class="examples">

@@ -23,8 +23,7 @@ steps:
 tools:
 - label: research and visual references
   items: Pinterest · are.na · same.energy · Google Scholar
-- label: AI and digital tools
-  items: ChatGPT · Claude · Claude Code
+- items: ChatGPT · Claude · Claude Code · Perplexity
 - label: project organisation
   items: Notion · Google Workspace · Microsoft Excel
 - label: visual and content production
