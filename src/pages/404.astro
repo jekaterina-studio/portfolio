@@ -1,0 +1,24 @@
+---
+/* 404: page not found. One bilingual page (Italian first, English below), same style as the rest of the site. */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { localizedPath } from '../lib/i18n';
+---
+<BaseLayout locale="it" title="pagina non trovata" hasTranslation={false} noindex>
+  <div class="notfound">
+    <h1>pagina non trovata</h1>
+    <p>La pagina che cerchi non esiste o è stata spostata.</p>
+    <p class="notfound__links"><a href={localizedPath('it')}>torna alla home</a> · <a href={localizedPath('it', 'projects')}>vai ai progetti</a></p>
+
+    <p class="notfound__en" lang="en">Page not found. The page you are looking for does not exist or has been moved.</p>
+    <p class="notfound__links" lang="en"><a href={localizedPath('en')}>back to home</a> · <a href={localizedPath('en', 'projects')}>see projects</a></p>
+  </div>
+</BaseLayout>
+
+<style>
+  .notfound { max-width: var(--measure); }
+  .notfound h1 { margin-bottom: var(--space-4); }
+  .notfound__links { margin-top: var(--space-2); }
+  .notfound__links a { color: var(--color-accent); font-weight: 700; }
+  .notfound__links a:hover, .notfound__links a:focus-visible { text-decoration: underline; text-underline-offset: 0.2em; }
+  .notfound__en { margin-top: var(--space-6); color: var(--color-muted); }
+</style>
