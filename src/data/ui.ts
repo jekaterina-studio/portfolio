@@ -21,6 +21,7 @@ const strings = {
   contacts: { it: 'Contatti', en: 'Contacts' },
   cvIt: { it: 'Scarica CV in italiano', en: 'Download CV in Italian' }, // en: PROPOSAL
   cvEn: { it: 'Download CV in English', en: 'Download CV in English' },
+  cv: { it: 'Scarica CV', en: 'Download CV' },
   cvPending: { it: 'in preparazione', en: 'coming soon' },
   cvDownload: { it: 'scarica i CV', en: 'download CVs' }, // home, owner request (en: proposal)
   vat: { it: 'P. IVA', en: 'VAT number' },

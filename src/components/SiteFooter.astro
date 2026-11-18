@@ -7,13 +7,11 @@ import CvLinks from './CvLinks.astro';
 interface Props { locale: Locale }
 const { locale } = Astro.props;
 const c = site.contact;
-const variant = import.meta.env.FOOTER_VARIANT ?? process.env.FOOTER_VARIANT;
 const year = new Date().getFullYear();
 ---
 <footer class="site-footer" data-fixed-bar="footer">
   <h2 class="visually-hidden">{t('contacts', locale)}</h2>
   <ul class="contacts">
-    {variant === 'A' && <li class="footer-credit">© {year} Jekaterina Kanevskaja</li>}
     <li><a href={`mailto:${c.email}`}>{c.email}</a></li>
     {/* phone number removed from the public site (owner request) */}
     <li>{c.linkedin ? <a href={c.linkedin} rel="me noopener" target="_blank">LinkedIn</a> : <span class="muted">LinkedIn</span>}</li>
@@ -22,7 +20,8 @@ const year = new Date().getFullYear();
     <li>{t('vat', locale)}: {c.vat}</li>
   </ul>
   <CvLinks locale={locale} class="footer-cv" />
-  {variant === 'B' && <p class="footer-signature">© {year} <a href="https://jekaterina.eu">Jekaterina Kanevskaja</a> · jekaterina.eu</p>}
+  {/* signature with the owner's name on every page (owner request, option B) */}
+  <p class="footer-signature">© {year} <a href="https://jekaterina.eu">Jekaterina Kanevskaja</a> · jekaterina.eu</p>
 </footer>
 
 <style>
@@ -46,7 +45,6 @@ const year = new Date().getFullYear();
     gap: var(--space-1) var(--space-4);
   }
   .site-footer li { white-space: nowrap; }
-  .footer-credit { color: var(--color-muted); }
   .footer-signature { flex-basis: 100%; color: var(--color-muted); font-size: 0.6875rem; }
   .footer-signature a { color: inherit; }
 

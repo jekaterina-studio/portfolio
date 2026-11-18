@@ -5,10 +5,8 @@ import type { Locale } from '../lib/i18n';
 
 interface Props { locale: Locale; class?: string }
 const { locale, class: className } = Astro.props;
-const items = [
-  { href: site.cv.it, label: t('cvIt', locale), lang: 'it' },
-  { href: site.cv.en, label: t('cvEn', locale), lang: 'en' },
-];
+// one link per language version: "Scarica CV" (Italian CV) on the Italian site, "Download CV" (English CV) on the English site (owner request)
+const items = [{ href: site.cv[locale], label: t('cv', locale), lang: locale }];
 ---
 <ul class:list={['cv-links', className]}>
   {items.map((cv) => (
