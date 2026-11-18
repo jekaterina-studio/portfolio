@@ -27,7 +27,7 @@ export const site = {
    * e.g. '/documents/cv/cv-jekaterina-kanevskaja-it.pdf'.
    */
   cv: {
-    it: null as string | null,
-    en: null as string | null,
+    it: '/documents/cv/CV_Jekaterina_Kanevskaja_ITA.pdf' as string | null,
+    en: '/documents/cv/CV_Jekaterina_Kanevskaja_EN.pdf' as string | null,
   },
 } as const;
