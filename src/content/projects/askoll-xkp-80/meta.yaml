@@ -115,3 +115,7 @@ slideshow:
     it: 'Dettaglio di una persona con la maglietta nera GP One Milano «20 years» che tiene una flûte di spumante.'
     en: 'Detail of a person in a black GP One Milano “20 years” T-shirt holding a flute of sparkling wine.'
 documents: []
+# client line (owner request), replaces the 'part of' link
+parentText:
+  it: 'Cliente: GPone Milano × Askoll'
+  en: 'Client: GPone Milano × Askoll'

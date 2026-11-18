@@ -146,3 +146,7 @@ slideshow:
     it: 'Secchiello con ghiaccio, bottiglia e lattine, con snack e bicchieri sul tavolo dell''accoglienza.'
     en: 'Ice bucket with a bottle and cans, with snacks and cups on the welcome table.'
 documents: []
+# client line (owner request), replaces the 'part of' link
+parentText:
+  it: 'Cliente: GPone Milano × Zero Motorcycles'
+  en: 'Client: GPone Milano × Zero Motorcycles'

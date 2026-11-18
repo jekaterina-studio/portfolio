@@ -23,5 +23,5 @@ media:
     caption: "photo by sofia ballabeni for ratava with qclub\n**dj set illumination by me**"
 documents: []
 parentText:
-  it: cliente QClub
-  en: client QClub
+  it: 'Cliente: QClub'
+  en: 'Client: QClub'

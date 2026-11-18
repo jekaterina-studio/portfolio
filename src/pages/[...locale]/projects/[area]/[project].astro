@@ -95,6 +95,12 @@ const projectHref = (slug: string) => {
               <>
                 {'intro' in results && results.intro && <p class="results-intro">{results.intro}</p>}
                 <ul class="activities">{results.items.map((r) => <li><Prose text={r} /></li>)}</ul>
+                {'more' in results && results.more && (
+                  <>
+                    <p class="results-intro results-intro--more">{results.more.intro}</p>
+                    <ul class="activities">{results.more.items.map((r) => <li><Prose text={r} /></li>)}</ul>
+                  </>
+                )}
                 {'note' in results && results.note && <div class="muted results-note"><Prose text={results.note} /></div>}
               </>
             )}
@@ -263,6 +269,7 @@ const projectHref = (slug: string) => {
   .project__meta a { color: var(--color-text); }
   .project__meta a:hover { color: var(--color-accent); }
   .results-intro { margin-bottom: var(--space-2); }
+  .results-intro--more { margin-top: var(--space-4); }
   .results-note { margin-top: var(--space-2); max-width: var(--measure); font-size: var(--fs-small); }
   .items + :global(.prose), :global(.prose) + .items { margin-top: var(--space-2); }
   /* brand activation cases */

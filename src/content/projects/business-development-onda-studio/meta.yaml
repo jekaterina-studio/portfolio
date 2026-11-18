@@ -17,5 +17,5 @@ diagram:
 documents: []
 # line under the title, without link (owner request)
 parentText:
-  it: cliente Onda Studio
-  en: client Onda Studio
+  it: 'Cliente: Onda Studio'
+  en: 'Client: Onda Studio'

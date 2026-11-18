@@ -115,7 +115,7 @@ const projectTexts = defineCollection({
     results: z
       .union([
         z.string(),
-        z.object({ intro: z.string().optional(), items: z.array(z.string()), note: z.string().optional() }),
+        z.object({ intro: z.string().optional(), items: z.array(z.string()), /** optional second group, e.g. collaborations secured */ more: z.object({ intro: z.string(), items: z.array(z.string()) }).optional(), note: z.string().optional() }),
       ])
       .optional(),
     /** brand activations list: sector and service keywords (owner to supply) */

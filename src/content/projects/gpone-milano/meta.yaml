@@ -89,5 +89,5 @@ cta:
 documents: []
 # line under the title (owner request)
 parentText:
-  it: cliente GPone Milano
-  en: client GPone Milano
+  it: 'Cliente: GPone Milano'
+  en: 'Client: GPone Milano'

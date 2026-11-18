@@ -60,5 +60,5 @@ media:
 documents: []
 # line under the title (owner request)
 parentText:
-  it: cliente ArtsLife - We Web Company
-  en: client ArtsLife - We Web Company
+  it: 'Cliente: ArtsLife - We Web Company'
+  en: 'Client: ArtsLife - We Web Company'

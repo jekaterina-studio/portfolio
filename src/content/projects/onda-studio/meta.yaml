@@ -63,5 +63,5 @@ media:
 documents: []
 # line under the title (owner request)
 parentText:
-  it: cliente Onda Studio e AreaOdeon
-  en: client Onda Studio and AreaOdeon
+  it: 'Cliente: Onda Studio e AreaOdeon'
+  en: 'Client: Onda Studio and AreaOdeon'

@@ -117,3 +117,7 @@ slideshow:
     it: 'Un portatile con il software di controllo dei laser su un tavolo nero, in una sala inondata di luce rossa'
     en: 'A laptop showing laser control software on a black table, in a room flooded with red light'
 documents: []
+# client line (owner request), replaces the 'part of' link
+parentText:
+  it: 'Cliente: Onda Studio'
+  en: 'Client: Onda Studio'
