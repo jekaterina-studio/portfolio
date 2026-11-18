@@ -25,7 +25,6 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
 
   <div class="rows">
     <InfoRow label={t('biography', locale)}>
-      {page.nameLine && <p class="name-label">{page.nameLine}</p>}
       <Prose text={page.biography} />
       <!-- link only, no separate heading (owner request) -->
       <p class="bio-link"><a href={localizedPath(locale, 'projects')}>{locale === 'en' ? 'my experiences' : 'le mie esperienze'} <span aria-hidden="true">→</span></a></p>
@@ -65,8 +64,6 @@ const img = (name: string | null) => (name ? siteImages[`../../assets/images/sit
 
 <style>
   .bio-link { margin-top: 1em; }
-  /* name as a small, light, right-aligned label (owner request) */
-  .name-label { max-width: var(--measure); margin-bottom: var(--space-3); text-align: right; font-size: var(--fs-small); font-weight: 300; line-height: 1.2; color: var(--color-muted); }
   .bio-link a { color: var(--color-accent); font-weight: 700; }
   .bio-link a:hover, .bio-link a:focus-visible { text-decoration: underline; text-underline-offset: 0.2em; }
   .rows { margin-top: var(--space-5); display: grid; gap: var(--space-5); }
