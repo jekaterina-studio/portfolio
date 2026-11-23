@@ -13,7 +13,7 @@ export const site = {
    */
   showPlaceholders: true,
   contact: {
-    email: 'digitalcuratorship@gmail.com',
+    email: 'info@jekaterina.eu',
     phoneDisplay: '+39 348 270 1207',
     phoneHref: '+393482701207',
     city: { it: 'Milano, Italia', en: 'Milan, Italy' },
