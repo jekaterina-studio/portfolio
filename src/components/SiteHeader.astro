@@ -56,11 +56,22 @@ const isExact = (s: readonly string[]) => s.join('/') === segments.join('/');
     display: grid;
     grid-template-columns: 1fr auto auto;
     grid-template-areas: 'word nav lang';
-    align-items: baseline;
+    align-items: center;
     column-gap: var(--space-5);
     padding: var(--space-3) var(--margin);
   }
-  .wordmark { grid-area: word; white-space: nowrap; }
+  /* Wordmark: name in bold capitals, like a simple logo (owner request) */
+  .wordmark {
+    grid-area: word;
+    white-space: nowrap;
+    font-size: 1.375rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1;
+    color: var(--color-text);
+  }
+  @media (max-width: 47.99rem) { .wordmark { font-size: 1.125rem; } }
   .main-nav { grid-area: nav; }
   .lang { grid-area: lang; white-space: nowrap; }
   .lang .sep { margin: 0 0.35em; }

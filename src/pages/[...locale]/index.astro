@@ -16,7 +16,7 @@ const tiles = (page.tiles ?? [])
 ---
 <BaseLayout locale={locale} section="home" mainClass="home">
   <div class="home__intro">
-    <h1 class="home__name">{site.name.toLowerCase()}</h1>
+    <h1 class="visually-hidden">{site.name}</h1>
     <p class="home__role">{page.role}</p>
     <p class="home__fields muted">{page.fields}</p>
   </div>
@@ -42,8 +42,6 @@ const tiles = (page.tiles ?? [])
     grid-template-rows: auto 1fr auto;
   }
   .home__intro { grid-column: 1; grid-row: 1; }
-  .home__name { font-size: var(--fs-h1); }
-  .home__role { margin-top: var(--space-1); }
   .home__fields { margin-top: var(--space-1); font-size: var(--fs-small); }
 
   .home__feature {
